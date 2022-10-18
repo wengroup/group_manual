@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: Wen Group Manual
-author: Wen Group
+author: the Wen Group
 # logo: logo.png
 
 # Force re-execution of notebooks on each build.
@@ -16,8 +16,8 @@ latex:
     targetname: book.tex
 
 # Add a bibtex file so that we can create citations
-bibtex_bibfiles:
-  - references.bib
+# bibtex_bibfiles:
+#  - references.bib
 
 # Information about where the book exists on the web
 repository:
