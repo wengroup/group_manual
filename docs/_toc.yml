@@ -7,9 +7,14 @@ root: intro.md
 parts:
   - caption: Computing
     chapters:
-    - file: computing/hpe_dsi.md
+      - file: computing/hpe_dsi.md
+      - file: computing/conda_env.md
 
+  - caption: Dev Tools
+    chapters:
+      - file: devtool/github.md
 
-
-
-
+  - caption: Contributing
+    chapters:
+      - file: contributing/edit.md
+      - file: contributing/local_build.md
