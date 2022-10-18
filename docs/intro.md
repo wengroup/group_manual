@@ -1,11 +1,11 @@
-# Welcome to your Jupyter Book
+# Wen Group Manual  
 
-This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
+This is the public group manual of the [Wen Group](https://wengroup.github.io) in the 
+[Department of Chemical & Biomolecular Engineering](https://www.chee.uh.edu) at the University of Houston. 
 
-Check out the content pages bundled with this sample book to see more.
 
 ```{tableofcontents}
 ```
+
+**Last update date**: {sub-ref}`today`
+
