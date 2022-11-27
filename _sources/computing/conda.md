@@ -61,7 +61,7 @@ You can add the above line to your `~/.bashrc`. Then it will be automatically lo
 :::
 ::::
 
-## Create a conda environment
+## Creating a conda environment
 
 Once conda is installed, create a new environment using the below command. In this example, we create an environment named `my_env` (you can create multiple environments with different names).
 
@@ -69,7 +69,7 @@ Once conda is installed, create a new environment using the below command. In th
 $ conda create --name my_env
 ```
 
-## Use a conda environment
+## Using a conda environment
 
 To use the `my_env` conda environment, first activate it by:
 
@@ -103,7 +103,7 @@ $ source ~/.bashrc
 
 Note, you just need to run the above two commands once; it will modify the `~/.bashrc` file to automatically configure for later usage.
 
-### Install packages
+### Installing packages
 
 Then, you can install packages into this environment. In this example, we install Python version 3.9.7.
 
@@ -111,13 +111,13 @@ Then, you can install packages into this environment. In this example, we instal
 $ conda install python=3.9.7
 ```
 
-### List packages in your environment
+### Listing packages in your environment
 
 ```
 $ conda list
 ```
 
-### List available environment
+### Listing available environment
 
 If you have created multiple environments, you can get a list of them by:
 
@@ -125,11 +125,11 @@ If you have created multiple environments, you can get a list of them by:
 $ conda env list
 ```
 
-## Use mamba to accelerate conda (optional)
+## Mamba (optional)
 
 Conda is great, but it can be slow. For example, it can take a long time to download the packages. To get around this, we can use [mamba](https://github.com/mamba-org/mamba), a reimplementation of the conda package manager with running speed taken into consideration.
 
-### Install mamba
+### Installing mamba
 
 Once you have activated your conda environment, e.g. `conda activate my_env`, you can install mamba into the `my_env` environment via conda
 
@@ -141,7 +141,7 @@ $ conda install -c conda-forge mamba
 We add the `-c conda-forge` to install the `mamba` packages from the `conda-forge` channel instead of the `main` channel. For more information of channels, see the [documentation](https://docs.conda.io/projects/conda/en/latest/user-guide/concepts/channels.html).
 ```
 
-### Use mamba
+### Using mamba
 
 You can use `mamba` to do pretty much everything that `conda` can do by replacing the `conda` command by the `mamba` command. For example, you can install `pymatgen` via
 
@@ -149,7 +149,7 @@ You can use `mamba` to do pretty much everything that `conda` can do by replacin
 $ mamba install -c conda-forge pymatgen
 ```
 
-## Change default conda settings (optional)
+## Changing default conda settings (optional)
 
 ```{warning}
 This is not needed on your Mac; skip it.
@@ -157,7 +157,7 @@ This is not needed on your Mac; skip it.
 This is optional on HPE DSI clusters, but it is good to do it.
 ```
 
-### Change environment directory
+### Changing environment directory
 
 By default, if we create a new environment, it will be stored in the `$HOME` directory (e.g. `/home/<username>/.conda/envs`).
 Conda environments can sometimes get quite big, but each of us only has a quota of 10G for `$HOME`. This can easily lead to out-of-quota problem. We can change the default environment directory to avoid this.
@@ -205,7 +205,7 @@ which means `/project/wen/<username>/conda/envs` is now configured as the defaul
 
 Alternatively, you can open `~/.condarc` to see all the changes you've made. You can even directly edit it to remove the changes or add new ones.
 
-### Change package directory
+### Changing package directory
 
 Similarly, by default, when you install a package, it will first be downloaded to a place in your `$HOME`, i.e. `/home/<username>/.conda/pkgs`). You can change the default package storage directory as well to avoid out-of-quota problems.
 

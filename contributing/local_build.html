@@ -352,13 +352,13 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#install">
-   Install
+  <a class="reference internal nav-link" href="#installation">
+   Installation
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#build">
-   Build
+  <a class="reference internal nav-link" href="#building">
+   Building
   </a>
  </li>
 </ul>
@@ -381,13 +381,13 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#install">
-   Install
+  <a class="reference internal nav-link" href="#installation">
+   Installation
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#build">
-   Build
+  <a class="reference internal nav-link" href="#building">
+   Building
   </a>
  </li>
 </ul>
@@ -403,8 +403,8 @@ title="Print to PDF"
   <section class="tex2jax_ignore mathjax_ignore" id="local-build">
 <h1>Local Build<a class="headerlink" href="#local-build" title="Permalink to this headline">#</a></h1>
 <p>In addition to directly editing it on GitHub, you can also download the repository to your local machine, edit the files, and then upload. You may want to visually check that everything works fine before uploading. To do this, you can build the doc locally.</p>
-<section id="install">
-<h2>Install<a class="headerlink" href="#install" title="Permalink to this headline">#</a></h2>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">#</a></h2>
 <p>First create a conda environment:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ conda create --name wen_group_manual
 $ conda activate wen_group_manual
@@ -415,8 +415,8 @@ $ conda activate wen_group_manual
 </pre></div>
 </div>
 </section>
-<section id="build">
-<h2>Build<a class="headerlink" href="#build" title="Permalink to this headline">#</a></h2>
+<section id="building">
+<h2>Building<a class="headerlink" href="#building" title="Permalink to this headline">#</a></h2>
 <p>We use <a class="reference external" href="https://jupyterbook.org/en/stable/intro.html">jupyter-book</a> to convert the markdown source files into html webpages. To build it, in the directory with the <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> file, do</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">build</span> <span class="n">docs</span> <span class="o">--</span><span class="n">path</span><span class="o">-</span><span class="n">output</span> <span class="n">docs_build</span>
 </pre></div>

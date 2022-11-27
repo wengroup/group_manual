@@ -2,7 +2,7 @@
 
 This page describes the basics of using the HPE Data Science Institute clusters at UH.
 
-## Get an account
+## Getting an account
 
 If you have never used HPE DSI clusters, first request an account at https://uh.edu/rcdc/getting-started/request-account.php. The below information may be needed:
 
@@ -14,7 +14,7 @@ If you have never used HPE DSI clusters, first request an account at https://uh.
 
 You will receive an email shortly after submitting your request, which contains the login information such as your `username` (called `Login name` in the email).
 
-## Log into the system
+## Logging into the system
 
 You need to use `ssh` to log into the cluster.
 In any terminal on Linux or Mac ([Linux subsystem](https://docs.microsoft.com/en-us/windows/wsl/) can be installed on Windows), type
@@ -27,7 +27,21 @@ Replace `<username>` by your username from the email and then press `Enter`. Nex
 
 **Note**, the cluster can only be accessed via the UH campus network (wired or UHSecure/eduroam wireless). If you are not connecting from it, you need to use the [UH VPN](https://uh.edu/infotech/services/computing/networks/vpn/).
 
-## Submit jobs
+## Transferring files
+
+Transfer a file from your laptop to Carya:
+
+```
+$ scp /local/path/my_file.txt <username>@carya.rcdc.uh.edu:/remote/path
+```
+
+Transfer a file from Carya to your laptop:
+
+```
+$ scp <username>@carya.rcdc.uh.edu:/remote/path/my_file.txt /local/path
+```
+
+## Submitting jobs
 
 - Do not submit jobs from your home directory `/home/<username>`, which is not configured for I/O and has a limited storage space of 10GB.
 - Do not submit jobs on the login node; it can affect other users.
@@ -78,7 +92,7 @@ $ sbatch submit.sh
 python example.py
 ```
 
-## Check balance
+## Checking balance
 
 To check the group allocations and accounts, use
 

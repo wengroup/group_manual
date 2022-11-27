@@ -2,7 +2,7 @@
 
 In addition to directly editing it on GitHub, you can also download the repository to your local machine, edit the files, and then upload. You may want to visually check that everything works fine before uploading. To do this, you can build the doc locally.
 
-## Install
+## Installation
 
 First create a conda environment:
 
@@ -17,7 +17,7 @@ Then install dependencies and this repo:
 $ pip install -e .
 ```
 
-## Build
+## Building
 
 We use [jupyter-book](https://jupyterbook.org/en/stable/intro.html) to convert the markdown source files into html webpages. To build it, in the directory with the `pyproject.toml` file, do
 
