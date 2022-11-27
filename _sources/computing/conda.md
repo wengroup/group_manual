@@ -54,7 +54,9 @@ To get it on `PATH`, do:
 $ module load python
 ```
 
-Note you can add the above line to your `~/.bashrc`. Then it will be automatically loaded each time you login to the cluster, avoid executing it manually.
+```{tip}
+You can add the above line to your `~/.bashrc`. Then it will be automatically loaded each time you login to the cluster, avoid executing it manually.
+```
 
 :::
 ::::
@@ -162,14 +164,14 @@ Conda environments can sometimes get quite big, but each of us only has a quota 
 
 You should have access to our group project directory, i.e. `/project/wen`, which has a much larger disk quota. We will configure conda to store environments there.
 
-First, create a directory under your username,
+First, create a directory under your username.
 
 ```
 $ cd /project/wen
 $ mkdir <username>   # change <username> to your HPE DSI user name
 ```
 
-**NOTE**, all `<username>` below needs to be changed to yours.
+**Note**, all `<username>` below needs to be changed to yours.
 
 Within your directory, create a directory to store conda environment. In this example, we create a directory `/home/wen/<username>/conda/envs`) to store the environments:
 
