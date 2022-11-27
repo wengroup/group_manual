@@ -4,7 +4,7 @@ In addition to directly editing it on GitHub, you can also download the reposito
 
 ## Installation
 
-First create a conda environment:
+First, create a [conda environment](conda:environment):
 
 ```
 $ conda create --name wen_group_manual

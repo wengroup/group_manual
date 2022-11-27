@@ -1,3 +1,5 @@
+(conda:environment)=
+
 # Conda Environment
 
 Frequently we need a specific configuration and package versions for one project, which can conflict with another project's needs. [Conda environment](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) is a great way to manage packages and versions. It allows us to create a separate environment where we can install any package versions for one project without affecting anything outside of this environment.
