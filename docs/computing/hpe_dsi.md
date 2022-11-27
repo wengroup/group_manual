@@ -1,6 +1,6 @@
 # HPE DSI
 
-This guide walks through the basics on using the HPE Data Science Institute clusters at UH.
+This page describes the basics of using the HPE Data Science Institute clusters at UH.
 
 ## Get an account
 
