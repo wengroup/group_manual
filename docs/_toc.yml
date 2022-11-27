@@ -7,6 +7,7 @@ root: intro.md
 parts:
   - caption: Computing
     chapters:
+      - file: computing/laptop.md
       - file: computing/hpe_dsi.md
       - file: computing/conda.md
 
