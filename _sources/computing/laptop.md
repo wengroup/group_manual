@@ -1,9 +1,9 @@
-# Setting up your laptop
+# Setting up Your Laptop
 
 This page describes the basic steps to setup your laptop for computational research.
 
 ```{warning}
-This page assumes using macOS.
+This page assumes the use of macOS.
 ```
 
 ## Install a terminal app
@@ -12,7 +12,7 @@ A fair amount of our work needs to be performed using command line (CLI) tools i
 
 [iTerm2](https://iterm2.com) is a great alternative. Follow the instructions on its website to download and install it.
 
-## Setup macOS developer environment
+## Set up macOS developer environment
 
 Open iTerm2 and type the below command (without `$`) to set up your macOS CLI developer environment.
 
