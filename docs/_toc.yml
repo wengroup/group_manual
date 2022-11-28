@@ -13,6 +13,8 @@ parts:
 
   - caption: Dev Tools
     chapters:
+      - file: devtool/cli.md
+      - file: devtool/text_editor.md
       - file: devtool/github.md
 
   - caption: Contributing
