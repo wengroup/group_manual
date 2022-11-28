@@ -1,4 +1,11 @@
-# GitHub
+(using:github)=
 
+# Using GitHub
 
-[TODO]
+## Cloning a repo
+
+## Making edits
+
+## Committing changes
+
+## Pushing to GitHub
