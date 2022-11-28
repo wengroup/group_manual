@@ -1,3 +1,5 @@
+(local:build)=
+
 # Local Build
 
 In addition to directly editing it on GitHub, you can also download the repository to your local machine, edit the files, and then upload. You may want to visually check that everything works fine before uploading. To do this, you can build the doc locally.
