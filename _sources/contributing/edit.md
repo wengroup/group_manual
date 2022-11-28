@@ -55,5 +55,5 @@ Then, enter a brief title and some additional message describing your pull reque
 This is all you need to do. We will then take a look at the pull request and merge it.
 
 ```{tip}
-You can commit multiple changes and then make a single pull request for all of them, i.e. performing step 2 multiple times for different files and then step 3 once.
+You can commit multiple changes and then make a single pull request for them, i.e. performing step 2 multiple times for different files and then step 3 only once.
 ```

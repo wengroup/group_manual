@@ -24,7 +24,7 @@ $ pip install -e .
 We use [jupyter-book](https://jupyterbook.org/en/stable/intro.html) to convert the markdown source files into html webpages. To build it, in the directory where the `pyproject.toml` file resides, do
 
 ```
-jupyter-book build docs --path-output docs_build
+$ jupyter-book build docs --path-output docs_build
 ```
 
 The generated group manual is placed in `docs_build`, and you can look at it by opening this file in a browser: `docs_build/_build/html/index.html`.
