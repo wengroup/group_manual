@@ -1,6 +1,6 @@
 # Setting up Your Laptop
 
-This page describes the basic steps to setup your laptop for computational research.
+This page describes the basic steps to set up your laptop for computational research.
 
 ```{warning}
 This page assumes the use of macOS.
