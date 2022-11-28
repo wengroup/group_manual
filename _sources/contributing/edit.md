@@ -5,7 +5,7 @@ This page describes how to make edits directly on the GitHub web editor.
 
 ## 1. Forking the repo
 
-Go to the GitHub page of the repo https://github.com/wengroup/group_manual. Fist click `Fork` and then `Create fork`.
+Go to the GitHub repo you want to fork (https://github.com/wengroup/group_manual in this case), and click `Fork` then `Create fork`.
 
 ```{figure} ../image/edit-1.png
 
@@ -15,27 +15,38 @@ Go to the GitHub page of the repo https://github.com/wengroup/group_manual. Fist
 
 ```
 
-## 2. Editing the manual
+## 2. Making edits
 
-In your fork, navigate to the markdown file you want to edit and then make changes to it. For example, in my `mjwen/group_manual` fork of the `wengroup/group_manual`, I can navigate to the `laptop.md` file and click the pencil button to start editing it.
+After forking, the repo will be copied to your GitHub account. Here, the `group_manual` repo from the `wengroup` GitHub account has been forked to the `mjwen` account.
+
+Then, you can edit your forked version of the repo (`mjwen/group_manual` here). Navigate to the file you want to edit and then make changes to it. For example, you can select the `laptop.md` file and click the pencil button to start editing.
 
 ```{figure} ../image/edit-3.png
 
 ```
 
-After editing a markdown page, enter a message describing what you've done, select `Create a new branch for this commit and start a pul request.`, and then click `Propose changes`.
+After changing a file, enter a commit message describing what you've done (e.g. `Typo fix`), select `Commit directly to the main branch`, and then click `Commit changes` to commit your edits.
 
 ```{figure} ../image/edit-4.png
 
 ```
 
+```{tip}
+Here, we use the GitHub web editor to make and commit changes. Alternatively, you can clone the repo, edit it locally, and push the commits. See [Using GitHub](using:github) for instructions.
+When editing locally, you may also want to build the manual and view it. For this, see [Local Build](local:build).
+```
+
 ## 3. Making a pull request
 
-In the `Comparing changes` page, click `Create pull request`, and then in the `Open a pull request` page, click `Create pul request` again.
+Now that you have made changes to your fork of the repo (e.g. `mjwen/group_manual`), you want to make a pull request to propose your changes to the upstream repo (e.g. `wengroup/group_manual`).
+
+Go to the homepage of your fork of the repo, click `Contribute` and then `Open pull request`.
 
 ```{figure} ../image/edit-5.png
 
 ```
+
+Then, enter a brief title and some additional message describing your pull request, check `Allow edits by maintainers`, and click `Create pull request`.
 
 ```{figure} ../image/edit-6.png
 
@@ -44,5 +55,5 @@ In the `Comparing changes` page, click `Create pull request`, and then in the `O
 This is all you need to do. We will then take a look at the pull request and merge it.
 
 ```{tip}
-You can also clone the repo, edit it locally, and push back. For this, see [local build](local:build).
+You can commit multiple changes and then make a single pull request for all of them, i.e. performing step 2 multiple times for different files and then step 3 once.
 ```

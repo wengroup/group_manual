@@ -21,7 +21,7 @@ $ pip install -e .
 
 ## Building
 
-We use [jupyter-book](https://jupyterbook.org/en/stable/intro.html) to convert the markdown source files into html webpages. To build it, in the directory with the `pyproject.toml` file, do
+We use [jupyter-book](https://jupyterbook.org/en/stable/intro.html) to convert the markdown source files into html webpages. To build it, in the directory where the `pyproject.toml` file resides, do
 
 ```
 jupyter-book build docs --path-output docs_build
