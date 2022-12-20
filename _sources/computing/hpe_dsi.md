@@ -6,7 +6,7 @@ This page describes the basics of using the HPE Data Science Institute clusters 
 
 If you have never used HPE DSI clusters, first request an account at https://uh.edu/rcdc/getting-started/request-account.php. The below information may be needed:
 
-- Principal Investigator's (PI): Mingjian Wen
+- Principal Investigator (PI): Mingjian Wen
 - PI Email address: mjwen@uh.edu
 - Grant information: N/A
 - Please select the Resource (Cluster): Carya
@@ -23,11 +23,15 @@ In any terminal on Linux or Mac ([Linux subsystem](https://docs.microsoft.com/en
 $ ssh <username>@carya.rcdc.uh.edu
 ```
 
-Replace `<username>` by your username from the email and then press `Enter`. Next, provide your `CougarNet` credentials.
+Replace `<username>` by yours, press `Enter` and then provide your CougarNet credentials to login.
 
-**Note**, the cluster can only be accessed via the UH campus network (wired or UHSecure/eduroam wireless). If you are not connecting from it, you need to use the [UH VPN](https://uh.edu/infotech/services/computing/networks/vpn/).
+```{tip}
+The clusters can be accessed via the `UHSecure` not the `UHGuest` network. If you cannot log in and see error message like `ssh: connect to host carya.rcdc.uh.edu port 22: Operation timed out`, check your Wi-Fi connection.
 
-## Transferring files
+If you are off campus, use UH [VPN](https://uh.edu/infotech/services/computing/networks/vpn/) to get access.
+```
+
+## Transferring data
 
 Transfer a file from your laptop to Carya:
 
@@ -40,6 +44,8 @@ Transfer a file from Carya to your laptop:
 ```
 $ scp <username>@carya.rcdc.uh.edu:/remote/path/my_file.txt /local/path
 ```
+
+Alternatively, if you prefer a graphical user interface or want to transfer a large amount of data, `globus` is a good option. See [HPE DSI User Guide](https://uh.edu/rcdc/support-services/user-guide/getting-started-clusters) for instructions. [TODO: add instructions here].
 
 ## Submitting jobs
 
@@ -102,7 +108,7 @@ $ sbalance
 
 ## More information
 
-Submitting job: https://uh.edu/rcdc/support-services/user-guide/getting-started-clusters
+HPE DSI User Guide: https://uh.edu/rcdc/support-services/user-guide/getting-started-clusters
 
 Open a ticket at the HPE DSI Support Center: https://support.hpedsi.uh.edu
 

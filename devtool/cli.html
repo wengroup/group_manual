@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Local Build &#8212; Wen Group Manual</title>
+    <title>Command Line Tool &#8212; Wen Group Manual</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,7 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Editing the Manual" href="edit.html" />
+    <link rel="next" title="Text Editor" href="text_editor.html" />
+    <link rel="prev" title="High-Throughput Computing" href="../computing/htc.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -139,19 +140,19 @@ const thebe_selector_output = ".output, .cell_output"
   Dev Tools
  </span>
 </p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../devtool/cli.html">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Command Line Tool
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../devtool/text_editor.html">
+  <a class="reference internal" href="text_editor.html">
    Text Editor
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../devtool/github.html">
+  <a class="reference internal" href="github.html">
    Using GitHub
   </a>
  </li>
@@ -161,14 +162,14 @@ const thebe_selector_output = ".output, .cell_output"
   Contributing
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="edit.html">
+  <a class="reference internal" href="../contributing/edit.html">
    Editing the Manual
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../contributing/local_build.html">
    Local Build
   </a>
  </li>
@@ -262,7 +263,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/wengroup/group_manual/issues/new?title=Issue%20on%20page%20%2Fcontributing/local_build.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/wengroup/group_manual/issues/new?title=Issue%20on%20page%20%2Fdevtool/cli.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -279,7 +280,7 @@ title="Open an issue"
       </li>
       
       <li>
-        <a href="https://github.com/wengroup/group_manual/edit/main/docs/contributing/local_build.md"
+        <a href="https://github.com/wengroup/group_manual/edit/main/docs/devtool/cli.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -307,7 +308,7 @@ title="Edit this page"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/contributing/local_build.md"
+        <a href="../_sources/devtool/cli.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -367,13 +368,48 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#installation">
-   Installation
+  <a class="reference internal nav-link" href="#syntax">
+   Syntax
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#building">
-   Building
+  <a class="reference internal nav-link" href="#manual-of-a-command">
+   Manual of a command
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#help-of-a-command">
+   Help of a command
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#some-useful-commands">
+   Some useful commands
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#which">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       which
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tldr">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       tldr
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#more-information">
+   More information
   </a>
  </li>
 </ul>
@@ -385,7 +421,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Local Build</h1>
+                <h1>Command Line Tool</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -396,13 +432,48 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#installation">
-   Installation
+  <a class="reference internal nav-link" href="#syntax">
+   Syntax
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#building">
-   Building
+  <a class="reference internal nav-link" href="#manual-of-a-command">
+   Manual of a command
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#help-of-a-command">
+   Help of a command
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#some-useful-commands">
+   Some useful commands
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#which">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       which
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tldr">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       tldr
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#more-information">
+   More information
   </a>
  </li>
 </ul>
@@ -415,32 +486,77 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="local-build">
-<span id="id1"></span><h1>Local Build<a class="headerlink" href="#local-build" title="Permalink to this headline">#</a></h1>
-<p>In addition to directly editing it on GitHub, you can also download the repository to your local machine, edit the files, and then upload. You may want to visually check that everything works fine before uploading. To do this, you can build the doc locally.</p>
-<section id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">#</a></h2>
-<p>First, create a <a class="reference internal" href="../computing/conda.html#conda-environment"><span class="std std-ref">conda environment</span></a>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ conda create --name wen_group_manual
-$ conda activate wen_group_manual
-</pre></div>
-</div>
-<p>Clone the repo from GitHub to your local machine:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/wengroup/group_manual.git
-</pre></div>
-</div>
-<p>Then install dependencies and this repo:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install -e group_manual
+  <section class="tex2jax_ignore mathjax_ignore" id="command-line-tool">
+<span id="id1"></span><h1>Command Line Tool<a class="headerlink" href="#command-line-tool" title="Permalink to this headline">#</a></h1>
+<section id="syntax">
+<h2>Syntax<a class="headerlink" href="#syntax" title="Permalink to this headline">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">command</span> <span class="p">[</span><span class="o">--</span><span class="n">option</span> <span class="mi">1</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">option</span> <span class="mi">2</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">subcommand</span> <span class="mi">1</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 </section>
-<section id="building">
-<h2>Building<a class="headerlink" href="#building" title="Permalink to this headline">#</a></h2>
-<p>We use <a class="reference external" href="https://jupyterbook.org/en/stable/intro.html">jupyter-book</a> to convert the markdown source files into html webpages. To build it, in the directory where the <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> file resides, do</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ jupyter-book build docs --path-output docs_build
+<section id="manual-of-a-command">
+<h2>Manual of a command<a class="headerlink" href="#manual-of-a-command" title="Permalink to this headline">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ man &lt;command&gt;
+# e.g.
+$ man ls
 </pre></div>
 </div>
-<p>The generated group manual is placed in <code class="docutils literal notranslate"><span class="pre">docs_build</span></code>, and you can look at it by opening this file in a browser: <code class="docutils literal notranslate"><span class="pre">docs_build/_build/html/index.html</span></code>.</p>
+</section>
+<section id="help-of-a-command">
+<h2>Help of a command<a class="headerlink" href="#help-of-a-command" title="Permalink to this headline">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ &lt;command&gt; --help
+# e.g.
+$ git --help
+</pre></div>
+</div>
+<p>Some commands may have subcommands, you can get help for a subcommand as well.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ &lt;command&gt; &lt;subcommand&gt; --help
+# e.g.
+$ git add --help
+</pre></div>
+</div>
+</section>
+<section id="some-useful-commands">
+<h2>Some useful commands<a class="headerlink" href="#some-useful-commands" title="Permalink to this headline">#</a></h2>
+<section id="which">
+<h3><code class="docutils literal notranslate"><span class="pre">which</span></code><a class="headerlink" href="#which" title="Permalink to this headline">#</a></h3>
+<p>Locate a program file in the user’s path. For example,</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ which git
+</pre></div>
+</div>
+<p>shows that the <code class="docutils literal notranslate"><span class="pre">git</span></code> command is from <code class="docutils literal notranslate"><span class="pre">/usr/bin/git</span></code>.</p>
+</section>
+<section id="tldr">
+<h3><code class="docutils literal notranslate"><span class="pre">tldr</span></code><a class="headerlink" href="#tldr" title="Permalink to this headline">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">tldr</span></code> simplify the beloved man pages with practical examples. For example,</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ tldr ls
+</pre></div>
+</div>
+<p>gives</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span>
+
+<span class="n">List</span> <span class="n">directory</span> <span class="n">contents</span><span class="o">.</span>
+<span class="n">More</span> <span class="n">information</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">gnu</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">software</span><span class="o">/</span><span class="n">coreutils</span><span class="o">/</span><span class="n">ls</span><span class="o">&gt;.</span>
+
+<span class="o">-</span> <span class="n">List</span> <span class="n">files</span> <span class="n">one</span> <span class="n">per</span> <span class="n">line</span><span class="p">:</span>
+    <span class="n">ls</span> <span class="o">-</span><span class="mi">1</span>
+
+<span class="o">-</span> <span class="n">List</span> <span class="nb">all</span> <span class="n">files</span><span class="p">,</span> <span class="n">including</span> <span class="n">hidden</span> <span class="n">files</span><span class="p">:</span>
+    <span class="n">ls</span> <span class="o">-</span><span class="n">a</span>
+<span class="o">...</span>
+
+<span class="o">-</span> <span class="n">Only</span> <span class="nb">list</span> <span class="n">directories</span><span class="p">:</span>
+    <span class="n">ls</span> <span class="o">-</span><span class="n">d</span> <span class="o">*/</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">tldr</span></code> needs to be installed before using. On macOS, do <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">brew</span> <span class="pre">install</span> <span class="pre">tldr</span></code>.</p>
+</div>
+</section>
+</section>
+<section id="more-information">
+<h2>More information<a class="headerlink" href="#more-information" title="Permalink to this headline">#</a></h2>
 </section>
 </section>
 
@@ -457,7 +573,7 @@ $ conda activate wen_group_manual
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./contributing"
+            path: "./devtool"
         },
         predefinedOutput: true
     }
@@ -471,12 +587,19 @@ $ conda activate wen_group_manual
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="edit.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../computing/htc.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Editing the Manual</p>
+            <p class="prev-next-title">High-Throughput Computing</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="text_editor.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Text Editor</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             </footer>

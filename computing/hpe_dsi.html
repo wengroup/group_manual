@@ -103,7 +103,7 @@ const thebe_selector_output = ".output, .cell_output"
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="../intro.html">
+                <a class="reference internal" href="../index.html">
                     Wen Group Manual
                 </a>
             </li>
@@ -129,6 +129,11 @@ const thebe_selector_output = ".output, .cell_output"
    Conda Environment
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="htc.html">
+   High-Throughput Computing
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -136,6 +141,16 @@ const thebe_selector_output = ".output, .cell_output"
  </span>
 </p>
 <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../devtool/cli.html">
+   Command Line Tool
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../devtool/text_editor.html">
+   Text Editor
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../devtool/github.html">
    Using GitHub
@@ -363,8 +378,8 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#transferring-files">
-   Transferring files
+  <a class="reference internal nav-link" href="#transferring-data">
+   Transferring data
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -417,8 +432,8 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#transferring-files">
-   Transferring files
+  <a class="reference internal nav-link" href="#transferring-data">
+   Transferring data
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -458,7 +473,7 @@ title="Print to PDF"
 <h2>Getting an account<a class="headerlink" href="#getting-an-account" title="Permalink to this headline">#</a></h2>
 <p>If you have never used HPE DSI clusters, first request an account at <a class="reference external" href="https://uh.edu/rcdc/getting-started/request-account.php">https://uh.edu/rcdc/getting-started/request-account.php</a>. The below information may be needed:</p>
 <ul class="simple">
-<li><p>Principal Investigator’s (PI): Mingjian Wen</p></li>
+<li><p>Principal Investigator (PI): Mingjian Wen</p></li>
 <li><p>PI Email address: <a class="reference external" href="mailto:mjwen&#37;&#52;&#48;uh&#46;edu">mjwen<span>&#64;</span>uh<span>&#46;</span>edu</a></p></li>
 <li><p>Grant information: N/A</p></li>
 <li><p>Please select the Resource (Cluster): Carya</p></li>
@@ -473,11 +488,15 @@ In any terminal on Linux or Mac (<a class="reference external" href="https://doc
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ssh &lt;username&gt;@carya.rcdc.uh.edu
 </pre></div>
 </div>
-<p>Replace <code class="docutils literal notranslate"><span class="pre">&lt;username&gt;</span></code> by your username from the email and then press <code class="docutils literal notranslate"><span class="pre">Enter</span></code>. Next, provide your <code class="docutils literal notranslate"><span class="pre">CougarNet</span></code> credentials.</p>
-<p><strong>Note</strong>, the cluster can only be accessed via the UH campus network (wired or UHSecure/eduroam wireless). If you are not connecting from it, you need to use the <a class="reference external" href="https://uh.edu/infotech/services/computing/networks/vpn/">UH VPN</a>.</p>
+<p>Replace <code class="docutils literal notranslate"><span class="pre">&lt;username&gt;</span></code> by yours, press <code class="docutils literal notranslate"><span class="pre">Enter</span></code> and then provide your CougarNet credentials to login.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The clusters can be accessed via the <code class="docutils literal notranslate"><span class="pre">UHSecure</span></code> not the <code class="docutils literal notranslate"><span class="pre">UHGuest</span></code> network. If you cannot log in and see error message like <code class="docutils literal notranslate"><span class="pre">ssh:</span> <span class="pre">connect</span> <span class="pre">to</span> <span class="pre">host</span> <span class="pre">carya.rcdc.uh.edu</span> <span class="pre">port</span> <span class="pre">22:</span> <span class="pre">Operation</span> <span class="pre">timed</span> <span class="pre">out</span></code>, check your Wi-Fi connection.</p>
+<p>If you are off campus, use UH <a class="reference external" href="https://uh.edu/infotech/services/computing/networks/vpn/">VPN</a> to get access.</p>
+</div>
 </section>
-<section id="transferring-files">
-<h2>Transferring files<a class="headerlink" href="#transferring-files" title="Permalink to this headline">#</a></h2>
+<section id="transferring-data">
+<h2>Transferring data<a class="headerlink" href="#transferring-data" title="Permalink to this headline">#</a></h2>
 <p>Transfer a file from your laptop to Carya:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ scp /local/path/my_file.txt &lt;username&gt;@carya.rcdc.uh.edu:/remote/path
 </pre></div>
@@ -486,6 +505,7 @@ In any terminal on Linux or Mac (<a class="reference external" href="https://doc
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ scp &lt;username&gt;@carya.rcdc.uh.edu:/remote/path/my_file.txt /local/path
 </pre></div>
 </div>
+<p>Alternatively, if you prefer a graphical user interface or want to transfer a large amount of data, <code class="docutils literal notranslate"><span class="pre">globus</span></code> is a good option. See <a class="reference external" href="https://uh.edu/rcdc/support-services/user-guide/getting-started-clusters">HPE DSI User Guide</a> for instructions. [TODO: add instructions here].</p>
 </section>
 <section id="submitting-jobs">
 <h2>Submitting jobs<a class="headerlink" href="#submitting-jobs" title="Permalink to this headline">#</a></h2>
@@ -541,7 +561,7 @@ python example.py
 </section>
 <section id="more-information">
 <h2>More information<a class="headerlink" href="#more-information" title="Permalink to this headline">#</a></h2>
-<p>Submitting job: <a class="reference external" href="https://uh.edu/rcdc/support-services/user-guide/getting-started-clusters">https://uh.edu/rcdc/support-services/user-guide/getting-started-clusters</a></p>
+<p>HPE DSI User Guide: <a class="reference external" href="https://uh.edu/rcdc/support-services/user-guide/getting-started-clusters">https://uh.edu/rcdc/support-services/user-guide/getting-started-clusters</a></p>
 <p>Open a ticket at the HPE DSI Support Center: <a class="reference external" href="https://support.hpedsi.uh.edu">https://support.hpedsi.uh.edu</a></p>
 <p>Policies and data management: <a class="reference external" href="https://hpedsi.uh.edu/about/policies">https://hpedsi.uh.edu/about/policies</a></p>
 </section>

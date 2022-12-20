@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Local Build &#8212; Wen Group Manual</title>
+    <title>Text Editor &#8212; Wen Group Manual</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,7 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Editing the Manual" href="edit.html" />
+    <link rel="next" title="Using GitHub" href="github.html" />
+    <link rel="prev" title="Command Line Tool" href="cli.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -139,19 +140,19 @@ const thebe_selector_output = ".output, .cell_output"
   Dev Tools
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../devtool/cli.html">
+  <a class="reference internal" href="cli.html">
    Command Line Tool
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../devtool/text_editor.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Text Editor
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../devtool/github.html">
+  <a class="reference internal" href="github.html">
    Using GitHub
   </a>
  </li>
@@ -161,14 +162,14 @@ const thebe_selector_output = ".output, .cell_output"
   Contributing
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="edit.html">
+  <a class="reference internal" href="../contributing/edit.html">
    Editing the Manual
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../contributing/local_build.html">
    Local Build
   </a>
  </li>
@@ -262,7 +263,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/wengroup/group_manual/issues/new?title=Issue%20on%20page%20%2Fcontributing/local_build.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/wengroup/group_manual/issues/new?title=Issue%20on%20page%20%2Fdevtool/text_editor.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -279,7 +280,7 @@ title="Open an issue"
       </li>
       
       <li>
-        <a href="https://github.com/wengroup/group_manual/edit/main/docs/contributing/local_build.md"
+        <a href="https://github.com/wengroup/group_manual/edit/main/docs/devtool/text_editor.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -307,7 +308,7 @@ title="Edit this page"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/contributing/local_build.md"
+        <a href="../_sources/devtool/text_editor.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -367,13 +368,23 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#installation">
-   Installation
+  <a class="reference internal nav-link" href="#basic-usage">
+   Basic usage
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#building">
-   Building
+  <a class="reference internal nav-link" href="#tutorial">
+   Tutorial
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#macvim">
+   MacVim
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#vim-in-ides">
+   vim in IDEs
   </a>
  </li>
 </ul>
@@ -385,7 +396,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Local Build</h1>
+                <h1>Text Editor</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -396,13 +407,23 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#installation">
-   Installation
+  <a class="reference internal nav-link" href="#basic-usage">
+   Basic usage
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#building">
-   Building
+  <a class="reference internal nav-link" href="#tutorial">
+   Tutorial
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#macvim">
+   MacVim
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#vim-in-ides">
+   vim in IDEs
   </a>
  </li>
 </ul>
@@ -415,32 +436,27 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="local-build">
-<span id="id1"></span><h1>Local Build<a class="headerlink" href="#local-build" title="Permalink to this headline">#</a></h1>
-<p>In addition to directly editing it on GitHub, you can also download the repository to your local machine, edit the files, and then upload. You may want to visually check that everything works fine before uploading. To do this, you can build the doc locally.</p>
-<section id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">#</a></h2>
-<p>First, create a <a class="reference internal" href="../computing/conda.html#conda-environment"><span class="std std-ref">conda environment</span></a>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ conda create --name wen_group_manual
-$ conda activate wen_group_manual
-</pre></div>
-</div>
-<p>Clone the repo from GitHub to your local machine:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/wengroup/group_manual.git
-</pre></div>
-</div>
-<p>Then install dependencies and this repo:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install -e group_manual
-</pre></div>
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="text-editor">
+<h1>Text Editor<a class="headerlink" href="#text-editor" title="Permalink to this headline">#</a></h1>
+<p>We recommend <a class="reference external" href="https://www.vim.org">vim</a> as your primary text editor.</p>
+<section id="basic-usage">
+<h2>Basic usage<a class="headerlink" href="#basic-usage" title="Permalink to this headline">#</a></h2>
 </section>
-<section id="building">
-<h2>Building<a class="headerlink" href="#building" title="Permalink to this headline">#</a></h2>
-<p>We use <a class="reference external" href="https://jupyterbook.org/en/stable/intro.html">jupyter-book</a> to convert the markdown source files into html webpages. To build it, in the directory where the <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> file resides, do</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ jupyter-book build docs --path-output docs_build
+<section id="tutorial">
+<h2>Tutorial<a class="headerlink" href="#tutorial" title="Permalink to this headline">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ vimtutor
 </pre></div>
 </div>
-<p>The generated group manual is placed in <code class="docutils literal notranslate"><span class="pre">docs_build</span></code>, and you can look at it by opening this file in a browser: <code class="docutils literal notranslate"><span class="pre">docs_build/_build/html/index.html</span></code>.</p>
+<p><a class="reference external" href="https://opensource.com/article/19/3/getting-started-vim">https://opensource.com/article/19/3/getting-started-vim</a></p>
+</section>
+<section id="macvim">
+<h2>MacVim<a class="headerlink" href="#macvim" title="Permalink to this headline">#</a></h2>
+<p><a class="reference external" href="https://macvim-dev.github.io/macvim/">https://macvim-dev.github.io/macvim/</a></p>
+</section>
+<section id="vim-in-ides">
+<h2>vim in IDEs<a class="headerlink" href="#vim-in-ides" title="Permalink to this headline">#</a></h2>
+<p>Most IDEs do offer a vim mode.
+VSCode and PyCharm</p>
 </section>
 </section>
 
@@ -457,7 +473,7 @@ $ conda activate wen_group_manual
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./contributing"
+            path: "./devtool"
         },
         predefinedOutput: true
     }
@@ -471,12 +487,19 @@ $ conda activate wen_group_manual
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="edit.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="cli.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Editing the Manual</p>
+            <p class="prev-next-title">Command Line Tool</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="github.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Using GitHub</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             </footer>
