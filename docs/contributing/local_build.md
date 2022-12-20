@@ -13,10 +13,16 @@ $ conda create --name wen_group_manual
 $ conda activate wen_group_manual
 ```
 
+Clone the repo from GitHub to your local machine:
+
+```
+$ git clone https://github.com/wengroup/group_manual.git
+```
+
 Then install dependencies and this repo:
 
 ```
-$ pip install -e .
+$ pip install -e group_manual
 ```
 
 ## Building
