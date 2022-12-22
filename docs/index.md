@@ -7,4 +7,4 @@ This is the group manual of the [Wen Group](https://wengroup.github.io) in the
 
 ```
 
-**Last update**: {sub-ref}`today`
+**Last updated**: {sub-ref}`today`
