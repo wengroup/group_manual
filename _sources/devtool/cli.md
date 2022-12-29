@@ -72,7 +72,7 @@ More information: <https://www.gnu.org/software/coreutils/ls>.
 ```
 
 ```{note}
-`tldr` needs to be installed before using. On macOS, do `$ brew install tldr`.
+`tldr` needs to be installed before using. On macOS, do `$ brew install tldr`
 ```
 
 ## More information
