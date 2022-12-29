@@ -1,4 +1,4 @@
-(command:line:tool)=
+(label:cli)=
 
 # Command Line Tool
 

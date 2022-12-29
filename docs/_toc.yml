@@ -5,6 +5,9 @@ format: jb-book
 root: index.md
 
 parts:
+  - caption: Onboarding
+    chapters:
+      - file: onboarding/guide.md
   - caption: Computing
     chapters:
       - file: computing/laptop.md

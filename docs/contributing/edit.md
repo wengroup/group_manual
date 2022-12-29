@@ -32,8 +32,9 @@ After changing a file, enter a commit message describing what you've done (e.g. 
 ```
 
 ```{tip}
-Here, we use the GitHub web editor to make and commit changes. Alternatively, you can clone the repo, edit it locally, and push the commits. See [Using GitHub](using:github) for instructions.
-When editing locally, you may also want to build the manual and view it. For this, see [Local Build](local:build).
+Here, we use the GitHub web editor to make and commit changes. Alternatively, you 
+can clone the repo, edit it locally, and push the commits. See [Using GitHub](label:github) for instructions.
+When editing locally, you may also want to build the manual and view it. For this, see [Local Build](label:local:build).
 ```
 
 ## 3. Making a pull request

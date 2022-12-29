@@ -1,4 +1,4 @@
-(local:build)=
+(label:local:build)=
 
 # Local Build
 
@@ -6,7 +6,7 @@ In addition to directly editing it on GitHub, you can also download the reposito
 
 ## Installation
 
-First, create a [conda environment](conda:environment):
+First, create a [conda environment](label:conda):
 
 ```
 $ conda create --name wen_group_manual
