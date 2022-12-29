@@ -1,4 +1,4 @@
-(conda:environment)=
+(label:conda)=
 
 # Conda Environment
 

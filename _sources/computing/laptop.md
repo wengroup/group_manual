@@ -1,3 +1,4 @@
+(label:laptop)=
 # Setting up Your Laptop
 
 This page describes the basic steps to set up your laptop for computational research.
