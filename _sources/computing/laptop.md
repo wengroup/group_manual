@@ -1,11 +1,7 @@
 (label:laptop)=
 # Setting up Your Laptop
 
-This page describes the basic steps to set up your laptop for computational research.
-
-```{warning}
-This page assumes the use of macOS.
-```
+This page describes the basic steps to set up your Mac for computational research.
 
 ## Installing a terminal app
 
@@ -45,6 +41,7 @@ See this [tutorial](https://flaviocopes.com/homebrew/) for a practical guide to 
 
 ## Optional
 
+- [Zotero](https://www.zotero.org) - a reference manager
+- [Obsidan](https://obsidian.md) - a markdown-based notetaking app
 - [Ovito](https://www.ovito.org) - an atomic structure viewer and data analysis tool
 - [Studio 3T](https://studio3t.com) - a GUI for MongoDB
-- [Obsidan](https://obsidian.md) - A markdown-based notetaking app
