@@ -15,8 +15,7 @@ postdocs joining the group.
 - Set up conda to manage Python packages, following [Setting up Conda Environment](label:conda).
 
 ## Coding
-  - We use Unix-like operating systems (e.g., macOS, Linux) and the command line 
-    interface (CLI) for most of our work. Get comfortable with the CLI by doing the 
+  - We use Unix-like operating systems and the command line interface (CLI) for most of our work. Get comfortable with the CLI by doing the 
     Software Carpentry [Unix Shell](https://swcarpentry.github.io/shell-novice/) 
     tutorials and referring to the [Command Line Tools](label:cli) page.
   - We mostly program in Python and use other languages (e.g., C++ and Rust) 
@@ -25,7 +24,7 @@ postdocs joining the group.
 
 
 ## Meetings
-- Schuedule with Mingjian a first meeting to discuss and plan your research projects.
+- Schedule with Mingjian a first meeting to discuss and plan your research projects.
   After the meeting, send Mingjian a headshot as well as a short paragraph introducing you and your research to be put on the group website.
 - Schedule with Mingjian regular meetings to discuss your research progress and 
   get feedback.

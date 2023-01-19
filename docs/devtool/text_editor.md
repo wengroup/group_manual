@@ -1,7 +1,7 @@
 # Text Editor
 
 We recommend [vim](https://www.vim.org) as your primary text editor.
-Vim is pre-installed on Mac and most Linux systems, it is built to make creating and
+Vim is pre-installed on Mac and most Linux systems, and it is built to make creating and
 changing any kind of text very efficient. In addition, vim is highly configurable via the [.vimrc](https://vimconfig.com) file.
 
 
