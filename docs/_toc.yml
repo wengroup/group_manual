@@ -13,7 +13,8 @@ parts:
       - file: computing/laptop.md
       - file: computing/hpe_dsi.md
       - file: computing/conda.md
-      - file: computing/htc.md
+      - file: computing/vasp.md
+      - file: computing/high_throughput.md
 
   - caption: Dev Tools
     chapters:
