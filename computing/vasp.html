@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>High-Throughput Computing &#8212; Wen Group Manual</title>
+    <title>VASP &#8212; Wen Group Manual</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Command Line Tool" href="../devtool/cli.html" />
+    <link rel="next" title="High-throughput Computing" href="high_throughput.html" />
     <link rel="prev" title="Conda Environment" href="conda.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -143,7 +143,12 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   High-Throughput Computing
+   VASP
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="high_throughput.html">
+   High-throughput Computing
   </a>
  </li>
 </ul>
@@ -275,7 +280,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/wengroup/group_manual/issues/new?title=Issue%20on%20page%20%2Fcomputing/htc.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/wengroup/group_manual/issues/new?title=Issue%20on%20page%20%2Fcomputing/vasp.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -292,7 +297,7 @@ title="Open an issue"
       </li>
       
       <li>
-        <a href="https://github.com/wengroup/group_manual/edit/main/docs/computing/htc.md"
+        <a href="https://github.com/wengroup/group_manual/edit/main/docs/computing/vasp.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -320,7 +325,7 @@ title="Edit this page"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/computing/htc.md"
+        <a href="../_sources/computing/vasp.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -390,6 +395,11 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#run-a-first-vasp-jobs">
+     Run a first VASP jobs
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#vasp-data-files">
      VASP data files
     </a>
@@ -405,7 +415,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>High-Throughput Computing</h1>
+                <h1>VASP</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -426,6 +436,11 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#run-a-first-vasp-jobs">
+     Run a first VASP jobs
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#vasp-data-files">
      VASP data files
     </a>
@@ -442,8 +457,8 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="high-throughput-computing">
-<h1>High-Throughput Computing<a class="headerlink" href="#high-throughput-computing" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="vasp">
+<h1>VASP<a class="headerlink" href="#vasp" title="Permalink to this headline">#</a></h1>
 <section id="vasp-on-carya">
 <h2>VASP on Carya<a class="headerlink" href="#vasp-on-carya" title="Permalink to this headline">#</a></h2>
 <section id="getting-access-to-vasp">
@@ -455,6 +470,74 @@ title="Print to PDF"
 <p>Then select one from the list and load it, e.g.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ module load vasp-wen/6.3.2
 </pre></div>
+</div>
+</section>
+<section id="run-a-first-vasp-jobs">
+<h3>Run a first VASP jobs<a class="headerlink" href="#run-a-first-vasp-jobs" title="Permalink to this headline">#</a></h3>
+<p>The example performs a relaxation of a Si diamond structure. First, create a directory and put into it the below three files. The names of the files should <code class="docutils literal notranslate"><span class="pre">INCAR</span></code>, <code class="docutils literal notranslate"><span class="pre">POSCAR</span></code> and <code class="docutils literal notranslate"><span class="pre">POTCAR</span></code>.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="ffe66dde-2c9d-49ba-b160-c688fc26e283" name="b53da9e2-ec9b-4fdb-8055-bc05252ad4d7" type="radio">
+</input><label class="sd-tab-label" for="ffe66dde-2c9d-49ba-b160-c688fc26e283">
+INCAR</label><div class="sd-tab-content docutils">
+<p>INCAR is the central input file of VASP.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">IBRION</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">NSW</span> <span class="o">=</span> <span class="mi">99</span>
+<span class="n">NELM</span> <span class="o">=</span> <span class="mi">200</span>
+<span class="n">PREC</span> <span class="o">=</span> <span class="n">Accurate</span>
+<span class="n">ALGO</span> <span class="o">=</span> <span class="n">Normal</span>
+<span class="n">ENCUT</span> <span class="o">=</span> <span class="mi">500</span>
+<span class="n">EDIFF</span> <span class="o">=</span> <span class="mf">1e-5</span>
+<span class="n">ISIF</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">ISMEAR</span> <span class="o">=</span> <span class="o">-</span><span class="mi">5</span>
+<span class="n">SIGMA</span> <span class="o">=</span> <span class="mf">0.2</span>
+<span class="n">ISPIN</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">KSPACING</span> <span class="o">=</span> <span class="mf">0.22</span>
+</pre></div>
+</div>
+</div>
+<input id="24480839-583a-4509-abee-4989b329ef8d" name="b53da9e2-ec9b-4fdb-8055-bc05252ad4d7" type="radio">
+</input><label class="sd-tab-label" for="24480839-583a-4509-abee-4989b329ef8d">
+POSCAR</label><div class="sd-tab-content docutils">
+<p>POSCAR gives the atomic structure of the material.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Diamond</span> <span class="n">silicon</span> <span class="n">structure</span>
+<span class="mf">1.0</span>
+<span class="mf">3.348898</span> <span class="mf">0.000000</span> <span class="mf">1.933487</span>
+<span class="mf">1.116299</span> <span class="mf">3.157372</span> <span class="mf">1.933487</span>
+<span class="mf">0.000000</span> <span class="mf">0.000000</span> <span class="mf">3.866975</span>
+<span class="n">Si</span>
+<span class="mi">2</span>
+<span class="n">direct</span>
+<span class="mf">0.250000</span> <span class="mf">0.250000</span> <span class="mf">0.250000</span> <span class="n">Si</span>
+<span class="mf">0.000000</span> <span class="mf">0.000000</span> <span class="mf">0.000000</span> <span class="n">Si</span>
+</pre></div>
+</div>
+</div>
+<input id="c22fc875-7ced-4f56-8be6-59a65de66eb9" name="b53da9e2-ec9b-4fdb-8055-bc05252ad4d7" type="radio">
+</input><label class="sd-tab-label" for="c22fc875-7ced-4f56-8be6-59a65de66eb9">
+POTCAR</label><div class="sd-tab-content docutils">
+<p>POTCAR gives the poeudopotential.</p>
+<p>POTCAR is proprietary, and we cannot list it publicly. To get it, on <code class="docutils literal notranslate"><span class="pre">Carya</span></code>, copy <code class="docutils literal notranslate"><span class="pre">/project/wen/commons/vasp/pp/potpaw_PBE_54/Si/POTCAR</span></code> to your directory.</p>
+</div>
+</div>
+<p>Then, in the directory, submit the job using the below Slurm script.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```bash
+#!/bin/bash -l
+
+#SBATCH --job-name=vasp_job
+#SBATCH --account=wen
+#SBATCH --time=01:00:00
+#SBATCH --nodes=1
+#SBATCH --ntasks=24
+#SBATCH --mem=50GB  # max 189 GB
+
+module load vasp-wen/6.3.2
+
+mpirun -n 24 --bind-to core vasp_std
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In some other tutorials, you may find that in addition to the above three, another <code class="docutils literal notranslate"><span class="pre">KPOINT</span></code> filed is provided to specify the meshes in the reciprocal space. Here, we use an alternative approach by providing the <code class="docutils literal notranslate"><span class="pre">KSPACING</span></code> value in the <code class="docutils literal notranslate"><span class="pre">INCAR</span></code> file.</p>
 </div>
 </section>
 <section id="vasp-data-files">
@@ -499,10 +582,10 @@ title="Print to PDF"
             <p class="prev-next-title">Conda Environment</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../devtool/cli.html" title="next page">
+    <a class='right-next' id="next-link" href="high_throughput.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Command Line Tool</p>
+        <p class="prev-next-title">High-throughput Computing</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
