@@ -9,7 +9,6 @@ typo-EO
 
 typo-DG
 
-typo-HB
 
 ## Getting an account
 
