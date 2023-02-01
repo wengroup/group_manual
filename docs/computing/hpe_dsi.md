@@ -1,7 +1,16 @@
 (label:hpe:dsi)=
+
 # HPE DSI
 
 This page describes the basics of using the HPE Data Science Institute clusters at UH.
+
+typo-WF
+
+typo-EO
+
+typo-DG
+
+typo-HB
 
 ## Getting an account
 
