@@ -72,7 +72,6 @@ POTCAR is proprietary, and we cannot list it publicly. To get it, on `Carya`, co
 
 Then, in the directory, submit the job using the below Slurm script.
 
-````
 ```bash
 #!/bin/bash -l
 
@@ -86,7 +85,7 @@ Then, in the directory, submit the job using the below Slurm script.
 module load vasp-wen/6.3.2
 
 mpirun -n 24 --bind-to core vasp_std
-````
+```
 
 ```{note}
 In some other tutorials, you may find that in addition to the above three, another `KPOINT` filed is provided to specify the meshes in the reciprocal space. Here, we use an alternative approach by providing the `KSPACING` value in the `INCAR` file.
