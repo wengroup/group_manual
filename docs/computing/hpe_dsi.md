@@ -6,7 +6,6 @@ This page describes the basics of using the HPE Data Science Institute clusters 
 
 typo-WF
 
-typo-EO
 
 typo-DG
 
