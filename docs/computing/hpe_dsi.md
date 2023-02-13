@@ -4,12 +4,8 @@
 
 This page describes the basics of using the HPE Data Science Institute clusters at UH.
 
-typo-WF
-
-
 typo-DG
 
-typo-HB
 
 ## Getting an account
 
