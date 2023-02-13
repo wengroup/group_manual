@@ -4,8 +4,6 @@
 
 This page describes the basics of using the HPE Data Science Institute clusters at UH.
 
-typo-EO
-
 typo-DG
 
 
