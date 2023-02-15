@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="High-throughput Computing" href="high_throughput.html" />
+    <link rel="next" title="GULP" href="gulp.html" />
     <link rel="prev" title="Conda Environment" href="conda.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -144,6 +144,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    VASP
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="gulp.html">
+   GULP
   </a>
  </li>
  <li class="toctree-l1">
@@ -481,8 +486,8 @@ title="Print to PDF"
 <h3>Run a first VASP jobs<a class="headerlink" href="#run-a-first-vasp-jobs" title="Permalink to this headline">#</a></h3>
 <p>The example performs a relaxation of a Si diamond structure. First, create a directory and put into it the below three files. The names of the files should <code class="docutils literal notranslate"><span class="pre">INCAR</span></code>, <code class="docutils literal notranslate"><span class="pre">POSCAR</span></code> and <code class="docutils literal notranslate"><span class="pre">POTCAR</span></code>.</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="6745f696-0842-42b2-8e32-d86af4dd25df" name="511ef640-d498-4fe7-ad9a-bdf1a49d5a82" type="radio">
-</input><label class="sd-tab-label" for="6745f696-0842-42b2-8e32-d86af4dd25df">
+<input checked="checked" id="e350adc9-9827-40b4-bf60-0079387a4686" name="3c1bc74e-eb74-4812-973f-622d5569d26b" type="radio">
+</input><label class="sd-tab-label" for="e350adc9-9827-40b4-bf60-0079387a4686">
 INCAR</label><div class="sd-tab-content docutils">
 <p>INCAR is the central input file of VASP.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">IBRION</span> <span class="o">=</span> <span class="mi">2</span>
@@ -500,8 +505,8 @@ INCAR</label><div class="sd-tab-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="779e28c9-ea1d-4afd-bac1-6310b44bf486" name="511ef640-d498-4fe7-ad9a-bdf1a49d5a82" type="radio">
-</input><label class="sd-tab-label" for="779e28c9-ea1d-4afd-bac1-6310b44bf486">
+<input id="b13eaa36-abfe-4ef5-81a2-ceb3b68a35c5" name="3c1bc74e-eb74-4812-973f-622d5569d26b" type="radio">
+</input><label class="sd-tab-label" for="b13eaa36-abfe-4ef5-81a2-ceb3b68a35c5">
 POSCAR</label><div class="sd-tab-content docutils">
 <p>POSCAR gives the atomic structure of the material.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Diamond</span> <span class="n">silicon</span> <span class="n">structure</span>
@@ -517,8 +522,8 @@ POSCAR</label><div class="sd-tab-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="bf305b59-3129-4a82-b00f-868c23a6d963" name="511ef640-d498-4fe7-ad9a-bdf1a49d5a82" type="radio">
-</input><label class="sd-tab-label" for="bf305b59-3129-4a82-b00f-868c23a6d963">
+<input id="8364bafa-a1f6-4dc4-bc43-0baa2e9e44ac" name="3c1bc74e-eb74-4812-973f-622d5569d26b" type="radio">
+</input><label class="sd-tab-label" for="8364bafa-a1f6-4dc4-bc43-0baa2e9e44ac">
 POTCAR</label><div class="sd-tab-content docutils">
 <p>POTCAR gives the pseudopotential.</p>
 <p>POTCAR is proprietary, and we cannot list it publicly. To get it, on <code class="docutils literal notranslate"><span class="pre">Carya</span></code>, copy <code class="docutils literal notranslate"><span class="pre">/project/wen/commons/vasp/pp/potpaw_PBE_54/Si/POTCAR</span></code> to your directory.</p>
@@ -586,10 +591,10 @@ mpirun<span class="w"> </span>-n<span class="w"> </span><span class="m">24</span
             <p class="prev-next-title">Conda Environment</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="high_throughput.html" title="next page">
+    <a class='right-next' id="next-link" href="gulp.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">High-throughput Computing</p>
+        <p class="prev-next-title">GULP</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
