@@ -14,7 +14,9 @@ parts:
       - file: computing/hpe_dsi.md
       - file: computing/conda.md
       - file: computing/vasp.md
+      - file: computing/gulp.md
       - file: computing/high_throughput.md
+      
 
   - caption: Dev Tools
     chapters:
