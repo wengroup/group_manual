@@ -1,61 +1,68 @@
 # GitHub
 
 ## Cloning a repo
+Generate SSH key and add it to your GitHub account, follow the tutorial here [Google link](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
-Navigate to the main page of the repository on `github.com`
+Click on `Code` to copy the URL
+```
+{figure} ../image/Git clone.png
+```
+Open your terminal and navigate to your working directory
 
-Click on `code`
+Use this command to clone
+```
+$ git clone <URL>
+``` 
+Press   **Enter** to create your local clone
 
-Copy the URL of the repository 
+## Commiting changes
+Navigate to your working directory  
 
-Open terminal, type `git clone`, and paste the URL you copied earlier
+Commit a message
+```
+$ git commit -m 'message'
+```
+Check the status
+```
+$ git status
+```
 
-Press **Enter** to create your local clone.
+```
+$ git log
+```
 
-## Making edits
-
-Navigate to the file you want to edit
-
-Open the file by clicking the `pen icon`
-
-Make any changes you want on the `Edit file` tab
-
-## Committing changes
-
-After making the edits, in the `commit changes` type a commit message that describe the changes done to the file
-
-Click on `commit changes`
-
-## Pushing to GitHub
-
-Create a new repository
-
-Open terminal and set your local project as the current directory
-
-Initialize the global directory as a git repository
-
-Add the files in your new local repository
-
-Commit the files that you have stage in your local repository
-
-Copy the remote repository URL
-
-Add the URL for the remote repository where your local repository will be pushed by using the command 
-
-`$ git remote add origin <remote repository URL>`
-
-Push your code to local repository by using the command
-
-`$ git push origin master`
-
-Vierw your files in your repository
-
-## More information
-
-Github skills: https://skills.github.com/
-
-
-
+## Git Push
+Open your terminal and move to the specific path in your local computer
+```
+$ cd 'path_name'
+```
+Initialize the repository
+```
+$ git init
+``` 
+Add the files to the new repository 
+```
+$ git add .
+```
+View all the files which are going to be staged to the first commit
+```
+$ git status
+```
+Use the command to commit a message 
+```
+$ git commit -m 'your message'
+``` 
+```
+$ git branch -M main
+```
+Add the URL copied, which is your remote repository to where your local content from your repository is pushed 
+```
+$ git remote add origin <URL>
+```
+Push the code in your local repository to Github 
+```
+$ git push -u origin main
+```
 
 
 
