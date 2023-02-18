@@ -4,8 +4,8 @@
 Generate SSH key and add it to your GitHub account, follow the tutorial here [Google link](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
 Click on `Code` to copy the URL
-```
-{figure} ../image/Git clone.png
+```{figure} ../image/Git clone.png
+
 ```
 Open your terminal and navigate to your working directory
 
