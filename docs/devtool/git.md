@@ -22,73 +22,73 @@ $ git config --global user.email "Youremail@example.com"
 <img width="820" alt="image" src="https://user-images.githubusercontent.com/123142931/219302278-e9655f60-d6b6-4594-a0fc-4a649c6e11d0.png">
 
 
-1. Create a new repository to start using Git.
+### Create a new repository to start using Git.
 ```
 $ git init
 ```
 
-2-1. Add files from workspace(working directory) to staging area(first level).
+### Add files from workspace (working directory) to staging area (first level).
 ```
 $ git add <filename>
 ```
 
-2-2. You can also use 'git add .' to add all files in the current directory to the staging area.
+### You can also use 'git add .' to add all files in the current directory to the staging area.
 ```
 $ git add .
 ```
 
-3-1. Transfer files from staging(first level) to repository(second level).
+### Transfer files from staging (first level) to repository (second level).
 ```
-$ git commit <filename>
+$ git commit
 ```
 
-3-2. Add message to full history to record your own changes.
+### Add message to full history to record your own changes.
 ```
 $ git commit -m "Commit message"
 # Replace "Commit message" with a brief description of the changes you're committing.
 ```
 
-3-3. Show full history of Git repository. This will show you a list of all the commits that have been made to the repository, including the commit message, the author, and the date and time.
+### Show full history of Git repository. This will show you a list of all the commits that have been made to the repository, including the commit message, the author, and the date and time.
 ```
 $ git log
 ```
 
-3-4. View the before and after changes of files.
+### View the before and after changes of files.
 ```
 $ git diff
 ```
 
-3-5. Check the status of your Git repository at any time. This will show you which files have been modified or added, which files are currently in the staging area, and which files have been committed to the repository.
+### Check the status of your Git repository at any time. This will show you which files have been modified or added, which files are currently in the staging area, and which files have been committed to the repository.
 ```
 $ git status
 ```
 
-3-6. Restore the last action on files.
+### Restore the last action on files.
 ```
 $ git restore <filename>
 ```
 
-3-7. View current remote connection location(SSH).
+### View current remote connection location (SSH).
 ```
 $ git remote -v
 ```
 
-4. Transfer files from local repository to a remote repository(Github).
+### Transfer files from local repository to a remote repository (Github).
 ```
 $ git push <filename>
 
 ```
-5. Transfer files from remote repository(Github) to the workspace.
+### Transfer files from remote repository (Github) to the workspace.
 ```
 $ git pull <filename>
 ```
 
-6. Allow you to retrieve changes from a remote repository without merging them into your local repository(branch). This means that you can review the changes and decide whether to merge them into your branch or not. This gives you more control over the merging process and can help you avoid conflicts when multiple contributors are working on the same codebase.
+### Retrieve changes from a remote repository without merging them into your local repository(branch). This means that you can review the changes and decide whether to merge them into your branch or not. This gives you more control over the merging process and can help you avoid conflicts when multiple contributors are working on the same codebase.
 ```
 $ git fetch <filename>
 ```
 
-7. Allow you to integrate changes from one branch into another.
+### Integrate changes from one branch into another.
 ```
 $ git merge <filename>
 ```
