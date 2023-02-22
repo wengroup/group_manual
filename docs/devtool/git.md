@@ -19,8 +19,8 @@ $ git config --global user.email "Youremail@example.com"
 ```
 
 ## Git workflow and basic commands
-<img width="820" alt="image" src="https://user-images.githubusercontent.com/123142931/219302278-e9655f60-d6b6-4594-a0fc-4a649c6e11d0.png">
-
+```{figure} ../image/Git-workflow.png
+```
 
 ### Create a new repository to start using Git.
 ```
@@ -32,7 +32,7 @@ $ git init
 $ git add <filename>
 ```
 
-### You can also use 'git add .' to add all files in the current directory to the staging area.
+### Add all files in the current directory to the staging area.
 ```
 $ git add .
 ```
@@ -48,7 +48,8 @@ $ git commit -m "Commit message"
 # Replace "Commit message" with a brief description of the changes you're committing.
 ```
 
-### Show full history of Git repository. This will show you a list of all the commits that have been made to the repository, including the commit message, the author, and the date and time.
+### Show full history of Git repository.
+This will show you a list of all the commits that have been made to the repository, including the commit message, the author, and the date and time.
 ```
 $ git log
 ```
@@ -58,7 +59,8 @@ $ git log
 $ git diff
 ```
 
-### Check the status of your Git repository at any time. This will show you which files have been modified or added, which files are currently in the staging area, and which files have been committed to the repository.
+### Check the status of your Git repository at any time.
+This will show you which files have been modified or added, which files are currently in the staging area, and which files have been committed to the repository.
 ```
 $ git status
 ```
@@ -83,7 +85,8 @@ $ git push <filename>
 $ git pull <filename>
 ```
 
-### Retrieve changes from a remote repository without merging them into your local repository(branch). This means that you can review the changes and decide whether to merge them into your branch or not. This gives you more control over the merging process and can help you avoid conflicts when multiple contributors are working on the same codebase.
+### Retrieve changes from a remote repository without merging them into your local repository (branch).
+This means that you can review the changes and decide whether to merge them into your branch or not. This gives you more control over the merging process and can help you avoid conflicts when multiple contributors are working on the same codebase.
 ```
 $ git fetch <filename>
 ```
