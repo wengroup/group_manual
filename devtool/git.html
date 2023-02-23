@@ -430,8 +430,8 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#add-message-to-full-history-to-record-your-own-changes">
-     Add message to full history to record your own changes.
+    <a class="reference internal nav-link" href="#transfer-files-from-staging-to-repository-and-add-message-to-full-history-to-record-your-own-changes">
+     Transfer files from staging to repository and add message to full history to record your own changes.
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -541,8 +541,8 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#add-message-to-full-history-to-record-your-own-changes">
-     Add message to full history to record your own changes.
+    <a class="reference internal nav-link" href="#transfer-files-from-staging-to-repository-and-add-message-to-full-history-to-record-your-own-changes">
+     Transfer files from staging to repository and add message to full history to record your own changes.
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -655,8 +655,8 @@ $ git config --global user.email &quot;Youremail@example.com&quot;
 </pre></div>
 </div>
 </section>
-<section id="add-message-to-full-history-to-record-your-own-changes">
-<h3>Add message to full history to record your own changes.<a class="headerlink" href="#add-message-to-full-history-to-record-your-own-changes" title="Permalink to this headline">#</a></h3>
+<section id="transfer-files-from-staging-to-repository-and-add-message-to-full-history-to-record-your-own-changes">
+<h3>Transfer files from staging to repository and add message to full history to record your own changes.<a class="headerlink" href="#transfer-files-from-staging-to-repository-and-add-message-to-full-history-to-record-your-own-changes" title="Permalink to this headline">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git commit -m &quot;Commit message&quot;
 # Replace &quot;Commit message&quot; with a brief description of the changes you&#39;re committing.
 </pre></div>
@@ -696,27 +696,26 @@ $ git config --global user.email &quot;Youremail@example.com&quot;
 </section>
 <section id="transfer-files-from-local-repository-to-a-remote-repository-github">
 <h3>Transfer files from local repository to a remote repository (Github).<a class="headerlink" href="#transfer-files-from-local-repository-to-a-remote-repository-github" title="Permalink to this headline">#</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git push &lt;filename&gt;
-
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git push
 </pre></div>
 </div>
 </section>
 <section id="transfer-files-from-remote-repository-github-to-the-workspace">
 <h3>Transfer files from remote repository (Github) to the workspace.<a class="headerlink" href="#transfer-files-from-remote-repository-github-to-the-workspace" title="Permalink to this headline">#</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git pull &lt;filename&gt;
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git pull
 </pre></div>
 </div>
 </section>
 <section id="retrieve-changes-from-a-remote-repository-without-merging-them-into-your-local-repository-branch">
 <h3>Retrieve changes from a remote repository without merging them into your local repository (branch).<a class="headerlink" href="#retrieve-changes-from-a-remote-repository-without-merging-them-into-your-local-repository-branch" title="Permalink to this headline">#</a></h3>
 <p>This means that you can review the changes and decide whether to merge them into your branch or not. This gives you more control over the merging process and can help you avoid conflicts when multiple contributors are working on the same codebase.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git fetch &lt;filename&gt;
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git fetch &lt;remote&gt; &lt;branch&gt;
 </pre></div>
 </div>
 </section>
 <section id="integrate-changes-from-one-branch-into-another">
 <h3>Integrate changes from one branch into another.<a class="headerlink" href="#integrate-changes-from-one-branch-into-another" title="Permalink to this headline">#</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git merge &lt;filename&gt;
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git merge &lt;branch&gt;
 </pre></div>
 </div>
 </section>
