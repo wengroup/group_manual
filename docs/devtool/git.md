@@ -42,7 +42,7 @@ $ git add .
 $ git commit
 ```
 
-### Add message to full history to record your own changes.
+### Transfer files from staging to repository and add message to full history to record your own changes.
 ```
 $ git commit -m "Commit message"
 # Replace "Commit message" with a brief description of the changes you're committing.
@@ -77,23 +77,23 @@ $ git remote -v
 
 ### Transfer files from local repository to a remote repository (Github).
 ```
-$ git push <filename>
-
+$ git push
 ```
+
 ### Transfer files from remote repository (Github) to the workspace.
 ```
-$ git pull <filename>
+$ git pull
 ```
 
 ### Retrieve changes from a remote repository without merging them into your local repository (branch).
 This means that you can review the changes and decide whether to merge them into your branch or not. This gives you more control over the merging process and can help you avoid conflicts when multiple contributors are working on the same codebase.
 ```
-$ git fetch <filename>
+$ git fetch <remote> <branch>
 ```
 
 ### Integrate changes from one branch into another.
 ```
-$ git merge <filename>
+$ git merge <branch>
 ```
 
 ## Git tutorial
