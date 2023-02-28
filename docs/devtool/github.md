@@ -16,12 +16,19 @@ Once the key is generated, you can view the public key by entering the following
 $ cat ~/.ssh/id_rsa.pub
 ```
 Highlight and copy the entire public key to your clipboard  
-Log in to your GitHub account and click on your profile picture in the top-right corner of the page  
+Log in to your GitHub account and click on your profile picture in the top-right corner of the page 
+```{figure} ../image/Screenshot 2023-02-28 at 11.10.10 AM.png
+
+```
 Then select **Settings** from the dropdown menu  
 In the left sidebar, click on "SSH and GPG keys"  
 Click on the green **New SSH key** button  
-Give your SSH key a descriptive title in the **Title** field  
-Paste the entire public key you copied earlier into the **Key** field  Click on the green **Add SSH key** button  
+Give your SSH key a descriptive title in the **Title** field
+```{figure} ../image/Screenshot 2023-02-28 at 11.10.31 AM.png
+
+```
+Paste the entire public key you copied earlier into the **Key** field  
+Click on the green **Add SSH key** button  
 Your SSH key is now uploaded to GitHub and ready to use  
 You can now use SSH to authenticate with GitHub and perform various Git operations.
 
@@ -30,6 +37,9 @@ Open your terminal on your laptop
 Clone the repository using the SSH URL. For example, if the repository URL is 'git@github.com:USERNAME/REPOSITORY.git'. You can clone it by running this command:
 ```
 $ git clone git@github.com:USERNAME/REPOSITORY.git
+```
+```{figure} ../image/Screenshot 2023-02-28 at 11.02.42 AM.png
+
 ```
 Navigate to the cloned repository using the **cd** command
 ```
@@ -48,7 +58,11 @@ Push the changes using **git push** command
 ```
 $ git push 
 ```
-Go to the repository on git hub and click on **pull request** tab and then click on the green **New pull request button**   
+Go to the repository on git hub and click on **pull request** tab
+and then click on the green **New pull request button**   
+```{figure} ../image/Screenshot 2023-02-28 at 11.07.38 AM.png
+
+```
 Select the branch with your changes from the **base** dropdown menu and the branch you want to merge into from the **compare** dropdown menu
 Review the changes in the pull request and add a descriptive title and description  
 Click on the green **Create pull request** button  
