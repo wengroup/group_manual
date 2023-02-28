@@ -36,5 +36,6 @@ $ git push origin <branch-name>
 Go to the repository on git hub and click on **Compare & pull request** button  
 Write a description of changes made and click on **Create pull request button**  
 The pull request will be sent to the repository owner for necessary review
-**More information**  
+
+**More information**    
 Github skills: https://skills.github.com/
