@@ -1,68 +1,40 @@
 # GitHub
 
-## Cloning a repo
-Generate SSH key and add it to your GitHub account, follow the tutorial here [Google link](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
-Click on `Code` to copy the URL
-```{figure} ../image/Git clone.png
 
+## Procedures to cloning a repository, making changes, commit, push and create a pull request
+Open your terminal on your laptop  
+Navigate to the directory you want to clone using **cd** command
 ```
-Open your terminal and navigate to your working directory
-
-Use this command to clone
+$ cd /path/to/directory
 ```
-$ git clone <URL>
-``` 
-Press   **Enter** to create your local clone
-
-## Commiting changes
-Navigate to your working directory  
-
-Commit a message
+Use the **git clone** command to clone the repository. This will create a copy of the repository on your local machine.
 ```
-$ git commit -m 'message'
+$ git clone https://github.com/<username>/<repository-name>.git
 ```
-Check the status
+Navigate to the cloned repository using the **cd** command
 ```
-$ git status
+$ cd <repository-name>
 ```
-
+Create a new branch for your changes using the **git checkout** command
 ```
-$ git log
+$ git checkout -b <branch-name>
 ```
-
-## Git Push
-Open your terminal and move to the specific path in your local computer
-```
-$ cd 'path_name'
-```
-Initialize the repository
-```
-$ git init
-``` 
-Add the files to the new repository 
+Make the changes you want using your desired text editor  
+Stage all the changes you made using the **git add** command
 ```
 $ git add .
 ```
-View all the files which are going to be staged to the first commit
+Commit the changes using the **git commit** command. Where the commit message is the changes you made
 ```
-$ git status
+$ git commit -m 'commit message'
 ```
-Use the command to commit a message 
+Push the changes using **git push** command
 ```
-$ git commit -m 'your message'
-``` 
+$ git push origin <branch-name>
 ```
-$ git branch -M main
-```
-Add the URL copied, which is your remote repository to where your local content from your repository is pushed 
-```
-$ git remote add origin <URL>
-```
-Push the code in your local repository to Github 
-```
-$ git push -u origin main
-```
-
-
-
+Go to the repository on git hub and click on **Compare & pull request** button  
+Write a description of changes made and click on **Create pull request button**  
+The pull request will be sent to the repository owner for necessary review
+**More information**  
+Github skills: https://skills.github.com/
