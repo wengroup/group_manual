@@ -1,72 +1,71 @@
 # GitHub
-
-## Generating an SSH key and upload to GitHub
-Open your terminal and eneter the following command:
+GitHub is a web-based platform that provides tools for version control and collaborative software development. It allows developers to host their code repositories online, track changes to code over time, and work together with others on the same codebase.  
+## Generating an SSH key
+* Open your terminal and enter the following command. Use the rsa algorithm to generate the key because of wider support.
 ```
-$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+$ ssh-keygen -t rsa -b 4096 -C "olanrewajuemmanuel145584@gmail.com"
 ```
-Use the rsa algorithm to generate the key because of wider support  
-This will start the process of generating your SSH key  
-You will be directed to enter a file name for the key   
-Press **Enter** to accept the default file name and location  
-You will then be prompted to enter a passphrase for the key.       This is optional but highly recommended for added security   
-Press **Enter** to leave it blank  
-Once the key is generated, you can view the public key by entering the following command in your terminal:
+* This will start the process of generating your SSH key and you will be directed to enter a file name for the key.   
+* Press **Enter** to accept the default file name and location.  
+* Enter a passphrase for the key. This is optional but highly recommended for added security.   
+* Press **Enter** to leave it blank. Once the key is generated, you can view the public key by entering the following command in your terminal:
 ```
 $ cat ~/.ssh/id_rsa.pub
 ```
-Highlight and copy the entire public key to your clipboard  
-Log in to your GitHub account and click on your profile picture in the top-right corner of the page 
-```{figure} ../image/Screenshot 2023-02-28 at 11.10.10 AM.png
+* Highlight and copy the entire public key to your clipboard.
+## Uploading to GitHub
+* Log in to your GitHub account and click on your profile picture in the top-right corner of the page. 
+```{figure} ../image/Profile.png
 
 ```
-Then select **Settings** from the dropdown menu  
-In the left sidebar, click on "SSH and GPG keys"  
-Click on the green **New SSH key** button  
-Give your SSH key a descriptive title in the **Title** field
-```{figure} ../image/Screenshot 2023-02-28 at 11.10.31 AM.png
+* Select **Settings** from the dropdown menu and in the left sidebar, click on "SSH and GPG keys".  
+* Click on the green **New SSH key** button and give your SSH key a descriptive title in the **Title** field.
+```{figure} ../image/Title.png
 
 ```
-Paste the entire public key you copied earlier into the **Key** field  
-Click on the green **Add SSH key** button  
-Your SSH key is now uploaded to GitHub and ready to use  
-You can now use SSH to authenticate with GitHub and perform various Git operations.
+* Paste the entire public key you copied earlier into the **Key** field and click on the green **Add SSH key** button.  
+* Your SSH key is now uploaded to GitHub and you can now use SSH to authenticate with GitHub and perform various Git operations.
 
-## Procedures to cloning a repository, making changes, commit, push and create a pull request
-Open your terminal on your laptop  
-Clone the repository using the SSH URL. For example, if the repository URL is 'git@github.com:USERNAME/REPOSITORY.git'. You can clone it by running this command:
+## Cloning a repository
+* Open your terminal on your laptop.  
+* Clone the repository using the SSH URL. For example, if the repository URL is 'git@github.com:Olanrewajuemmanuelabiodun/Olanrewajuemmanuelabiodun.git'. You can clone it by running this command:
 ```
-$ git clone git@github.com:USERNAME/REPOSITORY.git
+$ git clone git@github.com:Olanrewajuemmanuelabiodun/Olanrewajuemmanuelabiodun.git
 ```
-```{figure} ../image/Screenshot 2023-02-28 at 11.02.42 AM.png
+```{figure} ../image/SSH.png
 
 ```
-Navigate to the cloned repository using the **cd** command
+* Navigate to the cloned repository using the **cd** command.
 ```
-$ cd REPOSITORY
+$ cd Olanrewajuemmanuelabiodun
 ```
-Make the changes you want using your desired text editor  
-Stage all the changes you made using the **git add** command
+## Making changes
+* Make the changes you want using your desired text editor.  
+* Stage all the changes you made using the **git add** command.
 ```
 $ git add .
 ```
-Commit the changes using the **git commit** command. Where the commit message is the changes you made
+## Committing changes
+* Commit the changes using the **git commit** command. Where the commit message is the changes you made.
 ```
 $ git commit -m 'commit message'
 ```
-Push the changes using **git push** command
+## Push the changes
+* Push the changes using **git push** command.
 ```
 $ git push 
 ```
-Go to the repository on git hub and click on **pull request** tab
-and then click on the green **New pull request button**   
-```{figure} ../image/Screenshot 2023-02-28 at 11.07.38 AM.png
+## Pull request
+* Go to the repository on github and click on **pull request** tab
+and then click on the green **New pull request button**.   
+```{figure} ../image/Pull.png
 
 ```
-Select the branch with your changes from the **base** dropdown menu and the branch you want to merge into from the **compare** dropdown menu
-Review the changes in the pull request and add a descriptive title and description  
-Click on the green **Create pull request** button  
-Write a description of changes made and click on **Create pull request button**  
-The pull request will be sent to the repository owner for necessary review
-**More information**  
-Github skills: https://skills.github.com/
+* Select the branch with your changes from the **base** dropdown menu and the branch you want to merge into from the **compare** dropdown menu.
+* Review the changes in the pull request and add a descriptive title and description. Click on the green **Create pull request** button. 
+* Write a description of changes made and click on **Create pull request button**. The pull request will be sent to the repository owner for necessary review.
+
+## More information  
+* Github skills  
+https://skills.github.com/  
+* Generating SSH keys: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
