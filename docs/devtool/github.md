@@ -28,16 +28,16 @@ $ cat ~/.ssh/id_rsa.pub
 
 ## Cloning a repository
 * Open your terminal on your laptop.  
-* Clone the repository using the SSH URL. For example, if the repository URL is 'git@github.com:Olanrewajuemmanuelabiodun/Olanrewajuemmanuelabiodun.git'. You can clone it by running this command:
+* Clone the repository using the SSH URL. For example, if the repository URL is 'git@github.com:USERNAME/REPOSITORY.git'. You can clone it by running this command:
 ```
-$ git clone git@github.com:Olanrewajuemmanuelabiodun/Olanrewajuemmanuelabiodun.git
+$ git clone git@github.com:USERNAME/REPOSITORY.git
 ```
 ```{figure} ../image/SSH.png
 
 ```
 * Navigate to the cloned repository using the **cd** command.
 ```
-$ cd Olanrewajuemmanuelabiodun
+$ cd REPOSITORY
 ```
 ## Making changes
 * Make the changes you want using your desired text editor.  
