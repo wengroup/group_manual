@@ -1,9 +1,9 @@
 # GitHub
 GitHub is a web-based platform that provides tools for version control and collaborative software development. It allows developers to host their code repositories online, track changes to code over time, and work together with others on the same codebase.  
 ## Generating an SSH key
-* Open your terminal and enter the following command. Use the rsa algorithm to generate the key because of wider support.
+* Open your terminal and enter the following command. Use the rsa algorithm to generate the key because of wider support. Where you can change the your_email address to yours.
 ```
-$ ssh-keygen -t rsa -b 4096 -C "olanrewajuemmanuel145584@gmail.com"
+$ ssh-keygen -t rsa -b 4096 -C "your_email@gmail.com"
 ```
 * This will start the process of generating your SSH key and you will be directed to enter a file name for the key.   
 * Press **Enter** to accept the default file name and location.  
@@ -13,6 +13,9 @@ $ ssh-keygen -t rsa -b 4096 -C "olanrewajuemmanuel145584@gmail.com"
 $ cat ~/.ssh/id_rsa.pub
 ```
 * Highlight and copy the entire public key to your clipboard.
+```{figure} ../image/COPY SSH.png
+
+``` 
 ## Uploading to GitHub
 * Log in to your GitHub account and click on your profile picture in the top-right corner of the page. 
 ```{figure} ../image/Profile.png
@@ -28,7 +31,7 @@ $ cat ~/.ssh/id_rsa.pub
 
 ## Cloning a repository
 * Open your terminal on your laptop.  
-* Clone the repository using the SSH URL. For example, if the repository URL is 'git@github.com:USERNAME/REPOSITORY.git'. You can clone it by running this command:
+* Clone the repository using the SSH URL. For example, if the repository URL is `git@github.com:USERNAME/REPOSITORY.git`. USERNAME and REPOSITORY need to be change to your own. You can clone it by running this command:
 ```
 $ git clone git@github.com:USERNAME/REPOSITORY.git
 ```
@@ -68,4 +71,5 @@ and then click on the green **New pull request button**.
 ## More information  
 * Github skills  
 https://skills.github.com/  
-* Generating SSH keys: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+* Generating SSH keys:  
+https://www.flownative.com/en/documentation/guides/beach/how-to-generate-a-new-ssh-key-and-add-it-to-the-ssh-agent.html
