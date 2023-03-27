@@ -1,7 +1,16 @@
 (label:ssh)=
 # SSH
 
+
+
 ## Generating an SSH keys 
+
+
+```{warning}
+This will generate a new SSH key pair `id_rsa` and `id_rsa.pub` in the `~/.ssh` directory.
+It will overwrite existing ones. So, if you already have an SSH key pair, you should back up 
+them before generating a new one.
+```
 
 - Open your terminal and enter the following command. Change the `your_email@gmail.com`
   to your own email address or other comments.
