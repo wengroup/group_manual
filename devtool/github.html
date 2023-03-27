@@ -174,6 +174,11 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="ssh.html">
+   SSH
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="git.html">
    Git
   </a>
@@ -504,22 +509,13 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="github">
-<h1>GitHub<a class="headerlink" href="#github" title="Permalink to this headline">#</a></h1>
+<span id="label-github"></span><h1>GitHub<a class="headerlink" href="#github" title="Permalink to this headline">#</a></h1>
 <p>GitHub is a web-based platform that provides tools for version control and collaborative software development. It allows developers to host their code repositories online, track changes to code over time, and work together with others on the same codebase.</p>
 <section id="generating-an-ssh-key">
 <h2>Generating an SSH key<a class="headerlink" href="#generating-an-ssh-key" title="Permalink to this headline">#</a></h2>
-<ul class="simple">
-<li><p>Open your terminal and enter the following command. Use the rsa algorithm to generate the key because of wider support. Where you can change the your_email address to yours.</p></li>
-</ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ssh-keygen -t rsa -b 4096 -C &quot;your_email@gmail.com&quot;
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>This will start the process of generating your SSH key and you will be directed to enter a file name for the key.</p></li>
-<li><p>Press <strong>Enter</strong> to accept the default file name and location.</p></li>
-<li><p>Enter a passphrase for the key. This is optional but highly recommended for added security.</p></li>
-<li><p>Press <strong>Enter</strong> to leave it blank. Once the key is generated, you can view the public key by entering the following command in your terminal:</p></li>
-</ul>
+<p>If you haven’t already, generate an SSH key on your laptop. See <a class="reference internal" href="ssh.html#label-ssh"><span class="std std-ref">SSH</span></a> for
+instructions.</p>
+<p>You can view the public key by:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cat ~/.ssh/id_rsa.pub
 </pre></div>
 </div>
@@ -527,7 +523,7 @@ title="Print to PDF"
 <li><p>Highlight and copy the entire public key to your clipboard.</p></li>
 </ul>
 <figure class="align-default">
-<img alt="image/COPYSSH.png" src="image/COPYSSH.png" />
+<img alt="../_images/copyssh.png" src="../_images/copyssh.png" />
 </figure>
 </section>
 <section id="uploading-to-github">
@@ -560,7 +556,7 @@ title="Print to PDF"
 </pre></div>
 </div>
 <figure class="align-default">
-<img alt="../_images/SSH.png" src="../_images/SSH.png" />
+<img alt="../_images/git_clone_ssh.png" src="../_images/git_clone_ssh.png" />
 </figure>
 <ul class="simple">
 <li><p>Navigate to the cloned repository using the <strong>cd</strong> command.</p></li>
@@ -600,9 +596,9 @@ title="Print to PDF"
 <section id="pull-request">
 <h2>Pull request<a class="headerlink" href="#pull-request" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><p>Go to the repository on github and click on <strong>pull request</strong> tab
-and then click on the green <strong>New pull request button</strong>.</p></li>
+<li><p>Go to the repository on github and click on <strong>pull request</strong> tab</p></li>
 </ul>
+<p>and then click on the green <strong>New pull request button</strong>.</p>
 <figure class="align-default">
 <img alt="../_images/Pull.png" src="../_images/Pull.png" />
 </figure>
@@ -615,10 +611,7 @@ and then click on the green <strong>New pull request button</strong>.</p></li>
 <section id="more-information">
 <h2>More information<a class="headerlink" href="#more-information" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><p>Github skills<br />
-<a class="reference external" href="https://skills.github.com/">https://skills.github.com/</a></p></li>
-<li><p>Generating SSH keys:<br />
-<a class="reference external" href="https://www.flownative.com/en/documentation/guides/beach/how-to-generate-a-new-ssh-key-and-add-it-to-the-ssh-agent.html">https://www.flownative.com/en/documentation/guides/beach/how-to-generate-a-new-ssh-key-and-add-it-to-the-ssh-agent.html</a></p></li>
+<li><p><a class="reference external" href="https://skills.github.com/">Github skills</a></p></li>
 </ul>
 </section>
 </section>

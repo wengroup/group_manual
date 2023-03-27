@@ -174,6 +174,11 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../devtool/ssh.html">
+   SSH
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../devtool/git.html">
    Git
   </a>
@@ -425,6 +430,11 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#authentication-via-ssh-optional">
+   Authentication via ssh (optional)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#more-information">
    More information
   </a>
@@ -479,6 +489,11 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#authentication-via-ssh-optional">
+   Authentication via ssh (optional)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#more-information">
    More information
   </a>
@@ -526,13 +541,18 @@ In any terminal on Linux or Mac (<a class="reference external" href="https://doc
 <section id="transferring-data">
 <h2>Transferring data<a class="headerlink" href="#transferring-data" title="Permalink to this headline">#</a></h2>
 <p>Transfer a file from your laptop to Carya:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ scp /local/path/my_file.txt &lt;username&gt;@carya.rcdc.uh.edu:/remote/path
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ scp &lt;/local/path/my_file.txt&gt; &lt;username&gt;@carya.rcdc.uh.edu:&lt;/remote/path/&gt;
 </pre></div>
 </div>
+<p>Replace <code class="docutils literal notranslate"><span class="pre">&lt;/local/path/my_file.txt&gt;</span></code> by the path to your file on your laptop,
+and <code class="docutils literal notranslate"><span class="pre">&lt;/remote/path/&gt;</span></code> by the path to a directory on Carya where you want to place
+your file.</p>
 <p>Transfer a file from Carya to your laptop:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ scp &lt;username&gt;@carya.rcdc.uh.edu:/remote/path/my_file.txt /local/path
 </pre></div>
 </div>
+<p>Again, replace <code class="docutils literal notranslate"><span class="pre">&lt;/local/path&gt;</span></code> by the path to a directory on your laptop where you want to place
+your file, and <code class="docutils literal notranslate"><span class="pre">&lt;/remote/path/my_file.txt&gt;</span></code> by the path to your file on Carya.</p>
 <p>Alternatively, if you prefer a graphical user interface or want to transfer a large amount of data, <code class="docutils literal notranslate"><span class="pre">globus</span></code> is a good option. See <a class="reference external" href="https://uh.edu/rcdc/support-services/user-guide/getting-started-clusters">HPE DSI User Guide</a> for instructions. [TODO: add instructions here].</p>
 </section>
 <section id="submitting-jobs">
@@ -586,6 +606,27 @@ python<span class="w"> </span>example.py
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sbalance
 </pre></div>
 </div>
+</section>
+<section id="authentication-via-ssh-optional">
+<h2>Authentication via ssh (optional)<a class="headerlink" href="#authentication-via-ssh-optional" title="Permalink to this headline">#</a></h2>
+<p>You need to enter the CougarNet password every time you log in or use <code class="docutils literal notranslate"><span class="pre">scp</span></code>. You can
+avoid
+this by
+using ssh authentication.</p>
+<ol>
+<li><p>Generate SSH keys if you have not done so. See <a class="reference internal" href="../devtool/ssh.html#label-ssh"><span class="std std-ref">SSH</span></a> for instructions.</p></li>
+<li><p>Copy you public key (replace <code class="docutils literal notranslate"><span class="pre">&lt;username&gt;</span></code> by yours):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cat ~/.ssh/id_rsa.pub | ssh &lt;username&gt;@carya.rcdc.uh.edu &quot;mkdir -p ~/.ssh &amp;&amp; cat &gt;&gt; ~/.ssh/authorized_keys&quot;
+</pre></div>
+</div>
+<p>This copies your public key in <code class="docutils literal notranslate"><span class="pre">~/.ssh/id_rsa.pub</span></code> to the cluster, and appends it to
+<code class="docutils literal notranslate"><span class="pre">~/.ssh/authorized_keys</span></code> on the cluster. You will be asked for your password.</p>
+</li>
+</ol>
+<p>After doing this, you can log in without entering your CougarNet password.
+If you have a passphrase for your private key, you will be asked for it.
+But you can avoid this by adding your private key to the ssh-agent. See
+<a class="reference internal" href="../devtool/ssh.html#label-ssh"><span class="std std-ref">SSH</span></a> for instructions.</p>
 </section>
 <section id="more-information">
 <h2>More information<a class="headerlink" href="#more-information" title="Permalink to this headline">#</a></h2>

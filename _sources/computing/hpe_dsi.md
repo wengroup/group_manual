@@ -1,5 +1,4 @@
 (label:hpe:dsi)=
-
 # HPE DSI
 
 This page describes the basics of using the HPE Data Science Institute clusters at UH.
@@ -41,14 +40,22 @@ If you are off campus, use UH [VPN](https://uh.edu/infotech/services/computing/n
 Transfer a file from your laptop to Carya:
 
 ```
-$ scp /local/path/my_file.txt <username>@carya.rcdc.uh.edu:/remote/path
+$ scp </local/path/my_file.txt> <username>@carya.rcdc.uh.edu:</remote/path/>
 ```
+
+Replace `</local/path/my_file.txt>` by the path to your file on your laptop,
+and `</remote/path/>` by the path to a directory on Carya where you want to place 
+your file. 
+
 
 Transfer a file from Carya to your laptop:
 
 ```
 $ scp <username>@carya.rcdc.uh.edu:/remote/path/my_file.txt /local/path
 ```
+
+Again, replace `</local/path>` by the path to a directory on your laptop where you want to place
+your file, and `</remote/path/my_file.txt>` by the path to your file on Carya.
 
 Alternatively, if you prefer a graphical user interface or want to transfer a large amount of data, `globus` is a good option. See [HPE DSI User Guide](https://uh.edu/rcdc/support-services/user-guide/getting-started-clusters) for instructions. [TODO: add instructions here].
 
@@ -110,6 +117,29 @@ To check the group allocations and accounts, use
 ```
 $ sbalance
 ```
+
+## Authentication via ssh (optional)
+
+You need to enter the CougarNet password every time you log in or use `scp`. You can 
+avoid 
+this by 
+using ssh authentication. 
+1. Generate SSH keys if you have not done so. See [SSH](label:ssh) for instructions.
+
+2. Copy you public key (replace `<username>` by yours):
+
+    ```
+    $ cat ~/.ssh/id_rsa.pub | ssh <username>@carya.rcdc.uh.edu "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"
+    ```
+   This copies your public key in `~/.ssh/id_rsa.pub` to the cluster, and appends it to 
+    `~/.ssh/authorized_keys` on the cluster. You will be asked for your password.
+
+After doing this, you can log in without entering your CougarNet password.
+If you have a passphrase for your private key, you will be asked for it. 
+But you can avoid this by adding your private key to the ssh-agent. See 
+[SSH](label:ssh) for instructions.
+
+
 
 ## More information
 
