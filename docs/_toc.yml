@@ -16,12 +16,12 @@ parts:
       - file: computing/vasp.md
       - file: computing/gulp.md
       - file: computing/high_throughput.md
-      
 
   - caption: Dev Tools
     chapters:
       - file: devtool/cli.md
       - file: devtool/text_editor.md
+      - file: devtool/ssh.md
       - file: devtool/git.md
       - file: devtool/github.md
 
