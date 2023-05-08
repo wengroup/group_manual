@@ -83,10 +83,10 @@ BE EXTREMELY CAREFUL WHEN RUNNING THIS RESET COMMAND. It will wipe all existing 
 ```
 
 ```{warning}
-You typically only need to run the reset command once. DON'T redo it unless you know what your are doing.
+You typically only need to run the reset command once. DON'T redo it unless you know what you are doing.
 ```
 
-Ok, let's state this again: BE EXTREMELY CAREFUL WHEN RUNNING THIS RESET COMMAND. It will wipe all existing entries in your fireworks database in the fireworks, workflows, and launches collections. Make sure the `ht_mat` conda environment is activated and then do `$ lpad reset` to initialize your launchpad.
+OK, let's state this again: BE EXTREMELY CAREFUL WHEN RUNNING THIS RESET COMMAND. It will wipe all existing entries in your fireworks database in the fireworks, workflows, and launches collections. Make sure the `ht_mat` conda environment is activated and then do `$ lpad reset` to initialize your launchpad.
 
 ### Creating a workflow
 
