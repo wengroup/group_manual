@@ -24,4 +24,4 @@ Keep your access info, particularly `<mongo_password>` and `<minio_password>`, c
 
 ## Connecting to MongoDB
 
-You can use [Studio3T](https://studio3t.com) to connect to your MongoDB and view your calculations outputs.
+You can use [Studio3T](https://studio3t.com) to connect to your MongoDB and view your calculation outputs.
