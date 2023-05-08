@@ -27,7 +27,7 @@ Here we clone from the `https://github.com/mjwen/fireworks.git` repo, not the of
 
 ## Configuration
 
-Fireworks needs to be configured before it can work properly. For each of the file below, create it the `<CONFIG_DIR>` directory and put in the corresponding content. You will need to replace `<CONFIG_DIR>` by the full path to your config file directory, everything else in `<>` by your [MongoDB credentials](label:database).
+Fireworks needs to be configured before it can work properly. For each of the yaml files below, create it in the `<CONFIG_DIR>` directory with the corresponding content. You will need to replace `<CONFIG_DIR>` by the full path to your config file directory, and everything else in `<>` by your [MongoDB credentials](label:database).
 
 ### FW_config.yaml
 
@@ -49,7 +49,7 @@ export FW_CONFIG_FILE=<CONFIG_DIR>/FW_config.yaml
 This file specifies the database to store Fireworks lanuchpad info, and other launchpad settings.
 
 ```yaml
-host: mongodb+srv://<mongo_username>:<mongo_password>@serverlessinstance0.nisxfj9.mongodb.net/?retryWrites=true&w=majority
+host: <uri>
 name: <database>
 uri_mode: true
 logdir: null
@@ -60,7 +60,7 @@ wf_user_indices: []
 
 ### my_qadapter.yaml
 
-This file specifics how to run a job using the SLURM scheduler. You may want to adjust a few stuff (e.g. `walltime`, `ntasks`, `mem`, `pre_rocket` e.t.c.) to suit your needs.
+This file specifics how to run a job using the SLURM scheduler. You may want to adjust a few stuff (e.g. `walltime`, `ntasks`, `mem`, `pre_rocket` etc.) to suit your needs.
 
 ```yaml
 _fw_name: CommonAdapter
@@ -90,7 +90,7 @@ BE EXTREMELY CAREFUL WHEN RUNNING THIS RESET COMMAND. It will wipe all existing 
 You typically only need to run the reset command once. DON'T redo it unless you know what you are doing.
 ```
 
-OK, let's state this again: BE EXTREMELY CAREFUL WHEN RUNNING THIS RESET COMMAND. It will wipe all existing entries in your fireworks database in the fireworks, workflows, and launches collections. Make sure the `ht_mat` conda environment is activated and then do `$ lpad reset` to initialize your launchpad.
+OK, let's state this again: BE EXTREMELY CAREFUL WHEN RUNNING THIS RESET COMMAND. It will wipe all existing entries in your fireworks database in the fireworks, workflows, and launches collections. Make sure the `ht_mat` conda environment is activated and then do `$ lpad reset` to initialize/reset your launchpad.
 
 ### Creating a workflow
 
@@ -130,7 +130,7 @@ lpad get_fws -s READY
 
 ### Launching a workflow
 
-The above commands only adds the workflow to the launchpad, but the workflow hasn't been submitted for running. To run the workflow, you can use the `qlaunch` command to submit jobs using SLURM. You can use `singleshot` to submit a single job or `rapidfire` to submit multiple jobs.
+The above commands only add the workflow to the launchpad, but the workflow hasn't been submitted for running. To run the workflow, you can use the `qlaunch` command to submit jobs using SLURM. You can use `singleshot` to submit a single job or `rapidfire` to submit multiple jobs.
 
 ```{warning}
 Make sure you are in the directory you want your calculations to be run from before running the below commands. On `Carya`, do not run the commands from your home directory, instead, create a directory (e.g. `fw_launches`) in `/project/wen/<your_carya_username>/` and run the commands from there.
@@ -155,18 +155,20 @@ $ qlaunch rapidfire --nlaunches 1
 ```
 
 You may want to increase the number of launches to submit more jobs.
-Specifically, you can use `--nlaunches infinite` to keep on submit jobs without stopping (use the infinite mode with caution).
+Specifically, you can use `--nlaunches infinite` to keep submitting jobs without stop (use this mode with caution!).
 
 :::
 ::::
 
 ```{note}
-Use `$ qlaunch --help`, `$ qlaunch singleshot --help`, `$ qlaunch rapidfire --help` etc. to see more info on how to use `qlaunch`.
+Use `$ qlaunch --help`, `$ qlaunch singleshot --help`, `$ qlaunch rapidfire --help` etc. to see help message on `qlaunch`.
 ```
 
 ### Monitoring your workflow
 
-To check the status of your jobs, do
+You can use appropriate SLURM commands, e.g. `squeue` to see whether your job starts or not.
+
+Also, to check the status of your jobs, you can do
 
 ```bash
 $ lpad get_fws -s RUNNING
