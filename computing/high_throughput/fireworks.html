@@ -571,24 +571,28 @@ title="Print to PDF"
   <section class="tex2jax_ignore mathjax_ignore" id="fireworks">
 <span id="label-fireworks"></span><h1>Fireworks<a class="headerlink" href="#fireworks" title="Permalink to this headline">#</a></h1>
 <p><a class="reference external" href="https://materialsproject.github.io/fireworks">Fireworks</a> enables easy managing and executing workflows.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The below instruction is for the <code class="docutils literal notranslate"><span class="pre">Carya</span></code> cluster. It may need slight adjustments for other clusters.</p>
+</div>
 <section id="installing">
 <h2>Installing<a class="headerlink" href="#installing" title="Permalink to this headline">#</a></h2>
-<p>Let’s first clone the <code class="docutils literal notranslate"><span class="pre">fireworks</span></code> repo into the <code class="docutils literal notranslate"><span class="pre">~/Packages</span></code> directory, and then install it in the <code class="docutils literal notranslate"><span class="pre">ht_mat</span></code> conda environment.</p>
+<p>After logging into the cluster, let’s first clone the <code class="docutils literal notranslate"><span class="pre">fireworks</span></code> repo into the <code class="docutils literal notranslate"><span class="pre">~/Packages</span></code> directory, and then install it in the <code class="docutils literal notranslate"><span class="pre">ht_mat</span></code> conda environment.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>~/Packages<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>~/Packages
 $<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/mjwen/fireworks.git
 $<span class="w"> </span>conda<span class="w"> </span>activate<span class="w"> </span>ht_mat
 $<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>fireworks
 </pre></div>
 </div>
-<p>Note, here we clone from the <code class="docutils literal notranslate"><span class="pre">https://github.com/mjwen/fireworks.git</span></code> repo, not the official repo, because we need to use the <code class="docutils literal notranslate"><span class="pre">uri_mode</span></code> for MongoDB Atlas URI. Once <a class="reference external" href="https://github.com/materialsproject/fireworks/pull/494">this PR</a> is merged, we can use the official repo.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>See <a class="reference internal" href="atomate2.html#label-atomate2"><span class="std std-ref">Atomate2 Workflows</span></a> for what <code class="docutils literal notranslate"><span class="pre">ht_mat</span></code> and <code class="docutils literal notranslate"><span class="pre">&lt;CONFIG_DIR&gt;</span></code> (to be used) are.</p>
+</div>
+<p>Here we clone from the <code class="docutils literal notranslate"><span class="pre">https://github.com/mjwen/fireworks.git</span></code> repo, not the official repo, because we need to use the <code class="docutils literal notranslate"><span class="pre">uri_mode</span></code> for MongoDB Atlas URI. Once <a class="reference external" href="https://github.com/materialsproject/fireworks/pull/494">this PR</a> is merged, we can use the official repo.</p>
 </section>
 <section id="configuration">
 <h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">#</a></h2>
 <p>Fireworks needs to be configured before it can work properly. For each of the file below, create it the <code class="docutils literal notranslate"><span class="pre">&lt;CONFIG_DIR&gt;</span></code> directory and put in the corresponding content. You will need to replace <code class="docutils literal notranslate"><span class="pre">&lt;CONFIG_DIR&gt;</span></code> by the full path to your config file directory, everything else in <code class="docutils literal notranslate"><span class="pre">&lt;&gt;</span></code> by your <a class="reference internal" href="database.html#label-database"><span class="std std-ref">MongoDB credentials</span></a>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>See <a class="reference internal" href="atomate2.html#label-atomate2"><span class="std std-ref">Atomate2 Workflows</span></a> for what your <code class="docutils literal notranslate"><span class="pre">&lt;CONFIG_DIR&gt;</span></code> is.</p>
-</div>
 <section id="fw-config-yaml">
 <h3>FW_config.yaml<a class="headerlink" href="#fw-config-yaml" title="Permalink to this headline">#</a></h3>
 <p>This file specifics fireworks configurations.</p>
@@ -684,16 +688,16 @@ $<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </sp
 <h3>Launching a workflow<a class="headerlink" href="#launching-a-workflow" title="Permalink to this headline">#</a></h3>
 <p>The above commands only adds the workflow to the launchpad, but the workflow hasn’t been submitted for running. To run the workflow, you can use the <code class="docutils literal notranslate"><span class="pre">qlaunch</span></code> command to submit jobs using SLURM. You can use <code class="docutils literal notranslate"><span class="pre">singleshot</span></code> to submit a single job or <code class="docutils literal notranslate"><span class="pre">rapidfire</span></code> to submit multiple jobs.</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="1fb59ce1-a4f3-4099-81ab-860206f71d4e" name="2cba1a57-a7bc-4777-b85c-567de557f658" type="radio">
-</input><label class="sd-tab-label" for="1fb59ce1-a4f3-4099-81ab-860206f71d4e">
+<input checked="checked" id="6e67e042-1513-4b50-ad20-fa426352acbd" name="34dbb90c-f0e5-4c16-a77d-f146178549c5" type="radio">
+</input><label class="sd-tab-label" for="6e67e042-1513-4b50-ad20-fa426352acbd">
 singleshot</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>activate<span class="w"> </span>ht_mat<span class="w">   </span><span class="c1"># can be ignored if already activated</span>
 $<span class="w"> </span>qlaunch<span class="w"> </span>singleshot
 </pre></div>
 </div>
 </div>
-<input id="25db5143-5f91-42e4-8aaf-4a248a45fdde" name="2cba1a57-a7bc-4777-b85c-567de557f658" type="radio">
-</input><label class="sd-tab-label" for="25db5143-5f91-42e4-8aaf-4a248a45fdde">
+<input id="62d8cd88-9e4c-4ac7-86e5-7bb147606821" name="34dbb90c-f0e5-4c16-a77d-f146178549c5" type="radio">
+</input><label class="sd-tab-label" for="62d8cd88-9e4c-4ac7-86e5-7bb147606821">
 rapidfire</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>activate<span class="w"> </span>ht_mat<span class="w">   </span><span class="c1"># can be ignored if already activated</span>
 qlaunch<span class="w"> </span>rapidfire<span class="w"> </span>--nlaunches<span class="w"> </span><span class="m">1</span>
