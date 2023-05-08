@@ -151,7 +151,7 @@ $ qlaunch singleshot
 
 ```bash
 $ conda activate ht_mat   # can be ignored if already activated
-qlaunch rapidfire --nlaunches 1
+$ qlaunch rapidfire --nlaunches 1
 ```
 
 You may want to increase the number of launches to submit more jobs.
