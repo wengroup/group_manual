@@ -68,7 +68,7 @@ _fw_q_type: SLURM
 rocket_launch: rlaunch singleshot
 nodes: 1
 ntasks: 24
-walltime: 0-00:30:00
+walltime: 0-01:00:00
 account: wen
 job_name: fw_job
 # mem: 50GB
@@ -131,6 +131,10 @@ lpad get_fws -s READY
 ### Launching a workflow
 
 The above commands only adds the workflow to the launchpad, but the workflow hasn't been submitted for running. To run the workflow, you can use the `qlaunch` command to submit jobs using SLURM. You can use `singleshot` to submit a single job or `rapidfire` to submit multiple jobs.
+
+```{warning}
+Make sure you are in the directory you want your calculations to be run from before running the below commands. On `Carya`, do not run the commands from your home directory, instead, create a directory (e.g. `fw_launches`) in `/project/wen/<your_carya_username>/` and run the commands from there.
+```
 
 ::::{tab-set}
 
