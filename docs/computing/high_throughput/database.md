@@ -4,7 +4,7 @@
 
 ## Getting new databases
 
-We use MongoDB and MinIO to orchestrate the calculations and store the results. Ask Mingjian to create a MongoDB on Mongo Atlas and a MinIO bucket hosted at HPE DSI. You will get your MongoDB and MinIO bucket info like:
+We use MongoDB and MinIO to orchestrate the calculations and store the results. Ask Mingjian to create for you a MongoDB on Mongo Atlas and a MinIO bucket hosted at HPE DSI. You will get your MongoDB and MinIO bucket info like:
 
 ```yaml
 # MongoDB
