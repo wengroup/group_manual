@@ -2,7 +2,7 @@
 
 # Atomate2 Workflows
 
-This guide discusses the steps to configure computational workflows on HPCs, mainly [pymatgen](https://pymatgen.org), [jobflow](https://github.com/materialsproject/jobflow), [atomate2](https://materialsproject.github.io/atomate2/) and other related packages.
+This guide discusses the steps to configure computational workflows on HPCs, mainly using [pymatgen](https://pymatgen.org), [jobflow](https://github.com/materialsproject/jobflow), [atomate2](https://materialsproject.github.io/atomate2/) and other related packages.
 
 ```{note}
 The below instruction is for the `Carya` cluster. It may need slight adjustments for other clusters.
@@ -14,7 +14,7 @@ Make sure to have your [database credentials](label:database) ready before movin
 
 ## Setting up a conda environment
 
-Log into the cluster, and then create a conda:
+Log into the cluster, and then create a conda environment:
 
 ```bash
 $ conda create --name ht_mat
@@ -88,7 +88,7 @@ Replace all info in bracket `<>` by your MongoDB and MinIO access credentials. F
 
 ### atomate2.yaml
 
-This file specifics atomate2 settings, the commands to run VASP, updating VASP INCAR parameters, and the maximum allowed number of custodian errors. You can see the full list of available settings in the [Atomate2Settings](https://materialsproject.github.io/atomate2/reference/atomate2.settings.Atomate2Settings.html#atomate2.settings.Atomate2Settings) docs.
+This file specifics atomate2 settings, the commands to run VASP, update of VASP INCAR parameters, and the maximum allowed number of custodian errors, etc. You can see the full list of available settings in the [Atomate2Settings](https://materialsproject.github.io/atomate2/reference/atomate2.settings.Atomate2Settings.html#atomate2.settings.Atomate2Settings) docs.
 For now we just config the commands used to run VASP.
 
 Create an `atomate2.yaml` file in the `<CONFIG_DIR>` directory with the below content:
@@ -100,7 +100,7 @@ VASP_GAMMA_CMD: mpirun --bind-to core vasp_gam
 
 ### Setting environment variables
 
-The last thing is to set environment variables to point to these files so that the joflow and atomate2 can find them.
+The last thing is to set environment variables to point to these files so that joflow and atomate2 can find them.
 
 Edit your `~/.bashrc` file and add the below two lines:
 

@@ -556,7 +556,7 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="atomate2-workflows">
 <span id="label-atomate2"></span><h1>Atomate2 Workflows<a class="headerlink" href="#atomate2-workflows" title="Permalink to this headline">#</a></h1>
-<p>This guide discusses the steps to configure computational workflows on HPCs, mainly <a class="reference external" href="https://pymatgen.org">pymatgen</a>, <a class="reference external" href="https://github.com/materialsproject/jobflow">jobflow</a>, <a class="reference external" href="https://materialsproject.github.io/atomate2/">atomate2</a> and other related packages.</p>
+<p>This guide discusses the steps to configure computational workflows on HPCs, mainly using <a class="reference external" href="https://pymatgen.org">pymatgen</a>, <a class="reference external" href="https://github.com/materialsproject/jobflow">jobflow</a>, <a class="reference external" href="https://materialsproject.github.io/atomate2/">atomate2</a> and other related packages.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The below instruction is for the <code class="docutils literal notranslate"><span class="pre">Carya</span></code> cluster. It may need slight adjustments for other clusters.</p>
@@ -567,7 +567,7 @@ title="Print to PDF"
 </div>
 <section id="setting-up-a-conda-environment">
 <h2>Setting up a conda environment<a class="headerlink" href="#setting-up-a-conda-environment" title="Permalink to this headline">#</a></h2>
-<p>Log into the cluster, and then create a conda:</p>
+<p>Log into the cluster, and then create a conda environment:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>create<span class="w"> </span>--name<span class="w"> </span>ht_mat
 </pre></div>
 </div>
@@ -628,7 +628,7 @@ $<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>ht_co
 </section>
 <section id="atomate2-yaml">
 <h3>atomate2.yaml<a class="headerlink" href="#atomate2-yaml" title="Permalink to this headline">#</a></h3>
-<p>This file specifics atomate2 settings, the commands to run VASP, updating VASP INCAR parameters, and the maximum allowed number of custodian errors. You can see the full list of available settings in the <a class="reference external" href="https://materialsproject.github.io/atomate2/reference/atomate2.settings.Atomate2Settings.html#atomate2.settings.Atomate2Settings">Atomate2Settings</a> docs.
+<p>This file specifics atomate2 settings, the commands to run VASP, update of VASP INCAR parameters, and the maximum allowed number of custodian errors, etc. You can see the full list of available settings in the <a class="reference external" href="https://materialsproject.github.io/atomate2/reference/atomate2.settings.Atomate2Settings.html#atomate2.settings.Atomate2Settings">Atomate2Settings</a> docs.
 For now we just config the commands used to run VASP.</p>
 <p>Create an <code class="docutils literal notranslate"><span class="pre">atomate2.yaml</span></code> file in the <code class="docutils literal notranslate"><span class="pre">&lt;CONFIG_DIR&gt;</span></code> directory with the below content:</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">VASP_CMD</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mpirun --bind-to core vasp_std</span>
@@ -638,7 +638,7 @@ For now we just config the commands used to run VASP.</p>
 </section>
 <section id="setting-environment-variables">
 <h3>Setting environment variables<a class="headerlink" href="#setting-environment-variables" title="Permalink to this headline">#</a></h3>
-<p>The last thing is to set environment variables to point to these files so that the joflow and atomate2 can find them.</p>
+<p>The last thing is to set environment variables to point to these files so that joflow and atomate2 can find them.</p>
 <p>Edit your <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code> file and add the below two lines:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">JOBFLOW_CONFIG_FILE</span><span class="o">=</span>&lt;CONFIG_DIR&gt;/jobflow.yaml
 <span class="nb">export</span><span class="w"> </span><span class="nv">ATOMATE2_CONFIG_FILE</span><span class="o">=</span>&lt;CONFIG_DIR&gt;/atomate2.yaml
