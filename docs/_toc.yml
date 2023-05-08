@@ -15,7 +15,11 @@ parts:
       - file: computing/conda.md
       - file: computing/vasp.md
       - file: computing/gulp.md
-      - file: computing/high_throughput.md
+      - file: computing/high_throughput/index.md
+        sections:
+          - file: computing/high_throughput/database.md
+          - file: computing/high_throughput/atomate2.md
+          - file: computing/high_throughput/fireworks.md
 
   - caption: Dev Tools
     chapters:
