@@ -452,6 +452,28 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#running-a-flow">
    Running a flow
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#initializing-launchpad">
+     Initializing launchpad
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#creating-a-workflow">
+     Creating a workflow
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#launching-a-workflow">
+     Launching a workflow
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#monitoring-your-workflow">
+     Monitoring your workflow
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#more-information">
@@ -508,6 +530,28 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#running-a-flow">
    Running a flow
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#initializing-launchpad">
+     Initializing launchpad
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#creating-a-workflow">
+     Creating a workflow
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#launching-a-workflow">
+     Launching a workflow
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#monitoring-your-workflow">
+     Monitoring your workflow
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#more-information">
@@ -592,10 +636,97 @@ $<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </sp
 </section>
 <section id="running-a-flow">
 <h2>Running a flow<a class="headerlink" href="#running-a-flow" title="Permalink to this headline">#</a></h2>
+<section id="initializing-launchpad">
+<h3>Initializing launchpad<a class="headerlink" href="#initializing-launchpad" title="Permalink to this headline">#</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>BE EXTREMELY CAREFUL WHEN RUNNING THIS RESET COMMAND. It will wipe all existing entries in your fireworks database in the fireworks, workflows, and launches collections.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>You typically only need to run the reset command once. DON’T redo it unless you know what your are doing.</p>
+</div>
+<p>Ok, let’s state this again: BE EXTREMELY CAREFUL WHEN RUNNING THIS RESET COMMAND. It will wipe all existing entries in your fireworks database in the fireworks, workflows, and launches collections. Make sure the <code class="docutils literal notranslate"><span class="pre">ht_mat</span></code> conda environment is activated and then do <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">lpad</span> <span class="pre">reset</span></code> to initialize your launchpad.</p>
+</section>
+<section id="creating-a-workflow">
+<h3>Creating a workflow<a class="headerlink" href="#creating-a-workflow" title="Permalink to this headline">#</a></h3>
+<p>Create a file named <code class="docutils literal notranslate"><span class="pre">example_flow.py</span></code> and put in it:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">fireworks</span> <span class="kn">import</span> <span class="n">LaunchPad</span>
+<span class="kn">from</span> <span class="nn">atomate2.vasp.flows.core</span> <span class="kn">import</span> <span class="n">RelaxBandStructureMaker</span>
+<span class="kn">from</span> <span class="nn">jobflow.managers.fireworks</span> <span class="kn">import</span> <span class="n">flow_to_workflow</span>
+<span class="kn">from</span> <span class="nn">pymatgen.core</span> <span class="kn">import</span> <span class="n">Structure</span>
+
+<span class="c1"># construct a rock salt MgO structure</span>
+<span class="n">mgo_structure</span> <span class="o">=</span> <span class="n">Structure</span><span class="p">(</span>
+    <span class="n">lattice</span><span class="o">=</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">2.13</span><span class="p">,</span> <span class="mf">2.13</span><span class="p">],</span> <span class="p">[</span><span class="mf">2.13</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">2.13</span><span class="p">],</span> <span class="p">[</span><span class="mf">2.13</span><span class="p">,</span> <span class="mf">2.13</span><span class="p">,</span> <span class="mi">0</span><span class="p">]],</span>
+    <span class="n">species</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Mg&quot;</span><span class="p">,</span> <span class="s2">&quot;O&quot;</span><span class="p">],</span>
+    <span class="n">coords</span><span class="o">=</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">]],</span>
+<span class="p">)</span>
+
+<span class="c1"># make a band structure flow to optimise the structure and obtain the band structure</span>
+<span class="n">bandstructure_flow</span> <span class="o">=</span> <span class="n">RelaxBandStructureMaker</span><span class="p">()</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="n">mgo_structure</span><span class="p">)</span>
+
+<span class="c1"># convert the flow to a fireworks WorkFlow object</span>
+<span class="n">wf</span> <span class="o">=</span> <span class="n">flow_to_workflow</span><span class="p">(</span><span class="n">bandstructure_flow</span><span class="p">)</span>
+
+<span class="c1"># submit the workflow to the FireWorks launchpad</span>
+<span class="n">lpad</span> <span class="o">=</span> <span class="n">LaunchPad</span><span class="o">.</span><span class="n">auto_load</span><span class="p">()</span>
+<span class="n">lpad</span><span class="o">.</span><span class="n">add_wf</span><span class="p">(</span><span class="n">wf</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Then you can add it to your fireworks launchpad by <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">python</span> <span class="pre">example_flow.py</span></code>.</p>
+<p>You can verify that it is added by:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>lpad<span class="w"> </span>get_fws<span class="w"> </span>-s<span class="w"> </span>READY
+</pre></div>
+</div>
+</section>
+<section id="launching-a-workflow">
+<h3>Launching a workflow<a class="headerlink" href="#launching-a-workflow" title="Permalink to this headline">#</a></h3>
+<p>The above commands only adds the workflow to the launchpad, but the workflow hasn’t been submitted for running. To run the workflow, you can use the <code class="docutils literal notranslate"><span class="pre">qlaunch</span></code> command to submit jobs using SLURM. You can use <code class="docutils literal notranslate"><span class="pre">singleshot</span></code> to submit a single job or <code class="docutils literal notranslate"><span class="pre">rapidfire</span></code> to submit multiple jobs.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="30fc3ec0-ed0b-486a-abfe-9d5bba0ff92d" name="a77a6e01-9cfa-4923-9971-3e8684a5cc01" type="radio">
+</input><label class="sd-tab-label" for="30fc3ec0-ed0b-486a-abfe-9d5bba0ff92d">
+singleshot</label><div class="sd-tab-content docutils">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>activate<span class="w"> </span>ht_mat<span class="w">   </span><span class="c1"># can be ignored if already activated</span>
+$<span class="w"> </span>qlaunch<span class="w"> </span>singleshot
+</pre></div>
+</div>
+</div>
+<input id="9b76d4e2-f520-4ee7-a463-ca4b5f07fd03" name="a77a6e01-9cfa-4923-9971-3e8684a5cc01" type="radio">
+</input><label class="sd-tab-label" for="9b76d4e2-f520-4ee7-a463-ca4b5f07fd03">
+rapidfire</label><div class="sd-tab-content docutils">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>activate<span class="w"> </span>ht_mat<span class="w">   </span><span class="c1"># can be ignored if already activated</span>
+qlaunch<span class="w"> </span>rapidfire<span class="w"> </span>--nlaunches<span class="w"> </span><span class="m">1</span>
+</pre></div>
+</div>
+<p>You may want to increase the number of launches to submit more jobs.
+Specifically, you can use <code class="docutils literal notranslate"><span class="pre">--nlaunches</span> <span class="pre">infinite</span></code> to keep on submit jobs without stopping (use the infinite mode with caution).</p>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">qlaunch</span> <span class="pre">--help</span></code>, <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">qlaunch</span> <span class="pre">singleshot</span> <span class="pre">--help</span></code>, <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">qlaunch</span> <span class="pre">rapidfire</span> <span class="pre">--help</span></code> etc. to see more info on how to use <code class="docutils literal notranslate"><span class="pre">qlaunch</span></code>.</p>
+</div>
+</section>
+<section id="monitoring-your-workflow">
+<h3>Monitoring your workflow<a class="headerlink" href="#monitoring-your-workflow" title="Permalink to this headline">#</a></h3>
+<p>To check the status of your jobs, do</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>lpad<span class="w"> </span>get_fws<span class="w"> </span>-s<span class="w"> </span>RUNNING
+</pre></div>
+</div>
+<p>Alternatively, you can use a Web GUI to monitor the status of your workflows. To enable this, follow the above <code class="docutils literal notranslate"><span class="pre">Installing</span></code> and <code class="docutils literal notranslate"><span class="pre">Configuration</span></code> steps to set it up on your laptop (not on the cluster). Then</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ lpad webgui  # on a local terminal not connected to the cluster
+</pre></div>
+</div>
+<p>will open a tab in our web browser to show the status of your workflows.</p>
+</section>
 </section>
 <section id="more-information">
 <h2>More information<a class="headerlink" href="#more-information" title="Permalink to this headline">#</a></h2>
-<p>atomate2 documentation: <a class="reference external" href="https://materialsproject.github.io/atomate2/">https://materialsproject.github.io/atomate2/</a></p>
+<ul class="simple">
+<li><p>Fireworks documentation: <a class="reference external" href="https://materialsproject.github.io/fireworks">https://materialsproject.github.io/fireworks</a></p></li>
+<li><p>Persson group handbook (note, this is for atomate1 workflow, but many things are the same for atomate2): <a class="reference external" href="https://materialsproject.gitbook.io/persson-group-handbook/computing/atomate-setup">https://materialsproject.gitbook.io/persson-group-handbook/computing/atomate-setup</a></p></li>
+</ul>
 </section>
 </section>
 
