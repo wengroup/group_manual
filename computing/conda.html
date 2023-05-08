@@ -151,10 +151,32 @@ const thebe_selector_output = ".output, .cell_output"
    GULP
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="high_throughput.html">
-   High-throughput Computing
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="high_throughput/index.html">
+   High Throughput
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="high_throughput/database.html">
+     Database
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="high_throughput/atomate2.html">
+     Atomate2 Workflows
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="high_throughput/fireworks.html">
+     Fireworks
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -566,8 +588,8 @@ title="Print to PDF"
 <section id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">#</a></h2>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="ca249470-8e17-4348-bc13-9459ee90fea5" name="630290db-e9ff-49c2-92bf-640669cf8510" type="radio">
-</input><label class="sd-tab-label" for="ca249470-8e17-4348-bc13-9459ee90fea5">
+<input checked="checked" id="44693ca0-52de-485e-9261-fee4fc64df20" name="1069a2aa-a0ab-4eb8-bc61-b8ec08ff8fe5" type="radio">
+</input><label class="sd-tab-label" for="44693ca0-52de-485e-9261-fee4fc64df20">
 On macOS</label><div class="sd-tab-content docutils">
 <p>Conda is not installed on macOS by default. To install it, first do</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ curl https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-arm64.sh -o conda_installer.sh
@@ -599,8 +621,8 @@ To confirm it’s successfully installed, do <code class="docutils literal notra
 <p>This works for Apple M1 chip. For more installing options (e.g. for Intel chip), see the <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">miniconda doc</a>.</p>
 </div>
 </div>
-<input id="04d5dc9a-18b3-4347-9861-e9f0334db253" name="630290db-e9ff-49c2-92bf-640669cf8510" type="radio">
-</input><label class="sd-tab-label" for="04d5dc9a-18b3-4347-9861-e9f0334db253">
+<input id="f861c6da-6314-497b-883b-6f1d8e20998e" name="1069a2aa-a0ab-4eb8-bc61-b8ec08ff8fe5" type="radio">
+</input><label class="sd-tab-label" for="f861c6da-6314-497b-883b-6f1d8e20998e">
 On Carya</label><div class="sd-tab-content docutils">
 <p>On the HPE DSI carya clusters, <code class="docutils literal notranslate"><span class="pre">conda</span></code> is already installed, but it is not on <code class="docutils literal notranslate"><span class="pre">PATH</span></code> by default. When you run <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">conda</span></code>, you will get an error like <code class="docutils literal notranslate"><span class="pre">-bash:</span> <span class="pre">conda:</span> <span class="pre">command</span> <span class="pre">not</span> <span class="pre">found</span></code>.</p>
 <p>To get it on <code class="docutils literal notranslate"><span class="pre">PATH</span></code>, do:</p>

@@ -151,10 +151,32 @@ const thebe_selector_output = ".output, .cell_output"
    GULP
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="high_throughput.html">
-   High-throughput Computing
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="high_throughput/index.html">
+   High Throughput
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="high_throughput/database.html">
+     Database
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="high_throughput/atomate2.html">
+     Atomate2 Workflows
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="high_throughput/fireworks.html">
+     Fireworks
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -491,8 +513,8 @@ title="Print to PDF"
 <h3>Run a first VASP jobs<a class="headerlink" href="#run-a-first-vasp-jobs" title="Permalink to this headline">#</a></h3>
 <p>The example performs a relaxation of a Si diamond structure. First, create a directory and put into it the below three files. The names of the files should <code class="docutils literal notranslate"><span class="pre">INCAR</span></code>, <code class="docutils literal notranslate"><span class="pre">POSCAR</span></code> and <code class="docutils literal notranslate"><span class="pre">POTCAR</span></code>.</p>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="057355b3-a94e-403b-af5b-ebc87e71daec" name="e5ee96c4-4e28-460f-9c25-d3b8fa2716c5" type="radio">
-</input><label class="sd-tab-label" for="057355b3-a94e-403b-af5b-ebc87e71daec">
+<input checked="checked" id="5b6e02ae-170a-4cda-95fd-f20395c36418" name="b1ec6727-7f24-4743-bb6f-fbe7c0f4ba58" type="radio">
+</input><label class="sd-tab-label" for="5b6e02ae-170a-4cda-95fd-f20395c36418">
 INCAR</label><div class="sd-tab-content docutils">
 <p>INCAR is the central input file of VASP.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">IBRION</span> <span class="o">=</span> <span class="mi">2</span>
@@ -510,8 +532,8 @@ INCAR</label><div class="sd-tab-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="261064a3-e6bc-4146-a1f7-c3724d210819" name="e5ee96c4-4e28-460f-9c25-d3b8fa2716c5" type="radio">
-</input><label class="sd-tab-label" for="261064a3-e6bc-4146-a1f7-c3724d210819">
+<input id="42fd39ea-8d9f-44d3-9b53-5a04d52fc3e0" name="b1ec6727-7f24-4743-bb6f-fbe7c0f4ba58" type="radio">
+</input><label class="sd-tab-label" for="42fd39ea-8d9f-44d3-9b53-5a04d52fc3e0">
 POSCAR</label><div class="sd-tab-content docutils">
 <p>POSCAR gives the atomic structure of the material.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Diamond</span> <span class="n">silicon</span> <span class="n">structure</span>
@@ -527,8 +549,8 @@ POSCAR</label><div class="sd-tab-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="3a2ab3f8-7abd-483d-b6c1-17b733e5a83b" name="e5ee96c4-4e28-460f-9c25-d3b8fa2716c5" type="radio">
-</input><label class="sd-tab-label" for="3a2ab3f8-7abd-483d-b6c1-17b733e5a83b">
+<input id="0b5509dc-a2b9-43e4-ae64-91dca4f4d436" name="b1ec6727-7f24-4743-bb6f-fbe7c0f4ba58" type="radio">
+</input><label class="sd-tab-label" for="0b5509dc-a2b9-43e4-ae64-91dca4f4d436">
 POTCAR</label><div class="sd-tab-content docutils">
 <p>POTCAR gives the pseudopotential.</p>
 <p>POTCAR is proprietary, and we cannot list it publicly. To get it, on <code class="docutils literal notranslate"><span class="pre">Carya</span></code>, copy <code class="docutils literal notranslate"><span class="pre">/project/wen/commons/vasp/pp/potpaw_PBE_54/Si/POTCAR</span></code> to your directory.</p>
