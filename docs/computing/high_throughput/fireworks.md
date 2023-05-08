@@ -76,6 +76,103 @@ pre_rocket: |
 
 ## Running a flow
 
+### Initializing launchpad
+
+```{warning}
+BE EXTREMELY CAREFUL WHEN RUNNING THIS RESET COMMAND. It will wipe all existing entries in your fireworks database in the fireworks, workflows, and launches collections.
+```
+
+```{warning}
+You typically only need to run the reset command once. DON'T redo it unless you know what your are doing.
+```
+
+Ok, let's state this again: BE EXTREMELY CAREFUL WHEN RUNNING THIS RESET COMMAND. It will wipe all existing entries in your fireworks database in the fireworks, workflows, and launches collections. Make sure the `ht_mat` conda environment is activated and then do `$ lpad reset` to initialize your launchpad.
+
+### Creating a workflow
+
+Create a file named `example_flow.py` and put in it:
+
+```python
+from fireworks import LaunchPad
+from atomate2.vasp.flows.core import RelaxBandStructureMaker
+from jobflow.managers.fireworks import flow_to_workflow
+from pymatgen.core import Structure
+
+# construct a rock salt MgO structure
+mgo_structure = Structure(
+    lattice=[[0, 2.13, 2.13], [2.13, 0, 2.13], [2.13, 2.13, 0]],
+    species=["Mg", "O"],
+    coords=[[0, 0, 0], [0.5, 0.5, 0.5]],
+)
+
+# make a band structure flow to optimise the structure and obtain the band structure
+bandstructure_flow = RelaxBandStructureMaker().make(mgo_structure)
+
+# convert the flow to a fireworks WorkFlow object
+wf = flow_to_workflow(bandstructure_flow)
+
+# submit the workflow to the FireWorks launchpad
+lpad = LaunchPad.auto_load()
+lpad.add_wf(wf)
+```
+
+Then you can add it to your fireworks launchpad by `$ python example_flow.py`.
+
+You can verify that it is added by:
+
+```bash
+lpad get_fws -s READY
+```
+
+### Launching a workflow
+
+The above commands only adds the workflow to the launchpad, but the workflow hasn't been submitted for running. To run the workflow, you can use the `qlaunch` command to submit jobs using SLURM. You can use `singleshot` to submit a single job or `rapidfire` to submit multiple jobs.
+
+::::{tab-set}
+
+:::{tab-item} singleshot
+
+```bash
+$ conda activate ht_mat   # can be ignored if already activated
+$ qlaunch singleshot
+```
+
+:::
+
+:::{tab-item} rapidfire
+
+```bash
+$ conda activate ht_mat   # can be ignored if already activated
+qlaunch rapidfire --nlaunches 1
+```
+
+You may want to increase the number of launches to submit more jobs.
+Specifically, you can use `--nlaunches infinite` to keep on submit jobs without stopping (use the infinite mode with caution).
+
+:::
+::::
+
+```{note}
+Use `$ qlaunch --help`, `$ qlaunch singleshot --help`, `$ qlaunch rapidfire --help` etc. to see more info on how to use `qlaunch`.
+```
+
+### Monitoring your workflow
+
+To check the status of your jobs, do
+
+```bash
+$ lpad get_fws -s RUNNING
+```
+
+Alternatively, you can use a Web GUI to monitor the status of your workflows. To enable this, follow the above `Installing` and `Configuration` steps to set it up on your laptop (not on the cluster). Then
+
+```
+$ lpad webgui  # on a local terminal not connected to the cluster
+```
+
+will open a tab in our web browser to show the status of your workflows.
+
 ## More information
 
-atomate2 documentation: https://materialsproject.github.io/atomate2/
+- Fireworks documentation: https://materialsproject.github.io/fireworks
+- Persson group handbook (note, this is for atomate1 workflow, but many things are the same for atomate2): https://materialsproject.gitbook.io/persson-group-handbook/computing/atomate-setup
