@@ -4,9 +4,13 @@
 
 [Fireworks](https://materialsproject.github.io/fireworks) enables easy managing and executing workflows.
 
+```{note}
+The below instruction is for the `Carya` cluster. It may need slight adjustments for other clusters.
+```
+
 ## Installing
 
-Let's first clone the `fireworks` repo into the `~/Packages` directory, and then install it in the `ht_mat` conda environment.
+After logging into the cluster, let's first clone the `fireworks` repo into the `~/Packages` directory, and then install it in the `ht_mat` conda environment.
 
 ```bash
 $ mkdir -p ~/Packages && cd ~/Packages
@@ -15,15 +19,15 @@ $ conda activate ht_mat
 $ pip install -e fireworks
 ```
 
-Note, here we clone from the `https://github.com/mjwen/fireworks.git` repo, not the official repo, because we need to use the `uri_mode` for MongoDB Atlas URI. Once [this PR](https://github.com/materialsproject/fireworks/pull/494) is merged, we can use the official repo.
+```{note}
+See [Atomate2 Workflows](label:atomate2) for what `ht_mat` and `<CONFIG_DIR>` (to be used) are.
+```
+
+Here we clone from the `https://github.com/mjwen/fireworks.git` repo, not the official repo, because we need to use the `uri_mode` for MongoDB Atlas URI. Once [this PR](https://github.com/materialsproject/fireworks/pull/494) is merged, we can use the official repo.
 
 ## Configuration
 
 Fireworks needs to be configured before it can work properly. For each of the file below, create it the `<CONFIG_DIR>` directory and put in the corresponding content. You will need to replace `<CONFIG_DIR>` by the full path to your config file directory, everything else in `<>` by your [MongoDB credentials](label:database).
-
-```{note}
-See [Atomate2 Workflows](label:atomate2) for what your `<CONFIG_DIR>` is.
-```
 
 ### FW_config.yaml
 

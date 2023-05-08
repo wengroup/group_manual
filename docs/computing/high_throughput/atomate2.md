@@ -14,7 +14,7 @@ Make sure to have your [database credentials](label:database) ready before movin
 
 ## Setting up a conda environment
 
-Create a conda:
+Log into the cluster, and then create a conda:
 
 ```bash
 $ conda create --name ht_mat
