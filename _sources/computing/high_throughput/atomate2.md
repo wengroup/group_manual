@@ -73,12 +73,14 @@ JOB_STORE:
       type: S3Store
       endpoint_url: http://10.2.1.14:9000
       bucket: <minio_bucket_name>
+      key: blob_uuid
       compress: true
       index:
         type: MongoURIStore
         uri: <uri>
         database: <database>
         collection_name: jobflow_minio_index
+        key: blob_uuid
       s3_profile:
         aws_access_key_id: <minio_username>
         aws_secret_access_key: <minio_password>
