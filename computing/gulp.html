@@ -426,78 +426,69 @@ title="Print to PDF"
   <section class="tex2jax_ignore mathjax_ignore" id="gulp">
 <h1>GULP<a class="headerlink" href="#gulp" title="Permalink to this headline">#</a></h1>
 <p>This memo discusses the steps to download, install, and use GULP on <code class="docutils literal notranslate"><span class="pre">Carya</span></code>.</p>
-<ol class="simple">
+<ol>
 <li><p>Navigate to the GULP download page by visiting this <a class="reference external" href="https://gulp.curtin.edu.au/download.html">link</a>.</p></li>
-<li><p>Input your Cougarnet email address in the following format to request GULP:</p></li>
-</ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">username</span><span class="o">&gt;</span><span class="nd">@cougarnet</span><span class="o">.</span><span class="n">uh</span><span class="o">.</span><span class="n">edu</span>
-</pre></div>
-</div>
-<ol class="simple">
+<li><p>Input your Cougarnet email address in to request GULP.</p></li>
 <li><p>After submitting your email, you should receive an email containing a .tgz file. Download this file to your local device.</p></li>
-<li><p>Now, log into your Carya account. There, create a new directory named “gulp” on the</p></li>
-</ol>
+<li><p>Now, log into your Carya account. There, create a new directory named “gulp” on the</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">project</span><span class="o">/</span><span class="n">wen</span><span class="o">/&lt;</span><span class="n">your_username</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<p>If you have not create this before check conda environment page, changing environment directory. You can achieve this by using the command:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ mkdir gulp
+</li>
+</ol>
+<p>If you have not created this before check conda environment page, changing environment directory. You can achieve this by using the command:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>```
+$ mkdir gulp
+```
 </pre></div>
 </div>
-<ol class="simple">
-<li><p>Next, transfer the .tgz file you downloaded from your local device to the newly created ‘gulp’ directory on Carya using</p></li>
-</ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">scp</span> <span class="o">&lt;/</span><span class="n">local</span><span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">gulp</span><span class="o">.</span><span class="n">tgz</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">your_username</span><span class="o">&gt;</span><span class="nd">@carya</span><span class="o">.</span><span class="n">rcdc</span><span class="o">.</span><span class="n">uh</span><span class="o">.</span><span class="n">edu</span><span class="p">:</span><span class="o">/</span><span class="n">project</span><span class="o">/</span><span class="n">wen</span><span class="o">/&lt;</span><span class="n">your_username</span><span class="o">&gt;</span>
+<ol>
+<li><p>Next, transfer the .tgz file you downloaded from your local device to the newly created ‘gulp’ directory on Carya using</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ scp &lt;/local/path/gulp.tgz&gt; &lt;your_username&gt;@carya.rcdc.uh.edu:/project/wen/&lt;your_username&gt;
 </pre></div>
 </div>
-<ol class="simple">
-<li><p>Once you have the .tgz file in the correct location, use this command to load python and miniconda.</p></li>
-</ol>
+</li>
+<li><p>Once you have the .tgz file in the correct location, use this command to load python and miniconda.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ module load python
 </pre></div>
 </div>
-<ol class="simple">
-<li><p>Then create a new environment named ‘gulp_env’ by executing:</p></li>
-</ol>
+</li>
+<li><p>Then create a new environment named ‘gulp_env’ by executing:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ conda create -n gulp_env
 </pre></div>
 </div>
-<ol class="simple">
-<li><p>After creating the environment, activate it by entering:</p></li>
-</ol>
+</li>
+<li><p>After creating the environment, activate it by entering:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ conda activate gulp_env
 </pre></div>
 </div>
-<ol class="simple">
-<li><p>Now, install the <code class="docutils literal notranslate"><span class="pre">Scalapack</span></code> package to your active Conda environment by typing:</p></li>
-</ol>
+</li>
+<li><p>Now, install the <code class="docutils literal notranslate"><span class="pre">Scalapack</span></code> package to your active Conda environment by typing:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ conda install -c conda-forge scalapack
 </pre></div>
 </div>
-<ol class="simple">
-<li><p>With Scalapack installed, extract the contents of the .tgz file by using the command:</p></li>
-</ol>
+</li>
+<li><p>With Scalapack installed, extract the contents of the .tgz file by using the command:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ tar -xvf &lt;tgz file name&gt;
 </pre></div>
 </div>
-<ol class="simple">
-<li><p>Navigate to the <code class="docutils literal notranslate"><span class="pre">Src</span></code> directory in the extracted <code class="docutils literal notranslate"><span class="pre">gulp-6.1.2</span></code> folder by typing:</p></li>
-</ol>
+</li>
+<li><p>Navigate to the <code class="docutils literal notranslate"><span class="pre">Src</span></code> directory in the extracted <code class="docutils literal notranslate"><span class="pre">gulp-6.1.2</span></code> folder by typing:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cd gulp-6.1.2/Src
 </pre></div>
 </div>
-<ol class="simple">
-<li><p>In this directory, compile the required files using gfortran with the command:</p></li>
-</ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">mkgulp_old_gfortran</span>
+</li>
+<li><p>In this directory, compile the required files using gfortran with the command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ./mkgulp_old_gfortran
 </pre></div>
 </div>
-<ol class="simple">
-<li><p>To run GULP you will have to execute the gulp file in Src directory by doing</p></li>
-</ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">project</span><span class="o">/</span><span class="n">wen</span><span class="o">/&lt;</span><span class="n">your_username</span><span class="o">&gt;/</span><span class="n">gulp</span><span class="o">-</span><span class="mf">6.1.2</span><span class="o">/</span><span class="n">Src</span><span class="o">/</span><span class="n">gulp</span>
+</li>
+<li><p>To run GULP you will have to execute the gulp file in Src directory by doing</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ /project/wen/&lt;your_username&gt;/gulp-6.1.2/Src/gulp
 </pre></div>
 </div>
+</li>
+</ol>
 <p>This requires the typing of the full path to the <code class="docutils literal notranslate"><span class="pre">gulp</span></code> executable, which is
 cumbersome. To avoid this, you can edit <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code> to append the path to the
 directory of the executable to the <code class="docutils literal notranslate"><span class="pre">PATH</span></code> variable or create an alias there.
