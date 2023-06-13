@@ -3,34 +3,34 @@
 This memo discusses the steps to download, install, and use GULP on `Carya`.
 
 1. Navigate to the GULP download page by visiting this [link](https://gulp.curtin.edu.au/download.html).
-2. Input your Cougarnet email address in to request GULP.
+2. Input your university issued email (e.g. CougarNet email) to request for GULP.
 
 3. After submitting your email, you should receive an email containing a .tgz file. Download this file to your local device.
-4. Now, log into your Carya account. There, create a new directory named "gulp" on the
+4. Now, log into your Carya account. There, create a new directory named `gulp` in the below location:
 
    ```
    /project/wen/<your_username>
    ```
 
-If you have not created this before check conda environment page, changing environment directory. You can achieve this by using the command:
+   If you have not created this before, you can achieve this by using the command:
 
-    ```
-    $ mkdir gulp
-    ```
+   ```
+   $ mkdir gulp
+   ```
 
-5. Next, transfer the .tgz file you downloaded from your local device to the newly created 'gulp' directory on Carya using
+5. Next, transfer the .tgz file you downloaded from your local device to the newly created `gulp` directory on Carya using
 
    ```
    $ scp </local/path/gulp.tgz> <your_username>@carya.rcdc.uh.edu:/project/wen/<your_username>
    ```
 
-6. Once you have the .tgz file in the correct location, use this command to load python and miniconda.
+6. Once you have the .tgz file in the correct location, use this command to load python and conda.
 
    ```
    $ module load python
    ```
 
-7. Then create a new environment named 'gulp_env' by executing:
+7. Then create a new environment named `gulp_env` by executing:
 
    ```
    $ conda create -n gulp_env
