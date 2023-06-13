@@ -1,0 +1,7 @@
+(label:software)=
+
+# Software
+
+```{tableofcontents}
+
+```

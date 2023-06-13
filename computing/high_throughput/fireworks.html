@@ -141,22 +141,34 @@ const thebe_selector_output = ".output, .cell_output"
    Conda Environment
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../vasp.html">
-   VASP
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../software/index.html">
+   Software
   </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../gulp.html">
-   GULP
-  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../software/vasp.html">
+     VASP
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../software/gulp.html">
+     GULP
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="index.html">
    High Throughput
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -692,16 +704,16 @@ $<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </sp
 <p>Make sure you are in the directory you want your calculations to be run from before running the below commands. On <code class="docutils literal notranslate"><span class="pre">Carya</span></code>, do not run the commands from your home directory, instead, create a directory (e.g. <code class="docutils literal notranslate"><span class="pre">fw_launches</span></code>) in <code class="docutils literal notranslate"><span class="pre">/project/wen/&lt;your_carya_username&gt;/</span></code> and run the commands from there.</p>
 </div>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="51ca3e6a-9f1a-4ecd-aa68-c641a200d1f8" name="8822df2f-c62a-46da-ad3d-efd19e029174" type="radio">
-</input><label class="sd-tab-label" for="51ca3e6a-9f1a-4ecd-aa68-c641a200d1f8">
+<input checked="checked" id="11d9ec3d-2b2e-4d35-8160-a4ca7576bff0" name="281ea69f-e909-4178-9267-235b14e896b8" type="radio">
+</input><label class="sd-tab-label" for="11d9ec3d-2b2e-4d35-8160-a4ca7576bff0">
 singleshot</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>activate<span class="w"> </span>ht_mat<span class="w">   </span><span class="c1"># can be ignored if already activated</span>
 $<span class="w"> </span>qlaunch<span class="w"> </span>singleshot
 </pre></div>
 </div>
 </div>
-<input id="a8cbbc66-3a0b-436e-b612-1cea3d2a1f64" name="8822df2f-c62a-46da-ad3d-efd19e029174" type="radio">
-</input><label class="sd-tab-label" for="a8cbbc66-3a0b-436e-b612-1cea3d2a1f64">
+<input id="9458dbf5-eeec-4316-b2ec-865726a1e2e8" name="281ea69f-e909-4178-9267-235b14e896b8" type="radio">
+</input><label class="sd-tab-label" for="9458dbf5-eeec-4316-b2ec-865726a1e2e8">
 rapidfire</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>activate<span class="w"> </span>ht_mat<span class="w">   </span><span class="c1"># can be ignored if already activated</span>
 $<span class="w"> </span>qlaunch<span class="w"> </span>rapidfire<span class="w"> </span>--nlaunches<span class="w"> </span><span class="m">1</span>

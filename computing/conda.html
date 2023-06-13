@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="VASP" href="vasp.html" />
+    <link rel="next" title="Software" href="software/index.html" />
     <link rel="prev" title="HPE DSI" href="hpe_dsi.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -141,22 +141,34 @@ const thebe_selector_output = ".output, .cell_output"
    Conda Environment
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="vasp.html">
-   VASP
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="software/index.html">
+   Software
   </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="gulp.html">
-   GULP
-  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="software/vasp.html">
+     VASP
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="software/gulp.html">
+     GULP
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="high_throughput/index.html">
    High Throughput
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -588,8 +600,8 @@ title="Print to PDF"
 <section id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">#</a></h2>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="c9ca00a2-1acc-4ead-814b-2c1cdd272153" name="adc60a0f-fe17-4761-9340-ed38c69e58e3" type="radio">
-</input><label class="sd-tab-label" for="c9ca00a2-1acc-4ead-814b-2c1cdd272153">
+<input checked="checked" id="dc8bac16-cfe6-423b-9998-33f801624e94" name="a71e957e-be69-489c-a3a2-2ba3f011288b" type="radio">
+</input><label class="sd-tab-label" for="dc8bac16-cfe6-423b-9998-33f801624e94">
 On macOS</label><div class="sd-tab-content docutils">
 <p>Conda is not installed on macOS by default. To install it, first do</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ curl https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-arm64.sh -o conda_installer.sh
@@ -621,8 +633,8 @@ To confirm it’s successfully installed, do <code class="docutils literal notra
 <p>This works for Apple M1 chip. For more installing options (e.g. for Intel chip), see the <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">miniconda doc</a>.</p>
 </div>
 </div>
-<input id="c8a0c4e3-4625-432a-b3a4-0f299b169dd1" name="adc60a0f-fe17-4761-9340-ed38c69e58e3" type="radio">
-</input><label class="sd-tab-label" for="c8a0c4e3-4625-432a-b3a4-0f299b169dd1">
+<input id="4fcd3347-1c37-4001-920c-6ac87a7407a1" name="a71e957e-be69-489c-a3a2-2ba3f011288b" type="radio">
+</input><label class="sd-tab-label" for="4fcd3347-1c37-4001-920c-6ac87a7407a1">
 On Carya</label><div class="sd-tab-content docutils">
 <p>On the HPE DSI carya clusters, <code class="docutils literal notranslate"><span class="pre">conda</span></code> is already installed, but it is not on <code class="docutils literal notranslate"><span class="pre">PATH</span></code> by default. When you run <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">conda</span></code>, you will get an error like <code class="docutils literal notranslate"><span class="pre">-bash:</span> <span class="pre">conda:</span> <span class="pre">command</span> <span class="pre">not</span> <span class="pre">found</span></code>.</p>
 <p>To get it on <code class="docutils literal notranslate"><span class="pre">PATH</span></code>, do:</p>
@@ -800,10 +812,10 @@ $ mkdir conda &amp;&amp; mkdir conda/envs
             <p class="prev-next-title">HPE DSI</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="vasp.html" title="next page">
+    <a class='right-next' id="next-link" href="software/index.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">VASP</p>
+        <p class="prev-next-title">Software</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
