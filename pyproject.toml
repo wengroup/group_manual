@@ -11,10 +11,10 @@ requires-python = ">=3.9"
 authors = [{name = "The Wen Group", email = "mjwengroup@gmail.com"}]
 dynamic = ["version"]
 dependencies = [
-    "jupyter-book==0.13.0",
-    "ipython==8.4.0",
-    "autodoc_pydantic==1.6.2",
-    "sphinx-autodoc-typehints==1.18.3"
+    "jupyter-book",
+    "ipython",
+    "autodoc_pydantic",
+    "sphinx-autodoc-typehints"
 ]
 
 
