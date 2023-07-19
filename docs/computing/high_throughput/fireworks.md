@@ -44,6 +44,11 @@ Also, edit `~/.bashrc` and add:
 export FW_CONFIG_FILE=<CONFIG_DIR>/FW_config.yaml
 ```
 
+Don't forget to source it after editing, so that the modification will be effective in the current shell:
+```bash
+source ~/.bashrc
+```
+
 ### my_launchpad.yaml
 
 This file specifies the database to store Fireworks lanuchpad info, and other launchpad settings.
