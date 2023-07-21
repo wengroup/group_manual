@@ -3,12 +3,12 @@
 
 
 
-## Generating an SSH keys 
+## Generating an SSH keys
 
 
 ```{warning}
 This will generate a new SSH key pair `id_rsa` and `id_rsa.pub` in the `~/.ssh` directory.
-It will overwrite existing ones. So, if you already have an SSH key pair, you should back up 
+It will overwrite existing ones. So, if you already have an SSH key pair, you should backup
 them before generating a new one.
 ```
 
@@ -17,10 +17,10 @@ them before generating a new one.
 ```
 $ ssh-keygen -t rsa -b 4096 -C "your_email@gmail.com"
 ```
-- This will start the process of generating your SSH key and you will be directed to enter a file name for the key.   
-- Press **Enter** to accept the default file names (`id_rsa` for the private key and 
-  `id_rsa.pub` for the public key) and the default location (`~/.ssh` directory).  
-- Enter a passphrase for the key. This is optional but highly recommended for added 
+- This will start the process of generating your SSH key and you will be directed to enter a file name for the key.
+- Press **Enter** to accept the default file names (`id_rsa` for the private key and
+  `id_rsa.pub` for the public key) and the default location (`~/.ssh` directory).
+- Enter a passphrase for the key. This is optional but highly recommended for added
   security.(Pressing **Enter** to leave it blank will not use any passphrase.)
 
 Don't share with others your private key at `~/.ssh/id_rsa` and passphrase.
