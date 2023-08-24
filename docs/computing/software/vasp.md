@@ -65,7 +65,7 @@ direct
 :::{tab-item} POTCAR
 POTCAR gives the pseudopotential.
 
-POTCAR is proprietary, and we cannot list it publicly. To get it, on `Carya`, copy `/project/wen/commons/vasp/pp/potpaw_PBE_54/Si/POTCAR` to your directory.
+POTCAR is proprietary, and we cannot list it publicly. To get it, on `Carya`, copy `/project/wen/commons/vasp/pp/POT_GGA_PAW_PBE_54/Si/POTCAR` to your directory.
 
 :::
 ::::
