@@ -12,10 +12,10 @@ Frequently we need a specific configuration and package versions for one project
 
 Conda is not installed on macOS by default. To install it, first do
 
-```
-$ curl https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-arm64.sh -o conda_installer.sh
+```shell
+curl https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-arm64.sh -o conda_installer.sh
 
-$ bash conda_installer.sh
+bash conda_installer.sh
 ```
 
 Then follow the instructions on your screen, basically:
@@ -46,14 +46,14 @@ This works for Apple M1 chip. For more installing options (e.g. for Intel chip),
 
 :::
 
-:::{tab-item} On Carya
+:::{tab-item} On HPE DSI clusters
 
-On the HPE DSI carya clusters, `conda` is already installed, but it is not on `PATH` by default. When you run `$ conda`, you will get an error like `-bash: conda: command not found`.
+On the HPE DSI clusters (e.g. carya and sabine), `conda` is already installed, but it is not on `PATH` by default. When you run `$ conda`, you will get an error like `-bash: conda: command not found`.
 
 To get it on `PATH`, do:
 
-```
-$ module load python
+```shell
+module load python
 ```
 
 ```{tip}
@@ -67,16 +67,16 @@ You can add the above line to your `~/.bashrc`. Then it will be automatically lo
 
 Once conda is installed, create a new environment using the below command. In this example, we create an environment named `my_env` (you can create multiple environments with different names).
 
-```
-$ conda create --name my_env
+```shell
+conda create --name my_env
 ```
 
 ## Using a conda environment
 
 To use the `my_env` conda environment, first activate it by:
 
-```
-$ conda activate my_env
+```shell
+conda activate my_env
 ```
 
 When you run this for the first time, you may see something like
@@ -98,33 +98,33 @@ Currently supported shells are:
 
 Then, you need to do
 
-```
-$ conda init bash
-$ source ~/.bashrc
+```shell
+conda init bash
+source ~/.bashrc
 ```
 
 Note, you just need to run the above two commands once; it will modify the `~/.bashrc` file to automatically configure for later usage.
 
 ### Installing packages
 
-Then, you can install packages into this environment. In this example, we install Python version 3.9.7.
+Then, you can install packages into this environment. In this example, we install Python version 3.10
 
-```
-$ conda install python=3.9.7
+```shell
+conda install python=3.10
 ```
 
 ### Listing packages in your environment
 
-```
-$ conda list
+```shell
+conda list
 ```
 
 ### Listing available environment
 
 If you have created multiple environments, you can get a list of them by:
 
-```
-$ conda env list
+```shell
+conda env list
 ```
 
 ## Mamba (optional)
@@ -135,8 +135,8 @@ Conda is great, but it can be slow. For example, it can take a long time to down
 
 Once you have activated your conda environment, e.g. `conda activate my_env`, you can install mamba into the `my_env` environment via conda
 
-```
-$ conda install -c conda-forge mamba
+```shell
+conda install -c conda-forge mamba
 ```
 
 ```{note}
@@ -147,8 +147,8 @@ We add the `-c conda-forge` to install the `mamba` packages from the `conda-forg
 
 You can use `mamba` to do pretty much everything that `conda` can do by replacing the `conda` command by the `mamba` command. For example, you can install `pymatgen` via
 
-```
-$ mamba install -c conda-forge pymatgen
+```shell
+mamba install -c conda-forge pymatgen
 ```
 
 ## Changing default conda settings (optional)
@@ -168,30 +168,30 @@ You should have access to our group project directory, i.e. `/project/wen`, whic
 
 First, create a directory under your username.
 
-```
-$ cd /project/wen
-$ mkdir <username>   # change <username> to your HPE DSI user name
+```shell
+cd /project/wen
+mkdir <username>   # change <username> to your HPE DSI user name
 ```
 
 **Note**, all `<username>` below needs to be changed to yours.
 
 Within your directory, create a directory to store conda environment. In this example, we create a directory `/home/wen/<username>/conda/envs`) to store the environments:
 
-```
-$ cd <username>
-$ mkdir conda && mkdir conda/envs
+```shell
+cd <username>
+mkdir conda && mkdir conda/envs
 ```
 
 Then, config conda to prepend to `envs_dirs` the directory we've just created:
 
-```
-$ conda config --prepend envs_dirs /project/wen/<username>/conda/envs
+```shell
+conda config --prepend envs_dirs /project/wen/<username>/conda/envs
 ```
 
 This is all you need to do. To ensure it's successful, let's check it by
 
-```
-$ conda config --show
+```shell
+conda config --show
 ```
 
 This will generate a lot of output, but you will find something like:
@@ -211,8 +211,8 @@ Alternatively, you can open `~/.condarc` to see all the changes you've made. You
 
 Similarly, by default, when you install a package, it will first be downloaded to a place in your `$HOME`, i.e. `/home/<username>/.conda/pkgs`). You can change the default package storage directory as well to avoid out-of-quota problems.
 
-```
-$ conda config --prepend pkgs_dirs /tmp
+```shell
+conda config --prepend pkgs_dirs /tmp
 ```
 
 In this case, we set it to the `/tmp` directory to avoid using our group project space.
