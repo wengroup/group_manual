@@ -11,21 +11,25 @@ If you have never used HPE DSI clusters, first request an account at https://uh.
 - Principal Investigator (PI): Mingjian Wen
 - PI Email address: mjwen@uh.edu
 - Grant information: N/A
-- Please select the Resource (Cluster): Carya
+- Please select the Resource (Cluster): `Carya` or `Sabine` # Check with Mingjian on which cluster to use
 - Please select your login shell: Bash
 
 You will receive an email shortly after submitting your request, which contains the login information such as your `username` (called `Login name` in the email).
+
+```{tip}
+For all the below sections, replace `<username>` by your username. And replace `<clustername>` by either `carya` or `sabine` depending on which cluster you are using.
+```
 
 ## Logging into the system
 
 You need to use `ssh` to log into the cluster.
 In any terminal on Linux or Mac ([Linux subsystem](https://docs.microsoft.com/en-us/windows/wsl/) can be installed on Windows), type
 
-```
-$ ssh <username>@carya.rcdc.uh.edu
+```shell
+ssh <username>@<clustername>.rcdc.uh.edu
 ```
 
-Replace `<username>` by yours, press `Enter` and then provide your CougarNet credentials to login.
+Replace `<username>` by yours and replace `<clustername>` by the corresponding cluster name. press `Enter` and then provide your CougarNet credentials to login.
 
 ```{tip}
 The clusters can be accessed via the `UHSecure` not the `UHGuest` network. If you cannot log in and see error message like `ssh: connect to host carya.rcdc.uh.edu port 22: Operation timed out`, check your Wi-Fi connection.
@@ -35,10 +39,10 @@ If you are off campus, use UH [VPN](https://uh.edu/infotech/services/computing/n
 
 ## Transferring data
 
-Transfer a file from your laptop to Carya:
+Transfer a file from your laptop to the cluster:
 
-```
-$ scp </local/path/my_file.txt> <username>@carya.rcdc.uh.edu:</remote/path/>
+```shell
+scp </local/path/my_file.txt> <username>@<clustername>.rcdc.uh.edu:</remote/path/>
 ```
 
 Replace `</local/path/my_file.txt>` by the path to your file on your laptop,
@@ -47,8 +51,8 @@ your file.
 
 Transfer a file from Carya to your laptop:
 
-```
-$ scp <username>@carya.rcdc.uh.edu:/remote/path/my_file.txt /local/path
+```shell
+scp <username>@<cluster>.rcdc.uh.edu:/remote/path/my_file.txt /local/path
 ```
 
 Again, replace `</local/path>` by the path to a directory on your laptop where you want to place
@@ -124,8 +128,8 @@ avoid this by using ssh authentication.
 
 2. Copy you public key (replace `<username>` by yours):
 
-   ```
-   $ cat ~/.ssh/id_rsa.pub | ssh <username>@carya.rcdc.uh.edu "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"
+   ```shell
+   $ cat ~/.ssh/id_rsa.pub | ssh <username>@<clustername>.rcdc.uh.edu "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"
    ```
 
    This copies your public key in `~/.ssh/id_rsa.pub` to the cluster, and appends it to
