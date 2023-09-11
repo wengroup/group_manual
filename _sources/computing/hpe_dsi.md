@@ -52,7 +52,7 @@ your file.
 Transfer a file from Carya to your laptop:
 
 ```shell
-scp <username>@<cluster>.rcdc.uh.edu:/remote/path/my_file.txt /local/path
+scp <username>@<clustername>.rcdc.uh.edu:/remote/path/my_file.txt /local/path
 ```
 
 Again, replace `</local/path>` by the path to a directory on your laptop where you want to place
