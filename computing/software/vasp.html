@@ -393,12 +393,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vasp-on-carya">VASP on Carya</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-access-to-vasp">Getting access to VASP</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#run-a-first-vasp-jobs">Run a first VASP jobs</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vasp-data-files">VASP data files</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-access-to-vasp">Getting access to VASP</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-a-first-vasp-jobs">Run a first VASP jobs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vasp-data-files">VASP data files</a></li>
 </ul>
             </nav>
         </div>
@@ -412,22 +409,24 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="vasp">
 <h1>VASP<a class="headerlink" href="#vasp" title="Permalink to this heading">#</a></h1>
-<section id="vasp-on-carya">
-<h2>VASP on Carya<a class="headerlink" href="#vasp-on-carya" title="Permalink to this heading">#</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The below instructions apply to the HPE DSI <code class="docutils literal notranslate"><span class="pre">Carya</span></code> and <code class="docutils literal notranslate"><span class="pre">Sabine</span></code> clusters.</p>
+</div>
 <section id="getting-access-to-vasp">
-<h3>Getting access to VASP<a class="headerlink" href="#getting-access-to-vasp" title="Permalink to this heading">#</a></h3>
+<h2>Getting access to VASP<a class="headerlink" href="#getting-access-to-vasp" title="Permalink to this heading">#</a></h2>
 <p>To check the available VASP modules, do</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ module avail vasp
 </pre></div>
 </div>
 <p>Then select one from the list and load it, e.g.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ module load vasp-wen/6.3.2
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ module load vasp-wen/6.4.2
 </pre></div>
 </div>
 </section>
 <section id="run-a-first-vasp-jobs">
-<h3>Run a first VASP jobs<a class="headerlink" href="#run-a-first-vasp-jobs" title="Permalink to this heading">#</a></h3>
-<p>The example performs a relaxation of a Si diamond structure. First, create a directory and put into it the below three files. The names of the files should <code class="docutils literal notranslate"><span class="pre">INCAR</span></code>, <code class="docutils literal notranslate"><span class="pre">POSCAR</span></code> and <code class="docutils literal notranslate"><span class="pre">POTCAR</span></code>.</p>
+<h2>Run a first VASP jobs<a class="headerlink" href="#run-a-first-vasp-jobs" title="Permalink to this heading">#</a></h2>
+<p>The example performs a relaxation of a Si diamond structure. First, create a directory and put into it the below three files. The names of the files should <code class="docutils literal notranslate"><span class="pre">INCAR</span></code>, <code class="docutils literal notranslate"><span class="pre">POSCAR</span></code> <code class="docutils literal notranslate"><span class="pre">KPOINTS</span></code>, and <code class="docutils literal notranslate"><span class="pre">POTCAR</span></code>.</p>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-0">
@@ -438,13 +437,11 @@ INCAR</label><div class="sd-tab-content docutils">
 <span class="n">NELM</span> <span class="o">=</span> <span class="mi">200</span>
 <span class="n">PREC</span> <span class="o">=</span> <span class="n">Accurate</span>
 <span class="n">ALGO</span> <span class="o">=</span> <span class="n">Normal</span>
-<span class="n">ENCUT</span> <span class="o">=</span> <span class="mi">500</span>
+<span class="n">ENCUT</span> <span class="o">=</span> <span class="mi">520</span>
 <span class="n">EDIFF</span> <span class="o">=</span> <span class="mf">1e-5</span>
 <span class="n">ISIF</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="n">ISMEAR</span> <span class="o">=</span> <span class="o">-</span><span class="mi">5</span>
 <span class="n">SIGMA</span> <span class="o">=</span> <span class="mf">0.2</span>
-<span class="n">ISPIN</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="n">KSPACING</span> <span class="o">=</span> <span class="mf">0.22</span>
 </pre></div>
 </div>
 </div>
@@ -467,12 +464,29 @@ POSCAR</label><div class="sd-tab-content docutils">
 </div>
 <input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-2">
+KPOINTS</label><div class="sd-tab-content docutils">
+<p>KPOINTS gives the Bloch vectors to sample the Brillouin zone.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<span class="n">k</span> <span class="n">grid</span> <span class="n">mesh</span>
+<span class="mi">0</span>
+<span class="n">Gamma</span>
+<span class="mi">4</span> <span class="mi">4</span> <span class="mi">4</span>
+
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-3">
 POTCAR</label><div class="sd-tab-content docutils">
 <p>POTCAR gives the pseudopotential.</p>
-<p>POTCAR is proprietary, and we cannot list it publicly. To get it, on <code class="docutils literal notranslate"><span class="pre">Carya</span></code>, copy <code class="docutils literal notranslate"><span class="pre">/project/wen/commons/vasp/pp/POT_GGA_PAW_PBE_54/Si/POTCAR</span></code> to your directory.</p>
+<p>POTCAR is proprietary, and we cannot list it publicly. To get it, on <code class="docutils literal notranslate"><span class="pre">Carya</span></code> or <code class="docutils literal notranslate"><span class="pre">Sabine</span></code>, copy <code class="docutils literal notranslate"><span class="pre">/project/wen/commons/vasp/pp/POT_GGA_PAW_PBE_54/Si/POTCAR</span></code> to your directory.</p>
 </div>
 </div>
 <p>Then, in the directory, submit the job using the below Slurm script.</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-4" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-4">
+Sabine</label><div class="sd-tab-content docutils">
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash -l</span>
 
 <span class="c1">#SBATCH --job-name=vasp_job</span>
@@ -482,21 +496,47 @@ POTCAR</label><div class="sd-tab-content docutils">
 <span class="c1">#SBATCH --ntasks=24</span>
 <span class="c1">#SBATCH --mem=50GB  # max 189 GB</span>
 
-module<span class="w"> </span>load<span class="w"> </span>vasp-wen/6.3.2
+<span class="c1">#SBATCH --exclusive</span>
+
+module<span class="w"> </span>load<span class="w"> </span>vasp-wen/6.4.2
 
 mpirun<span class="w"> </span>-n<span class="w"> </span><span class="m">24</span><span class="w"> </span>--bind-to<span class="w"> </span>core<span class="w"> </span>vasp_std
 </pre></div>
 </div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Don’t forget to add the <code class="docutils literal notranslate"><span class="pre">#SBATCH</span> <span class="pre">--exclusive</span></code> line, otherwise your MPI job will fail if other users are trying to run MPI jobs on the same node.
+This is not needed on <code class="docutils literal notranslate"><span class="pre">Carya</span></code>.</p>
+</div>
+</div>
+<input id="sd-tab-item-5" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-5">
+Carya</label><div class="sd-tab-content docutils">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash -l</span>
+
+<span class="c1">#SBATCH --job-name=vasp_job</span>
+<span class="c1">#SBATCH --account=wen</span>
+<span class="c1">#SBATCH --time=01:00:00</span>
+<span class="c1">#SBATCH --nodes=1</span>
+<span class="c1">#SBATCH --ntasks=24</span>
+<span class="c1">#SBATCH --mem=50GB  # max 189 GB</span>
+
+module<span class="w"> </span>load<span class="w"> </span>vasp-wen/6.4.2
+
+mpirun<span class="w"> </span>-n<span class="w"> </span><span class="m">24</span><span class="w"> </span>--bind-to<span class="w"> </span>core<span class="w"> </span>vasp_std
+</pre></div>
+</div>
+</div>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>In some other tutorials, you may find that in addition to the above three, another <code class="docutils literal notranslate"><span class="pre">KPOINT</span></code> filed is provided to specify the meshes in the reciprocal space. Here, we use an alternative approach by providing the <code class="docutils literal notranslate"><span class="pre">KSPACING</span></code> value in the <code class="docutils literal notranslate"><span class="pre">INCAR</span></code> file.</p>
+<p>In some other tutorials, instead of using the <code class="docutils literal notranslate"><span class="pre">KPOINTS</span></code> file, you can add a  <code class="docutils literal notranslate"><span class="pre">KSPACING</span></code> value in the <code class="docutils literal notranslate"><span class="pre">INCAR</span></code> file to automatically generate the k-points mesh.</p>
 </div>
 </section>
 <section id="vasp-data-files">
-<h3>VASP data files<a class="headerlink" href="#vasp-data-files" title="Permalink to this heading">#</a></h3>
+<h2>VASP data files<a class="headerlink" href="#vasp-data-files" title="Permalink to this heading">#</a></h2>
 <p>Pseudopotentials are located at: <code class="docutils literal notranslate"><span class="pre">/project/wen/commons/vasp/pp</span></code></p>
 <p>Vdw kernels are located at: <code class="docutils literal notranslate"><span class="pre">/project/wen/commons/vasp/vdw_kernel</span></code></p>
-</section>
 </section>
 </section>
 
@@ -567,12 +607,9 @@ mpirun<span class="w"> </span>-n<span class="w"> </span><span class="m">24</span
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vasp-on-carya">VASP on Carya</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-access-to-vasp">Getting access to VASP</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#run-a-first-vasp-jobs">Run a first VASP jobs</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vasp-data-files">VASP data files</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-access-to-vasp">Getting access to VASP</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#run-a-first-vasp-jobs">Run a first VASP jobs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vasp-data-files">VASP data files</a></li>
 </ul>
   </nav></div>
 

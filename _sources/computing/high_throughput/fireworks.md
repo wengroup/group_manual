@@ -45,8 +45,9 @@ export FW_CONFIG_FILE=<CONFIG_DIR>/FW_config.yaml
 ```
 
 Don't forget to source it after editing, so that the modification will be effective in the current shell:
+
 ```bash
-source ~/.bashrc
+$ source ~/.bashrc
 ```
 
 ### my_launchpad.yaml
@@ -79,7 +80,7 @@ job_name: fw_job
 # mem: 50GB
 signal: SIGINT@60
 pre_rocket: |
-  module load vasp-wen/6.3.2
+  module load vasp-wen/6.4.2
   conda activate ht_mat
 ```
 

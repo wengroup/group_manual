@@ -1,6 +1,8 @@
 # VASP
 
-## VASP on Carya
+```{warning}
+The below instructions apply to the HPE DSI `Carya` and `Sabine` clusters.
+```
 
 ### Getting access to VASP
 
@@ -13,12 +15,12 @@ $ module avail vasp
 Then select one from the list and load it, e.g.
 
 ```
-$ module load vasp-wen/6.3.2
+$ module load vasp-wen/6.4.2
 ```
 
 ### Run a first VASP jobs
 
-The example performs a relaxation of a Si diamond structure. First, create a directory and put into it the below three files. The names of the files should `INCAR`, `POSCAR` and `POTCAR`.
+The example performs a relaxation of a Si diamond structure. First, create a directory and put into it the below three files. The names of the files should `INCAR`, `POSCAR` `KPOINTS`, and `POTCAR`.
 
 ::::{tab-set}
 
@@ -32,13 +34,11 @@ NSW = 99
 NELM = 200
 PREC = Accurate
 ALGO = Normal
-ENCUT = 500
+ENCUT = 520
 EDIFF = 1e-5
 ISIF = 3
 ISMEAR = -5
 SIGMA = 0.2
-ISPIN = 2
-KSPACING = 0.22
 ```
 
 :::
@@ -62,15 +62,34 @@ direct
 
 :::
 
+:::{tab-item} KPOINTS
+
+KPOINTS gives the Bloch vectors to sample the Brillouin zone.
+
+```
+
+k grid mesh
+0
+Gamma
+4 4 4
+
+```
+
+:::
+
 :::{tab-item} POTCAR
 POTCAR gives the pseudopotential.
 
-POTCAR is proprietary, and we cannot list it publicly. To get it, on `Carya`, copy `/project/wen/commons/vasp/pp/POT_GGA_PAW_PBE_54/Si/POTCAR` to your directory.
+POTCAR is proprietary, and we cannot list it publicly. To get it, on `Carya` or `Sabine`, copy `/project/wen/commons/vasp/pp/POT_GGA_PAW_PBE_54/Si/POTCAR` to your directory.
 
 :::
 ::::
 
 Then, in the directory, submit the job using the below Slurm script.
+
+::::{tab-set}
+
+:::{tab-item} Sabine
 
 ```bash
 #!/bin/bash -l
@@ -82,13 +101,42 @@ Then, in the directory, submit the job using the below Slurm script.
 #SBATCH --ntasks=24
 #SBATCH --mem=50GB  # max 189 GB
 
-module load vasp-wen/6.3.2
+#SBATCH --exclusive
+
+module load vasp-wen/6.4.2
 
 mpirun -n 24 --bind-to core vasp_std
 ```
 
+```{warning}
+Don't forget to add the `#SBATCH --exclusive` line, otherwise your MPI job will fail if other users are trying to run MPI jobs on the same node.
+This is not needed on `Carya`.
+```
+
+:::
+
+:::{tab-item} Carya
+
+```bash
+#!/bin/bash -l
+
+#SBATCH --job-name=vasp_job
+#SBATCH --account=wen
+#SBATCH --time=01:00:00
+#SBATCH --nodes=1
+#SBATCH --ntasks=24
+#SBATCH --mem=50GB  # max 189 GB
+
+module load vasp-wen/6.4.2
+
+mpirun -n 24 --bind-to core vasp_std
+```
+
+:::
+::::
+
 ```{note}
-In some other tutorials, you may find that in addition to the above three, another `KPOINT` filed is provided to specify the meshes in the reciprocal space. Here, we use an alternative approach by providing the `KSPACING` value in the `INCAR` file.
+In some other tutorials, instead of using the `KPOINTS` file, you can add a  `KSPACING` value in the `INCAR` file to automatically generate the k-points mesh.
 ```
 
 ### VASP data files

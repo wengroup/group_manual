@@ -421,7 +421,7 @@ document.write(`
 <p>This guide discusses the steps to configure computational workflows on HPCs, mainly using <a class="reference external" href="https://pymatgen.org">pymatgen</a>, <a class="reference external" href="https://github.com/materialsproject/jobflow">jobflow</a>, <a class="reference external" href="https://materialsproject.github.io/atomate2/">atomate2</a> and other related packages.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The below instruction is for the <code class="docutils literal notranslate"><span class="pre">Carya</span></code> cluster. It may need slight adjustments for other clusters.</p>
+<p>The below instruction is for the HPE DSI <code class="docutils literal notranslate"><span class="pre">Carya</span></code> and <code class="docutils literal notranslate"><span class="pre">Sabine</span></code> cluster. It may need slight adjustments for other clusters.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -458,7 +458,7 @@ $<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>ht_co
 </pre></div>
 </div>
 <p>Let’s call this the <code class="docutils literal notranslate"><span class="pre">&lt;CONFIG_DIR&gt;</span></code>. In below, each time we use <code class="docutils literal notranslate"><span class="pre">&lt;CONFIG_DIR&gt;</span></code>, you should provide the full path, not the relative path. To get the full path, do <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">pwd</span></code>, and you should see something like:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/home/&lt;your_carya_username&gt;/ht_config_files
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/home/&lt;your_username&gt;/ht_config_files
 </pre></div>
 </div>
 <section id="jobflow-yaml">
