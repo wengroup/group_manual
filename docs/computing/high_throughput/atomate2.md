@@ -5,7 +5,7 @@
 This guide discusses the steps to configure computational workflows on HPCs, mainly using [pymatgen](https://pymatgen.org), [jobflow](https://github.com/materialsproject/jobflow), [atomate2](https://materialsproject.github.io/atomate2/) and other related packages.
 
 ```{note}
-The below instruction is for the `Carya` cluster. It may need slight adjustments for other clusters.
+The below instruction is for the HPE DSI `Carya` and `Sabine` cluster. It may need slight adjustments for other clusters.
 ```
 
 ```{note}
@@ -54,7 +54,7 @@ $ cd ht_config_files
 Let's call this the `<CONFIG_DIR>`. In below, each time we use `<CONFIG_DIR>`, you should provide the full path, not the relative path. To get the full path, do `$ pwd`, and you should see something like:
 
 ```bash
-/home/<your_carya_username>/ht_config_files
+/home/<your_username>/ht_config_files
 ```
 
 ### jobflow.yaml
