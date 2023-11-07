@@ -61,6 +61,10 @@ Let's call this the `<CONFIG_DIR>`. In below, each time we use `<CONFIG_DIR>`, y
 
 This file specifics the MongoDB and MinIO info to store your calculation outputs. Create a `jobflow.yaml` in the `<CONFIG_DIR>` directory with the below content:
 
+::::{tab-set}
+
+:::{tab-item} On Carya
+
 ```yaml
 JOB_STORE:
   docs_store:
@@ -86,7 +90,53 @@ JOB_STORE:
         aws_secret_access_key: <minio_password>
 ```
 
+```{tip}
 Replace all info in bracket `<>` by your MongoDB and MinIO access credentials. For `<uri>`, don't forget to replace `<mongo_username>` and `<mongo_password>` as well. Also, ensure the indentation is correct.
+```
+
+:::
+
+:::{tab-item} On Sabine
+
+```yaml
+JOB_STORE:
+  docs_store:
+    type: MongoURIStore
+    uri: <uri>
+    database: <database>
+    collection_name: jobflow_outputs
+  additional_stores:
+    data:
+      type: S3Store
+      bucket: <minio_bucket_name>
+      key: blob_uuid
+      compress: true
+      index:
+        type: MongoURIStore
+        uri: <uri>
+        database: <database>
+        collection_name: jobflow_minio_index
+        key: blob_uuid
+      s3_profile:
+        aws_access_key_id: <minio_username>
+        aws_secret_access_key: <minio_password>
+      ssh_tunnel:
+        type: SSHTunnel
+        tunnel_server_address: carya.rcdc.uh.edu:22
+        remote_server_address: carya-nfs12:9000
+        local_port: 9000
+        username: <CARYA_USERNAME>
+        password: <CARYA_PASSWORD>
+```
+
+```{tip}
+Replace all info in bracket `<>` by your MongoDB and MinIO access credentials. For `<uri>`, don't forget to replace `<mongo_username>` and `<mongo_password>` as well. Also, ensure the indentation is correct.
+
+Also, replace `<CARYA_USERNAME>` and `<CARYA_PASSWORD>` by your Carya (yes, not Sabine) username and login password (i.g. your Cougarnet password). This is needed to establish a SSH tunnel to Carya from Sabine to access the MinIO server.
+```
+
+:::
+::::
 
 ### atomate2.yaml
 
