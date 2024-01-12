@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>GitHub &#8212; Wen Group Manual</title>
+    <title>Using LaTeX &#8212; Wen Group Manual</title>
   
   
   
@@ -62,11 +62,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'devtool/github';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'writing/latex';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Using LaTeX" href="../writing/latex.html" />
-    <link rel="prev" title="Git" href="git.html" />
+    <link rel="next" title="Editing the Manual" href="../contributing/edit.html" />
+    <link rel="prev" title="GitHub" href="../devtool/github.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -192,16 +194,16 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Dev Tools</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="cli.html">Command Line Tool</a></li>
-<li class="toctree-l1"><a class="reference internal" href="text_editor.html">Text Editor</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ssh.html">SSH</a></li>
-<li class="toctree-l1"><a class="reference internal" href="git.html">Git</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">GitHub</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../devtool/cli.html">Command Line Tool</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../devtool/text_editor.html">Text Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../devtool/ssh.html">SSH</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../devtool/git.html">Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../devtool/github.html">GitHub</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Writing</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../writing/latex.html">Using LaTeX</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Using LaTeX</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contributing</span></p>
 <ul class="nav bd-sidenav">
@@ -278,7 +280,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/wengroup/group_manual/edit/main/docs/devtool/github.md" target="_blank"
+      <li><a href="https://github.com/wengroup/group_manual/edit/main/docs/writing/latex.md" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -295,7 +297,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/wengroup/group_manual/issues/new?title=Issue%20on%20page%20%2Fdevtool/github.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/wengroup/group_manual/issues/new?title=Issue%20on%20page%20%2Fwriting/latex.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -325,7 +327,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/devtool/github.md" target="_blank"
+      <li><a href="../_sources/writing/latex.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -409,7 +411,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>GitHub</h1>
+    <h1>Using LaTeX</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -419,14 +421,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generating-an-ssh-key">Generating an SSH key</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uploading-to-github">Uploading to GitHub</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cloning-a-repository">Cloning a repository</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#making-changes">Making changes</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#committing-changes">Committing changes</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#push-the-changes">Push the changes</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pull-request">Pull request</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#more-information">More information</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started">Getting started</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tips">Tips</a></li>
 </ul>
             </nav>
         </div>
@@ -438,111 +434,44 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="github">
-<span id="label-github"></span><h1>GitHub<a class="headerlink" href="#github" title="Permalink to this heading">#</a></h1>
-<p>GitHub is a web-based platform that provides tools for version control and collaborative software development. It allows developers to host their code repositories online, track changes to code over time, and work together with others on the same codebase.</p>
-<section id="generating-an-ssh-key">
-<h2>Generating an SSH key<a class="headerlink" href="#generating-an-ssh-key" title="Permalink to this heading">#</a></h2>
-<p>If you haven’t already, generate an SSH key on your laptop. See <a class="reference internal" href="ssh.html#label-ssh"><span class="std std-ref">SSH</span></a> for
-instructions.</p>
-<p>You can view the public key by:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cat ~/.ssh/id_rsa.pub
+  <section class="tex2jax_ignore mathjax_ignore" id="using-latex">
+<span id="label-latex"></span><h1>Using LaTeX<a class="headerlink" href="#using-latex" title="Permalink to this heading">#</a></h1>
+<p>For technical writing, we recommend <a class="reference external" href="https://en.wikipedia.org/wiki/LaTeX">LaTeX</a>, a document typesetting system.</p>
+<section id="getting-started">
+<h2>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this heading">#</a></h2>
+<p>The easiest way to get started using latex is to use <a class="reference external" href="https://www.overleaf.com/">Overleaf</a>, an online LaTeX editor. It is free to use and has a rich set of features.
+If you haven’t used Overleaf before, you can start with the <a class="reference external" href="https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes">Learn LaTeX in 30 minutes tutorial</a>.</p>
+<p>Alternatively, you can install a LaTeX distribution on your computer. See <a class="reference external" href="https://www.tug.org/mactex/">MacTeX</a> for macOS.</p>
+</section>
+<section id="tips">
+<h2>Tips<a class="headerlink" href="#tips" title="Permalink to this heading">#</a></h2>
+<p>LaTex is a powerful typesetting system, and there are a lot of customizations you can do with it. Here are some tips that we find useful.</p>
+<ol class="arabic">
+<li><p>Write each sentence in a separate line. This makes it easier to navigate long paragraphs using text editors like <code class="docutils literal notranslate"><span class="pre">vim</span></code>, also makes it easier to track changes in <code class="docutils literal notranslate"><span class="pre">git</span></code>.</p></li>
+<li><p>Label your figures, equations, tables, sections, etc. consistently. For example,</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>figure<span class="nb">}</span>
+    <span class="k">\centering</span>
+    <span class="k">\includegraphics</span><span class="nb">{</span>figures/diamond<span class="nb">_</span>crystals.pdf<span class="nb">}</span>
+    <span class="k">\caption</span><span class="nb">{</span>Crystal structure of cubic diamond.<span class="nb">}</span>
+    <span class="k">\label</span><span class="nb">{</span>fig:diamond<span class="nb">}</span>
+ <span class="k">\end</span><span class="nb">{</span>figure<span class="nb">}</span>
 </pre></div>
 </div>
-<ul class="simple">
-<li><p>Highlight and copy the entire public key to your clipboard.</p></li>
-</ul>
-<figure class="align-default">
-<img alt="../_images/copyssh.png" src="../_images/copyssh.png" />
-</figure>
-</section>
-<section id="uploading-to-github">
-<h2>Uploading to GitHub<a class="headerlink" href="#uploading-to-github" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Log in to your GitHub account and click on your profile picture in the top-right corner of the page.</p></li>
-</ul>
-<figure class="align-default">
-<img alt="../_images/Profile.png" src="../_images/Profile.png" />
-</figure>
-<ul class="simple">
-<li><p>Select <strong>Settings</strong> from the dropdown menu and in the left sidebar, click on “SSH and GPG keys”.</p></li>
-<li><p>Click on the green <strong>New SSH key</strong> button and give your SSH key a descriptive title in the <strong>Title</strong> field.</p></li>
-</ul>
-<figure class="align-default">
-<img alt="../_images/Title.png" src="../_images/Title.png" />
-</figure>
-<ul class="simple">
-<li><p>Paste the entire public key you copied earlier into the <strong>Key</strong> field and click on the green <strong>Add SSH key</strong> button.</p></li>
-<li><p>Your SSH key is now uploaded to GitHub and you can now use SSH to authenticate with GitHub and perform various Git operations.</p></li>
-</ul>
-</section>
-<section id="cloning-a-repository">
-<h2>Cloning a repository<a class="headerlink" href="#cloning-a-repository" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Open your terminal on your laptop.</p></li>
-<li><p>Clone the repository using the SSH URL. For example, if the repository URL is <code class="docutils literal notranslate"><span class="pre">git&#64;github.com:USERNAME/REPOSITORY.git</span></code>. USERNAME and REPOSITORY need to be change to your own. You can clone it by running this command:</p></li>
-</ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git clone git@github.com:USERNAME/REPOSITORY.git
+<p>It is a good practice to use the prefix <code class="docutils literal notranslate"><span class="pre">fig:</span></code> for figures, <code class="docutils literal notranslate"><span class="pre">tab:</span></code> for tables, <code class="docutils literal notranslate"><span class="pre">eq:</span></code> for equations, <code class="docutils literal notranslate"><span class="pre">sec:</span></code> for sections, etc. This makes it easier to refer to them later in the text.</p>
+</li>
+<li><p>Instead of using <code class="docutils literal notranslate"><span class="pre">\ref</span></code> to refer to figures, equations, tables, sections etc., define your onw macros to customize the reference. Put the below in the preamble of your document.</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\newcommand*</span><span class="nb">{</span><span class="k">\fref</span><span class="nb">}</span>[1]<span class="nb">{</span>Fig.~<span class="k">\ref</span><span class="nb">{</span>#1<span class="nb">}}</span>
+<span class="k">\newcommand*</span><span class="nb">{</span><span class="k">\tref</span><span class="nb">}</span>[1]<span class="nb">{</span>Table~<span class="k">\ref</span><span class="nb">{</span>#1<span class="nb">}}</span>
+<span class="k">\newcommand*</span><span class="nb">{</span><span class="k">\eref</span><span class="nb">}</span>[1]<span class="nb">{</span>Eq.~<span class="k">\eqref</span><span class="nb">{</span>#1<span class="nb">}}</span>
+<span class="k">\newcommand*</span><span class="nb">{</span><span class="k">\sref</span><span class="nb">}</span>[1]<span class="nb">{</span>Section~<span class="k">\ref</span><span class="nb">{</span>#1<span class="nb">}}</span>
+<span class="k">\newcommand*</span><span class="nb">{</span><span class="k">\aref</span><span class="nb">}</span>[1]<span class="nb">{</span>Appendix~<span class="k">\ref</span><span class="nb">{</span>#1<span class="nb">}}</span>
 </pre></div>
 </div>
-<figure class="align-default">
-<img alt="../_images/git_clone_ssh.png" src="../_images/git_clone_ssh.png" />
-</figure>
-<ul class="simple">
-<li><p>Navigate to the cloned repository using the <strong>cd</strong> command.</p></li>
-</ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cd REPOSITORY
-</pre></div>
-</div>
-</section>
-<section id="making-changes">
-<h2>Making changes<a class="headerlink" href="#making-changes" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Make the changes you want using your desired text editor.</p></li>
-<li><p>Stage all the changes you made using the <strong>git add</strong> command.</p></li>
-</ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git add .
-</pre></div>
-</div>
-</section>
-<section id="committing-changes">
-<h2>Committing changes<a class="headerlink" href="#committing-changes" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Commit the changes using the <strong>git commit</strong> command. Where the commit message is the changes you made.</p></li>
-</ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git commit -m &#39;commit message&#39;
-</pre></div>
-</div>
-</section>
-<section id="push-the-changes">
-<h2>Push the changes<a class="headerlink" href="#push-the-changes" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Push the changes using <strong>git push</strong> command.</p></li>
-</ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git push 
-</pre></div>
-</div>
-</section>
-<section id="pull-request">
-<h2>Pull request<a class="headerlink" href="#pull-request" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Go to the repository on github and click on <strong>pull request</strong> tab</p></li>
-</ul>
-<p>and then click on the green <strong>New pull request button</strong>.</p>
-<figure class="align-default">
-<img alt="../_images/Pull.png" src="../_images/Pull.png" />
-</figure>
-<ul class="simple">
-<li><p>Select the branch with your changes from the <strong>base</strong> dropdown menu and the branch you want to merge into from the <strong>compare</strong> dropdown menu.</p></li>
-<li><p>Review the changes in the pull request and add a descriptive title and description. Click on the green <strong>Create pull request</strong> button.</p></li>
-<li><p>Write a description of changes made and click on <strong>Create pull request button</strong>. The pull request will be sent to the repository owner for necessary review.</p></li>
-</ul>
-</section>
-<section id="more-information">
-<h2>More information<a class="headerlink" href="#more-information" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p><a class="reference external" href="https://skills.github.com/">Github skills</a></p></li>
-</ul>
+<p>This does nothing but add a prefix to the reference. For example, <code class="docutils literal notranslate"><span class="pre">\ref{fig:diamond}</span></code> will only give <code class="docutils literal notranslate"><span class="pre">1</span></code>. With the above macros, you can use <code class="docutils literal notranslate"><span class="pre">\fref{fig:diamond}</span></code> to get <code class="docutils literal notranslate"><span class="pre">Fig.</span> <span class="pre">1</span></code>.</p>
+</li>
+<li><p>Add a slash <code class="docutils literal notranslate"><span class="pre">\</span> </code> after a period to indicate that it is not the end of a sentence. For example, you should write <code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">U.S.\</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">country.</span></code>, instead of <code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">U.S.</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">country.</span></code>. The period after <code class="docutils literal notranslate"><span class="pre">U.S.</span></code> is not the end of the sentence, so we add a slash <code class="docutils literal notranslate"><span class="pre">\</span> </code> after it. This will make the spacing between <code class="docutils literal notranslate"><span class="pre">U.S.</span></code> and <code class="docutils literal notranslate"><span class="pre">is</span></code> correct. Similarly, you should use <code class="docutils literal notranslate"><span class="pre">e.g.\</span> </code> instead of <code class="docutils literal notranslate"><span class="pre">e.g.</span> </code> in the middle of a sentence.</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">\mathrm{}</span></code> for text in math mode. For example, the Boltzmann constant should be written as <code class="docutils literal notranslate"><span class="pre">$k_\mathrm{B}$</span></code>, which gives <span class="math notranslate nohighlight">\(k_\mathrm{B}\)</span>, instead of <code class="docutils literal notranslate"><span class="pre">$k_B$</span></code>, which gives <span class="math notranslate nohighlight">\(k_B\)</span>. By default, all text in math mode is italicized. Here <code class="docutils literal notranslate"><span class="pre">B</span></code> stands for the text Boltzmann, and we use <code class="docutils literal notranslate"><span class="pre">\mathrm{}</span></code> to make it upright.</p></li>
+</ol>
 </section>
 </section>
 
@@ -559,7 +488,7 @@ instructions.</p>
         },
         kernelOptions: {
             name: "python3",
-            path: "./devtool"
+            path: "./writing"
         },
         predefinedOutput: true
     }
@@ -577,20 +506,20 @@ instructions.</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="git.html"
+       href="../devtool/github.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Git</p>
+        <p class="prev-next-title">GitHub</p>
       </div>
     </a>
     <a class="right-next"
-       href="../writing/latex.html"
+       href="../contributing/edit.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Using LaTeX</p>
+        <p class="prev-next-title">Editing the Manual</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -610,14 +539,8 @@ instructions.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generating-an-ssh-key">Generating an SSH key</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#uploading-to-github">Uploading to GitHub</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cloning-a-repository">Cloning a repository</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#making-changes">Making changes</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#committing-changes">Committing changes</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#push-the-changes">Push the changes</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pull-request">Pull request</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#more-information">More information</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started">Getting started</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tips">Tips</a></li>
 </ul>
   </nav></div>
 
