@@ -4,7 +4,7 @@
 The below instructions apply to the HPE DSI `Carya` and `Sabine` clusters.
 ```
 
-### Getting access to VASP
+## Getting access to VASP
 
 To check the available VASP modules, do
 
@@ -18,7 +18,7 @@ Then select one from the list and load it, e.g.
 $ module load vasp-wen/6.4.2
 ```
 
-### Run a first VASP jobs
+## Run a first VASP jobs
 
 The example performs a relaxation of a Si diamond structure. First, create a directory and put into it the below three files. The names of the files should `INCAR`, `POSCAR` `KPOINTS`, and `POTCAR`.
 
@@ -139,7 +139,7 @@ mpirun -n 24 --bind-to core vasp_std
 In some other tutorials, instead of using the `KPOINTS` file, you can add a  `KSPACING` value in the `INCAR` file to automatically generate the k-points mesh.
 ```
 
-### VASP data files
+## VASP data files
 
 Pseudopotentials are located at: `/project/wen/commons/vasp/pp`
 

@@ -31,6 +31,10 @@ parts:
       - file: devtool/git.md
       - file: devtool/github.md
 
+  - caption: Writing
+    chapters:
+      - file: writing/latex.md
+
   - caption: Contributing
     chapters:
       - file: contributing/edit.md
