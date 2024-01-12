@@ -13,7 +13,7 @@ Alternatively, you can install a LaTeX distribution on your computer. See [MacTe
 
 ## Tips
 
-LaTex is a powerful typesetting system, and there are a lot of customizations you make. Here are some tips that we find useful.
+LaTex is a powerful typesetting system, and there are a lot of customizations you can make. Here are some tips that we find useful.
 
 1. Write each sentence in a separate line. This makes it easier to navigate long paragraphs using text editors like `vim`, also makes it easier to track changes in `git`.
 
