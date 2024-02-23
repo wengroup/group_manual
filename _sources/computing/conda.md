@@ -71,6 +71,10 @@ You can add the above line to your `~/.bashrc`. Then it will be automatically lo
 This is not needed on your Mac; skip it.
 ```
 
+```{note}
+In all the below sections, replace `<username>` by your HPE DSI username.
+```
+
 ### Changing environment directory
 
 On HPE DSI clusters, by default, if we create a new environment, it will be stored in the `$HOME` directory (e.g. `/home/<username>/.conda/envs`).
@@ -124,10 +128,10 @@ Alternatively, you can open `~/.condarc` to see all the changes you've made. You
 Similarly, by default, when you install a package, it will first be downloaded to a place in your `$HOME`, i.e. `/home/<username>/.conda/pkgs`). You can change the default package storage directory as well to avoid out-of-quota problems.
 
 ```shell
-$ conda config --prepend pkgs_dirs /tmp
+$ conda config --prepend pkgs_dirs /project/wen/<username>/conda/pkgs
 ```
 
-In this case, we set it to the `/tmp` directory to avoid using our group project space.
+In this case, we put the packages in `/project/wen/<username>/conda/pkgs`.
 
 Of course, you can use `conda config --show` or view `~/.condarc` to see the changes.
 

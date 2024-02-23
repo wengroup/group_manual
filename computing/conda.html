@@ -509,6 +509,10 @@ On HPE DSI clusters</label><div class="sd-tab-content docutils">
 <p class="admonition-title">Note</p>
 <p>This is not needed on your Mac; skip it.</p>
 </div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In all the below sections, replace <code class="docutils literal notranslate"><span class="pre">&lt;username&gt;</span></code> by your HPE DSI username.</p>
+</div>
 <section id="changing-environment-directory">
 <h3>Changing environment directory<a class="headerlink" href="#changing-environment-directory" title="Link to this heading">#</a></h3>
 <p>On HPE DSI clusters, by default, if we create a new environment, it will be stored in the <code class="docutils literal notranslate"><span class="pre">$HOME</span></code> directory (e.g. <code class="docutils literal notranslate"><span class="pre">/home/&lt;username&gt;/.conda/envs</span></code>).
@@ -546,10 +550,10 @@ $<span class="w"> </span>mkdir<span class="w"> </span>conda<span class="w"> </sp
 <section id="changing-package-directory">
 <h3>Changing package directory<a class="headerlink" href="#changing-package-directory" title="Link to this heading">#</a></h3>
 <p>Similarly, by default, when you install a package, it will first be downloaded to a place in your <code class="docutils literal notranslate"><span class="pre">$HOME</span></code>, i.e. <code class="docutils literal notranslate"><span class="pre">/home/&lt;username&gt;/.conda/pkgs</span></code>). You can change the default package storage directory as well to avoid out-of-quota problems.</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>config<span class="w"> </span>--prepend<span class="w"> </span>pkgs_dirs<span class="w"> </span>/tmp
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>config<span class="w"> </span>--prepend<span class="w"> </span>pkgs_dirs<span class="w"> </span>/project/wen/&lt;username&gt;/conda/pkgs
 </pre></div>
 </div>
-<p>In this case, we set it to the <code class="docutils literal notranslate"><span class="pre">/tmp</span></code> directory to avoid using our group project space.</p>
+<p>In this case, we put the packages in <code class="docutils literal notranslate"><span class="pre">/project/wen/&lt;username&gt;/conda/pkgs</span></code>.</p>
 <p>Of course, you can use <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">config</span> <span class="pre">--show</span></code> or view <code class="docutils literal notranslate"><span class="pre">~/.condarc</span></code> to see the changes.</p>
 </section>
 </section>
