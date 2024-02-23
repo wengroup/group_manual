@@ -6,6 +6,8 @@ Frequently we need a specific configuration and package versions for one project
 
 ## Installation
 
+The way to install conda depends on the platform you are using. It is different on macOS and on HPE DSI clusters. Select the corresponding tab below.
+
 ::::{tab-set}
 
 :::{tab-item} On macOS
