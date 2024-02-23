@@ -41,7 +41,7 @@ This will install conda to your home directory `~/miniconda3`.
 To confirm it's successfully installed, do `$ conda --version` , and you will see something like `conda 4.14.0`.
 
 ```{note}
-This works for Apple M1 chip. For more installing options (e.g. for Intel chip), see the [miniconda doc](https://docs.conda.io/en/latest/miniconda.html).
+This works for Apple M series chips. For more installing options (e.g. for Intel chip), see the [miniconda doc](https://docs.conda.io/en/latest/miniconda.html).
 ```
 
 :::
@@ -67,13 +67,11 @@ You can add the above line to your `~/.bashrc`. Then it will be automatically lo
 
 ```{warning}
 This is not needed on your Mac; skip it.
-
-This is optional on HPE DSI clusters, but it is good to do it.
 ```
 
 ### Changing environment directory
 
-By default, if we create a new environment, it will be stored in the `$HOME` directory (e.g. `/home/<username>/.conda/envs`).
+On HPE DSI clusters, by default, if we create a new environment, it will be stored in the `$HOME` directory (e.g. `/home/<username>/.conda/envs`).
 Conda environments can sometimes get quite big, but each of us only has a quota of 10G for `$HOME`. This can easily lead to out-of-quota problem. We can change the default environment directory to avoid this.
 
 You should have access to our group project directory, i.e. `/project/wen`, which has a much larger disk quota. We will configure conda to store environments there.
