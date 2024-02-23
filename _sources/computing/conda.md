@@ -63,6 +63,74 @@ You can add the above line to your `~/.bashrc`. Then it will be automatically lo
 :::
 ::::
 
+## Changing default conda settings
+
+```{warning}
+This is not needed on your Mac; skip it.
+
+This is optional on HPE DSI clusters, but it is good to do it.
+```
+
+### Changing environment directory
+
+By default, if we create a new environment, it will be stored in the `$HOME` directory (e.g. `/home/<username>/.conda/envs`).
+Conda environments can sometimes get quite big, but each of us only has a quota of 10G for `$HOME`. This can easily lead to out-of-quota problem. We can change the default environment directory to avoid this.
+
+You should have access to our group project directory, i.e. `/project/wen`, which has a much larger disk quota. We will configure conda to store environments there.
+
+First, create a directory under your username.
+
+```shell
+$ cd /project/wen
+$ mkdir <username>   # change <username> to your HPE DSI user name
+```
+
+**Note**, all `<username>` below needs to be changed to yours.
+
+Within your directory, create a directory to store conda environment. In this example, we create a directory `/home/wen/<username>/conda/envs`) to store the environments:
+
+```shell
+$ cd <username>
+$ mkdir conda && mkdir conda/envs
+```
+
+Then, config conda to prepend to `envs_dirs` the directory we've just created:
+
+```shell
+$ conda config --prepend envs_dirs /project/wen/<username>/conda/envs
+```
+
+This is all you need to do. To ensure it's successful, let's check it by
+
+```shell
+$ conda config --show
+```
+
+This will generate a lot of output, but you will find something like:
+
+```
+envs_dirs:
+  - /project/wen/<username>/conda/envs
+  - /home/<username>/.conda/envs
+  - /project/dsi/apps/python/3.9/envs
+```
+
+which means `/project/wen/<username>/conda/envs` is now configured as the default place to store your environments.
+
+Alternatively, you can open `~/.condarc` to see all the changes you've made. You can even directly edit it to remove the changes or add new ones.
+
+### Changing package directory
+
+Similarly, by default, when you install a package, it will first be downloaded to a place in your `$HOME`, i.e. `/home/<username>/.conda/pkgs`). You can change the default package storage directory as well to avoid out-of-quota problems.
+
+```shell
+$ conda config --prepend pkgs_dirs /tmp
+```
+
+In this case, we set it to the `/tmp` directory to avoid using our group project space.
+
+Of course, you can use `conda config --show` or view `~/.condarc` to see the changes.
+
 ## Creating a conda environment
 
 Once conda is installed, create a new environment using the below command. In this example, we create an environment named `my_env` (you can create multiple environments with different names).
@@ -150,71 +218,3 @@ You can use `mamba` to do pretty much everything that `conda` can do by replacin
 ```shell
 $ mamba install -c conda-forge pymatgen
 ```
-
-## Changing default conda settings (optional)
-
-```{warning}
-This is not needed on your Mac; skip it.
-
-This is optional on HPE DSI clusters, but it is good to do it.
-```
-
-### Changing environment directory
-
-By default, if we create a new environment, it will be stored in the `$HOME` directory (e.g. `/home/<username>/.conda/envs`).
-Conda environments can sometimes get quite big, but each of us only has a quota of 10G for `$HOME`. This can easily lead to out-of-quota problem. We can change the default environment directory to avoid this.
-
-You should have access to our group project directory, i.e. `/project/wen`, which has a much larger disk quota. We will configure conda to store environments there.
-
-First, create a directory under your username.
-
-```shell
-$ cd /project/wen
-$ mkdir <username>   # change <username> to your HPE DSI user name
-```
-
-**Note**, all `<username>` below needs to be changed to yours.
-
-Within your directory, create a directory to store conda environment. In this example, we create a directory `/home/wen/<username>/conda/envs`) to store the environments:
-
-```shell
-$ cd <username>
-$ mkdir conda && mkdir conda/envs
-```
-
-Then, config conda to prepend to `envs_dirs` the directory we've just created:
-
-```shell
-$ conda config --prepend envs_dirs /project/wen/<username>/conda/envs
-```
-
-This is all you need to do. To ensure it's successful, let's check it by
-
-```shell
-$ conda config --show
-```
-
-This will generate a lot of output, but you will find something like:
-
-```
-envs_dirs:
-  - /project/wen/<username>/conda/envs
-  - /home/<username>/.conda/envs
-  - /project/dsi/apps/python/3.9/envs
-```
-
-which means `/project/wen/<username>/conda/envs` is now configured as the default place to store your environments.
-
-Alternatively, you can open `~/.condarc` to see all the changes you've made. You can even directly edit it to remove the changes or add new ones.
-
-### Changing package directory
-
-Similarly, by default, when you install a package, it will first be downloaded to a place in your `$HOME`, i.e. `/home/<username>/.conda/pkgs`). You can change the default package storage directory as well to avoid out-of-quota problems.
-
-```shell
-$ conda config --prepend pkgs_dirs /tmp
-```
-
-In this case, we set it to the `/tmp` directory to avoid using our group project space.
-
-Of course, you can use `conda config --show` or view `~/.condarc` to see the changes.

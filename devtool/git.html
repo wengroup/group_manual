@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Git &#8212; Wen Group Manual</title>
   
@@ -19,49 +18,45 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
-  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'devtool/git';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -79,7 +74,6 @@ const thebe_selector_output = ".output, .cell_output"
   <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -119,20 +113,15 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
-
-  <header>
   
-    <div class="bd-header navbar navbar-expand-lg bd-navbar">
-    </div>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
-  </header>
 
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
       
-      
-        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -160,7 +149,18 @@ const thebe_selector_output = ".output, .cell_output"
     <p class="title logo__title">Wen Group Manual</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -451,10 +451,10 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="git">
-<span id="label-git"></span><h1>Git<a class="headerlink" href="#git" title="Permalink to this heading">#</a></h1>
+<span id="label-git"></span><h1>Git<a class="headerlink" href="#git" title="Link to this heading">#</a></h1>
 <p>Git allows developers to keep track of changes to their code, collaborate with other developers, and work on multiple versions of their software simultaneously. This is achieved through a distributed model, where each developer has a copy of the codebase on their local machine and can make changes and commit them to a shared repository.</p>
 <section id="install-git">
-<h2>Install Git<a class="headerlink" href="#install-git" title="Permalink to this heading">#</a></h2>
+<h2>Install Git<a class="headerlink" href="#install-git" title="Link to this heading">#</a></h2>
 <p>You can download Git from the official website: <a class="reference external" href="https://git-scm.com/downloads">https://git-scm.com/downloads</a></p>
 <p>If you use Mac, first install <a class="reference external" href="https://brew.sh/index_zh-tw.html">Homebrew</a>, you can use Homebrew to install Git, and execute this line of command in the terminal to complete:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ brew install git
@@ -462,7 +462,7 @@ document.write(`
 </div>
 </section>
 <section id="set-up-the-git-environment">
-<h2>Set up the Git environment<a class="headerlink" href="#set-up-the-git-environment" title="Permalink to this heading">#</a></h2>
+<h2>Set up the Git environment<a class="headerlink" href="#set-up-the-git-environment" title="Link to this heading">#</a></h2>
 <p>Once Git is installed, you’ll need to set up your environment by configuring your username and email address, so that Git can attribute your changes to you. To do this, open a command prompt or terminal window and type the following commands, replacing “Your Name” and “Youremail” with your own information:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git config --global user.name &quot;Your Name&quot;
 $ git config --global user.email &quot;Youremail@example.com&quot;
@@ -470,101 +470,101 @@ $ git config --global user.email &quot;Youremail@example.com&quot;
 </div>
 </section>
 <section id="git-workflow-and-basic-commands">
-<h2>Git workflow and basic commands<a class="headerlink" href="#git-workflow-and-basic-commands" title="Permalink to this heading">#</a></h2>
+<h2>Git workflow and basic commands<a class="headerlink" href="#git-workflow-and-basic-commands" title="Link to this heading">#</a></h2>
 <figure class="align-default">
 <img alt="../_images/Git-workflow.png" src="../_images/Git-workflow.png" />
 </figure>
 <section id="create-a-new-repository-to-start-using-git">
-<h3>Create a new repository to start using Git.<a class="headerlink" href="#create-a-new-repository-to-start-using-git" title="Permalink to this heading">#</a></h3>
+<h3>Create a new repository to start using Git.<a class="headerlink" href="#create-a-new-repository-to-start-using-git" title="Link to this heading">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git init
 </pre></div>
 </div>
 </section>
 <section id="add-files-from-workspace-working-directory-to-staging-area-first-level">
-<h3>Add files from workspace (working directory) to staging area (first level).<a class="headerlink" href="#add-files-from-workspace-working-directory-to-staging-area-first-level" title="Permalink to this heading">#</a></h3>
+<h3>Add files from workspace (working directory) to staging area (first level).<a class="headerlink" href="#add-files-from-workspace-working-directory-to-staging-area-first-level" title="Link to this heading">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git add &lt;filename&gt;
 </pre></div>
 </div>
 </section>
 <section id="add-all-files-in-the-current-directory-to-the-staging-area">
-<h3>Add all files in the current directory to the staging area.<a class="headerlink" href="#add-all-files-in-the-current-directory-to-the-staging-area" title="Permalink to this heading">#</a></h3>
+<h3>Add all files in the current directory to the staging area.<a class="headerlink" href="#add-all-files-in-the-current-directory-to-the-staging-area" title="Link to this heading">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git add .
 </pre></div>
 </div>
 </section>
 <section id="transfer-files-from-staging-first-level-to-repository-second-level">
-<h3>Transfer files from staging (first level) to repository (second level).<a class="headerlink" href="#transfer-files-from-staging-first-level-to-repository-second-level" title="Permalink to this heading">#</a></h3>
+<h3>Transfer files from staging (first level) to repository (second level).<a class="headerlink" href="#transfer-files-from-staging-first-level-to-repository-second-level" title="Link to this heading">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git commit
 </pre></div>
 </div>
 </section>
 <section id="transfer-files-from-staging-to-repository-and-add-message-to-full-history-to-record-your-own-changes">
-<h3>Transfer files from staging to repository and add message to full history to record your own changes.<a class="headerlink" href="#transfer-files-from-staging-to-repository-and-add-message-to-full-history-to-record-your-own-changes" title="Permalink to this heading">#</a></h3>
+<h3>Transfer files from staging to repository and add message to full history to record your own changes.<a class="headerlink" href="#transfer-files-from-staging-to-repository-and-add-message-to-full-history-to-record-your-own-changes" title="Link to this heading">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git commit -m &quot;Commit message&quot;
 # Replace &quot;Commit message&quot; with a brief description of the changes you&#39;re committing.
 </pre></div>
 </div>
 </section>
 <section id="show-full-history-of-git-repository">
-<h3>Show full history of Git repository.<a class="headerlink" href="#show-full-history-of-git-repository" title="Permalink to this heading">#</a></h3>
+<h3>Show full history of Git repository.<a class="headerlink" href="#show-full-history-of-git-repository" title="Link to this heading">#</a></h3>
 <p>This will show you a list of all the commits that have been made to the repository, including the commit message, the author, and the date and time.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git log
 </pre></div>
 </div>
 </section>
 <section id="view-the-before-and-after-changes-of-files">
-<h3>View the before and after changes of files.<a class="headerlink" href="#view-the-before-and-after-changes-of-files" title="Permalink to this heading">#</a></h3>
+<h3>View the before and after changes of files.<a class="headerlink" href="#view-the-before-and-after-changes-of-files" title="Link to this heading">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git diff
 </pre></div>
 </div>
 </section>
 <section id="check-the-status-of-your-git-repository-at-any-time">
-<h3>Check the status of your Git repository at any time.<a class="headerlink" href="#check-the-status-of-your-git-repository-at-any-time" title="Permalink to this heading">#</a></h3>
+<h3>Check the status of your Git repository at any time.<a class="headerlink" href="#check-the-status-of-your-git-repository-at-any-time" title="Link to this heading">#</a></h3>
 <p>This will show you which files have been modified or added, which files are currently in the staging area, and which files have been committed to the repository.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git status
 </pre></div>
 </div>
 </section>
 <section id="restore-the-last-action-on-files">
-<h3>Restore the last action on files.<a class="headerlink" href="#restore-the-last-action-on-files" title="Permalink to this heading">#</a></h3>
+<h3>Restore the last action on files.<a class="headerlink" href="#restore-the-last-action-on-files" title="Link to this heading">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git restore &lt;filename&gt;
 </pre></div>
 </div>
 </section>
 <section id="view-current-remote-connection-location-ssh">
-<h3>View current remote connection location (SSH).<a class="headerlink" href="#view-current-remote-connection-location-ssh" title="Permalink to this heading">#</a></h3>
+<h3>View current remote connection location (SSH).<a class="headerlink" href="#view-current-remote-connection-location-ssh" title="Link to this heading">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git remote -v
 </pre></div>
 </div>
 </section>
 <section id="transfer-files-from-local-repository-to-a-remote-repository-github">
-<h3>Transfer files from local repository to a remote repository (Github).<a class="headerlink" href="#transfer-files-from-local-repository-to-a-remote-repository-github" title="Permalink to this heading">#</a></h3>
+<h3>Transfer files from local repository to a remote repository (Github).<a class="headerlink" href="#transfer-files-from-local-repository-to-a-remote-repository-github" title="Link to this heading">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git push
 </pre></div>
 </div>
 </section>
 <section id="transfer-files-from-remote-repository-github-to-the-workspace">
-<h3>Transfer files from remote repository (Github) to the workspace.<a class="headerlink" href="#transfer-files-from-remote-repository-github-to-the-workspace" title="Permalink to this heading">#</a></h3>
+<h3>Transfer files from remote repository (Github) to the workspace.<a class="headerlink" href="#transfer-files-from-remote-repository-github-to-the-workspace" title="Link to this heading">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git pull
 </pre></div>
 </div>
 </section>
 <section id="retrieve-changes-from-a-remote-repository-without-merging-them-into-your-local-repository-branch">
-<h3>Retrieve changes from a remote repository without merging them into your local repository (branch).<a class="headerlink" href="#retrieve-changes-from-a-remote-repository-without-merging-them-into-your-local-repository-branch" title="Permalink to this heading">#</a></h3>
+<h3>Retrieve changes from a remote repository without merging them into your local repository (branch).<a class="headerlink" href="#retrieve-changes-from-a-remote-repository-without-merging-them-into-your-local-repository-branch" title="Link to this heading">#</a></h3>
 <p>This means that you can review the changes and decide whether to merge them into your branch or not. This gives you more control over the merging process and can help you avoid conflicts when multiple contributors are working on the same codebase.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git fetch &lt;remote&gt; &lt;branch&gt;
 </pre></div>
 </div>
 </section>
 <section id="integrate-changes-from-one-branch-into-another">
-<h3>Integrate changes from one branch into another.<a class="headerlink" href="#integrate-changes-from-one-branch-into-another" title="Permalink to this heading">#</a></h3>
+<h3>Integrate changes from one branch into another.<a class="headerlink" href="#integrate-changes-from-one-branch-into-another" title="Link to this heading">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git merge &lt;branch&gt;
 </pre></div>
 </div>
 </section>
 </section>
 <section id="git-tutorial">
-<h2>Git tutorial<a class="headerlink" href="#git-tutorial" title="Permalink to this heading">#</a></h2>
+<h2>Git tutorial<a class="headerlink" href="#git-tutorial" title="Link to this heading">#</a></h2>
 <p><a class="reference external" href="https://swcarpentry.github.io/git-novice/">https://swcarpentry.github.io/git-novice/</a></p>
 </section>
 </section>
@@ -677,7 +677,7 @@ By Wen Group
 
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>
@@ -701,8 +701,8 @@ By Wen Group
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>

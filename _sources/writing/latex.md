@@ -6,14 +6,14 @@ For technical writing, we recommend [LaTeX](https://en.wikipedia.org/wiki/LaTeX)
 
 ## Getting started
 
-The easiest way to get started using latex is to use [Overleaf](https://www.overleaf.com/), an online LaTeX editor. It is free to use and has a rich set of features.
+The easiest way to get started is to use [Overleaf](https://www.overleaf.com/), an online LaTeX editor. It is free to use and has a rich set of features.
 If you haven't used Overleaf before, you can start with the [Learn LaTeX in 30 minutes tutorial](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes).
 
 Alternatively, you can install a LaTeX distribution on your computer. See [MacTeX](https://www.tug.org/mactex/) for macOS.
 
 ## Tips
 
-LaTex is a powerful typesetting system, and there are a lot of customizations you make. Here are some tips that we find useful.
+LaTex is a powerful typesetting system, and there are a lot of customizations you can make. Here are some tips that we find useful.
 
 1. Write each sentence in a separate line. This makes it easier to navigate long paragraphs using text editors like `vim`, also makes it easier to track changes in `git`.
 

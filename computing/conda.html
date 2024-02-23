@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Conda Environment &#8212; Wen Group Manual</title>
   
@@ -19,49 +18,45 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
-  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'computing/conda';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -79,7 +74,6 @@ const thebe_selector_output = ".output, .cell_output"
   <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -119,20 +113,15 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
-
-  <header>
   
-    <div class="bd-header navbar navbar-expand-lg bd-navbar">
-    </div>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
   
-  </header>
 
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
       
-      
-        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -160,7 +149,18 @@ const thebe_selector_output = ".output, .cell_output"
     <p class="title logo__title">Wen Group Manual</p>
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -420,6 +420,11 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-default-conda-settings">Changing default conda settings</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-environment-directory">Changing environment directory</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-package-directory">Changing package directory</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-conda-environment">Creating a conda environment</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-a-conda-environment">Using a conda environment</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-packages">Installing packages</a></li>
@@ -430,11 +435,6 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mamba-optional">Mamba (optional)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-mamba">Installing mamba</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-mamba">Using mamba</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-default-conda-settings-optional">Changing default conda settings (optional)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-environment-directory">Changing environment directory</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-package-directory">Changing package directory</a></li>
 </ul>
 </li>
 </ul>
@@ -449,10 +449,10 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="conda-environment">
-<span id="label-conda"></span><h1>Conda Environment<a class="headerlink" href="#conda-environment" title="Permalink to this heading">#</a></h1>
+<span id="label-conda"></span><h1>Conda Environment<a class="headerlink" href="#conda-environment" title="Link to this heading">#</a></h1>
 <p>Frequently we need a specific configuration and package versions for one project, which can conflict with another project’s needs. <a class="reference external" href="https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html">Conda environment</a> is a great way to manage packages and versions. It allows us to create a separate environment where we can install any package versions for one project without affecting anything outside of this environment.</p>
 <section id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">#</a></h2>
+<h2>Installation<a class="headerlink" href="#installation" title="Link to this heading">#</a></h2>
 <div class="sd-tab-set docutils">
 <input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
 </input><label class="sd-tab-label" for="sd-tab-item-0">
@@ -502,92 +502,15 @@ On HPE DSI clusters</label><div class="sd-tab-content docutils">
 </div>
 </div>
 </section>
-<section id="creating-a-conda-environment">
-<h2>Creating a conda environment<a class="headerlink" href="#creating-a-conda-environment" title="Permalink to this heading">#</a></h2>
-<p>Once conda is installed, create a new environment using the below command. In this example, we create an environment named <code class="docutils literal notranslate"><span class="pre">my_env</span></code> (you can create multiple environments with different names).</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>create<span class="w"> </span>--name<span class="w"> </span>my_env
-</pre></div>
-</div>
-</section>
-<section id="using-a-conda-environment">
-<h2>Using a conda environment<a class="headerlink" href="#using-a-conda-environment" title="Permalink to this heading">#</a></h2>
-<p>To use the <code class="docutils literal notranslate"><span class="pre">my_env</span></code> conda environment, first activate it by:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>activate<span class="w"> </span>my_env
-</pre></div>
-</div>
-<p>When you run this for the first time, you may see something like</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>CommandNotFoundError: Your shell has not been properly configured to use &#39;conda activate&#39;.
-To initialize your shell, run
-
-    $ conda init &lt;SHELL_NAME&gt;
-
-Currently supported shells are:
-  - bash
-  - fish
-  - tcsh
-  - xonsh
-  - zsh
-  - powershell
-</pre></div>
-</div>
-<p>Then, you need to do</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>init<span class="w"> </span>bash
-$<span class="w"> </span><span class="nb">source</span><span class="w"> </span>~/.bashrc
-</pre></div>
-</div>
-<p>Note, you just need to run the above two commands once; it will modify the <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code> file to automatically configure for later usage.</p>
-<section id="installing-packages">
-<h3>Installing packages<a class="headerlink" href="#installing-packages" title="Permalink to this heading">#</a></h3>
-<p>Then, you can install packages into this environment. In this example, we install Python version 3.10</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>install<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.10
-</pre></div>
-</div>
-</section>
-<section id="listing-packages-in-your-environment">
-<h3>Listing packages in your environment<a class="headerlink" href="#listing-packages-in-your-environment" title="Permalink to this heading">#</a></h3>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>list
-</pre></div>
-</div>
-</section>
-<section id="listing-available-environment">
-<h3>Listing available environment<a class="headerlink" href="#listing-available-environment" title="Permalink to this heading">#</a></h3>
-<p>If you have created multiple environments, you can get a list of them by:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>env<span class="w"> </span>list
-</pre></div>
-</div>
-</section>
-</section>
-<section id="mamba-optional">
-<h2>Mamba (optional)<a class="headerlink" href="#mamba-optional" title="Permalink to this heading">#</a></h2>
-<p>Conda is great, but it can be slow. For example, it can take a long time to download the packages. To get around this, we can use <a class="reference external" href="https://github.com/mamba-org/mamba">mamba</a>, a reimplementation of the conda package manager with running speed taken into consideration.</p>
-<section id="installing-mamba">
-<h3>Installing mamba<a class="headerlink" href="#installing-mamba" title="Permalink to this heading">#</a></h3>
-<p>Once you have activated your conda environment, e.g. <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">my_env</span></code>, you can install mamba into the <code class="docutils literal notranslate"><span class="pre">my_env</span></code> environment via conda</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>mamba
-</pre></div>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>We add the <code class="docutils literal notranslate"><span class="pre">-c</span> <span class="pre">conda-forge</span></code> to install the <code class="docutils literal notranslate"><span class="pre">mamba</span></code> packages from the <code class="docutils literal notranslate"><span class="pre">conda-forge</span></code> channel instead of the <code class="docutils literal notranslate"><span class="pre">main</span></code> channel. For more information of channels, see the <a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/concepts/channels.html">documentation</a>.</p>
-</div>
-</section>
-<section id="using-mamba">
-<h3>Using mamba<a class="headerlink" href="#using-mamba" title="Permalink to this heading">#</a></h3>
-<p>You can use <code class="docutils literal notranslate"><span class="pre">mamba</span></code> to do pretty much everything that <code class="docutils literal notranslate"><span class="pre">conda</span></code> can do by replacing the <code class="docutils literal notranslate"><span class="pre">conda</span></code> command by the <code class="docutils literal notranslate"><span class="pre">mamba</span></code> command. For example, you can install <code class="docutils literal notranslate"><span class="pre">pymatgen</span></code> via</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>mamba<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>pymatgen
-</pre></div>
-</div>
-</section>
-</section>
-<section id="changing-default-conda-settings-optional">
-<h2>Changing default conda settings (optional)<a class="headerlink" href="#changing-default-conda-settings-optional" title="Permalink to this heading">#</a></h2>
+<section id="changing-default-conda-settings">
+<h2>Changing default conda settings<a class="headerlink" href="#changing-default-conda-settings" title="Link to this heading">#</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This is not needed on your Mac; skip it.</p>
 <p>This is optional on HPE DSI clusters, but it is good to do it.</p>
 </div>
 <section id="changing-environment-directory">
-<h3>Changing environment directory<a class="headerlink" href="#changing-environment-directory" title="Permalink to this heading">#</a></h3>
+<h3>Changing environment directory<a class="headerlink" href="#changing-environment-directory" title="Link to this heading">#</a></h3>
 <p>By default, if we create a new environment, it will be stored in the <code class="docutils literal notranslate"><span class="pre">$HOME</span></code> directory (e.g. <code class="docutils literal notranslate"><span class="pre">/home/&lt;username&gt;/.conda/envs</span></code>).
 Conda environments can sometimes get quite big, but each of us only has a quota of 10G for <code class="docutils literal notranslate"><span class="pre">$HOME</span></code>. This can easily lead to out-of-quota problem. We can change the default environment directory to avoid this.</p>
 <p>You should have access to our group project directory, i.e. <code class="docutils literal notranslate"><span class="pre">/project/wen</span></code>, which has a much larger disk quota. We will configure conda to store environments there.</p>
@@ -621,13 +544,90 @@ $<span class="w"> </span>mkdir<span class="w"> </span>conda<span class="w"> </sp
 <p>Alternatively, you can open <code class="docutils literal notranslate"><span class="pre">~/.condarc</span></code> to see all the changes you’ve made. You can even directly edit it to remove the changes or add new ones.</p>
 </section>
 <section id="changing-package-directory">
-<h3>Changing package directory<a class="headerlink" href="#changing-package-directory" title="Permalink to this heading">#</a></h3>
+<h3>Changing package directory<a class="headerlink" href="#changing-package-directory" title="Link to this heading">#</a></h3>
 <p>Similarly, by default, when you install a package, it will first be downloaded to a place in your <code class="docutils literal notranslate"><span class="pre">$HOME</span></code>, i.e. <code class="docutils literal notranslate"><span class="pre">/home/&lt;username&gt;/.conda/pkgs</span></code>). You can change the default package storage directory as well to avoid out-of-quota problems.</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>config<span class="w"> </span>--prepend<span class="w"> </span>pkgs_dirs<span class="w"> </span>/tmp
 </pre></div>
 </div>
 <p>In this case, we set it to the <code class="docutils literal notranslate"><span class="pre">/tmp</span></code> directory to avoid using our group project space.</p>
 <p>Of course, you can use <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">config</span> <span class="pre">--show</span></code> or view <code class="docutils literal notranslate"><span class="pre">~/.condarc</span></code> to see the changes.</p>
+</section>
+</section>
+<section id="creating-a-conda-environment">
+<h2>Creating a conda environment<a class="headerlink" href="#creating-a-conda-environment" title="Link to this heading">#</a></h2>
+<p>Once conda is installed, create a new environment using the below command. In this example, we create an environment named <code class="docutils literal notranslate"><span class="pre">my_env</span></code> (you can create multiple environments with different names).</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>create<span class="w"> </span>--name<span class="w"> </span>my_env
+</pre></div>
+</div>
+</section>
+<section id="using-a-conda-environment">
+<h2>Using a conda environment<a class="headerlink" href="#using-a-conda-environment" title="Link to this heading">#</a></h2>
+<p>To use the <code class="docutils literal notranslate"><span class="pre">my_env</span></code> conda environment, first activate it by:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>activate<span class="w"> </span>my_env
+</pre></div>
+</div>
+<p>When you run this for the first time, you may see something like</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>CommandNotFoundError: Your shell has not been properly configured to use &#39;conda activate&#39;.
+To initialize your shell, run
+
+    $ conda init &lt;SHELL_NAME&gt;
+
+Currently supported shells are:
+  - bash
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+</pre></div>
+</div>
+<p>Then, you need to do</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>init<span class="w"> </span>bash
+$<span class="w"> </span><span class="nb">source</span><span class="w"> </span>~/.bashrc
+</pre></div>
+</div>
+<p>Note, you just need to run the above two commands once; it will modify the <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code> file to automatically configure for later usage.</p>
+<section id="installing-packages">
+<h3>Installing packages<a class="headerlink" href="#installing-packages" title="Link to this heading">#</a></h3>
+<p>Then, you can install packages into this environment. In this example, we install Python version 3.10</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>install<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.10
+</pre></div>
+</div>
+</section>
+<section id="listing-packages-in-your-environment">
+<h3>Listing packages in your environment<a class="headerlink" href="#listing-packages-in-your-environment" title="Link to this heading">#</a></h3>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>list
+</pre></div>
+</div>
+</section>
+<section id="listing-available-environment">
+<h3>Listing available environment<a class="headerlink" href="#listing-available-environment" title="Link to this heading">#</a></h3>
+<p>If you have created multiple environments, you can get a list of them by:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>env<span class="w"> </span>list
+</pre></div>
+</div>
+</section>
+</section>
+<section id="mamba-optional">
+<h2>Mamba (optional)<a class="headerlink" href="#mamba-optional" title="Link to this heading">#</a></h2>
+<p>Conda is great, but it can be slow. For example, it can take a long time to download the packages. To get around this, we can use <a class="reference external" href="https://github.com/mamba-org/mamba">mamba</a>, a reimplementation of the conda package manager with running speed taken into consideration.</p>
+<section id="installing-mamba">
+<h3>Installing mamba<a class="headerlink" href="#installing-mamba" title="Link to this heading">#</a></h3>
+<p>Once you have activated your conda environment, e.g. <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">my_env</span></code>, you can install mamba into the <code class="docutils literal notranslate"><span class="pre">my_env</span></code> environment via conda</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>conda<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>mamba
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We add the <code class="docutils literal notranslate"><span class="pre">-c</span> <span class="pre">conda-forge</span></code> to install the <code class="docutils literal notranslate"><span class="pre">mamba</span></code> packages from the <code class="docutils literal notranslate"><span class="pre">conda-forge</span></code> channel instead of the <code class="docutils literal notranslate"><span class="pre">main</span></code> channel. For more information of channels, see the <a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/concepts/channels.html">documentation</a>.</p>
+</div>
+</section>
+<section id="using-mamba">
+<h3>Using mamba<a class="headerlink" href="#using-mamba" title="Link to this heading">#</a></h3>
+<p>You can use <code class="docutils literal notranslate"><span class="pre">mamba</span></code> to do pretty much everything that <code class="docutils literal notranslate"><span class="pre">conda</span></code> can do by replacing the <code class="docutils literal notranslate"><span class="pre">conda</span></code> command by the <code class="docutils literal notranslate"><span class="pre">mamba</span></code> command. For example, you can install <code class="docutils literal notranslate"><span class="pre">pymatgen</span></code> via</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>mamba<span class="w"> </span>install<span class="w"> </span>-c<span class="w"> </span>conda-forge<span class="w"> </span>pymatgen
+</pre></div>
+</div>
 </section>
 </section>
 </section>
@@ -697,6 +697,11 @@ $<span class="w"> </span>mkdir<span class="w"> </span>conda<span class="w"> </sp
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-default-conda-settings">Changing default conda settings</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-environment-directory">Changing environment directory</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-package-directory">Changing package directory</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-conda-environment">Creating a conda environment</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-a-conda-environment">Using a conda environment</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-packages">Installing packages</a></li>
@@ -707,11 +712,6 @@ $<span class="w"> </span>mkdir<span class="w"> </span>conda<span class="w"> </sp
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mamba-optional">Mamba (optional)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-mamba">Installing mamba</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-mamba">Using mamba</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-default-conda-settings-optional">Changing default conda settings (optional)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-environment-directory">Changing environment directory</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#changing-package-directory">Changing package directory</a></li>
 </ul>
 </li>
 </ul>
@@ -738,7 +738,7 @@ By Wen Group
 
   <p class="copyright">
     
-      © Copyright 2022.
+      © Copyright 2023.
       <br/>
     
   </p>
@@ -762,8 +762,8 @@ By Wen Group
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
   </footer>
