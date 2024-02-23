@@ -41,7 +41,7 @@ This will install conda to your home directory `~/miniconda3`.
 To confirm it's successfully installed, do `$ conda --version` , and you will see something like `conda 4.14.0`.
 
 ```{note}
-This works for Apple M1 chip. For more installing options (e.g. for Intel chip), see the [miniconda doc](https://docs.conda.io/en/latest/miniconda.html).
+This works for Apple M series chips. For more installing options (e.g. for Intel chip), see the [miniconda doc](https://docs.conda.io/en/latest/miniconda.html).
 ```
 
 :::
