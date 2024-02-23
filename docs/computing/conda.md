@@ -67,13 +67,11 @@ You can add the above line to your `~/.bashrc`. Then it will be automatically lo
 
 ```{warning}
 This is not needed on your Mac; skip it.
-
-This is optional on HPE DSI clusters, but it is good to do it.
 ```
 
 ### Changing environment directory
 
-By default, if we create a new environment, it will be stored in the `$HOME` directory (e.g. `/home/<username>/.conda/envs`).
+On HPE DSI clusters, by default, if we create a new environment, it will be stored in the `$HOME` directory (e.g. `/home/<username>/.conda/envs`).
 Conda environments can sometimes get quite big, but each of us only has a quota of 10G for `$HOME`. This can easily lead to out-of-quota problem. We can change the default environment directory to avoid this.
 
 You should have access to our group project directory, i.e. `/project/wen`, which has a much larger disk quota. We will configure conda to store environments there.
