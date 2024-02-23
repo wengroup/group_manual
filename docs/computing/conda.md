@@ -65,7 +65,7 @@ You can add the above line to your `~/.bashrc`. Then it will be automatically lo
 
 ## Changing default conda settings
 
-```{warning}
+```{note}
 This is not needed on your Mac; skip it.
 ```
 
