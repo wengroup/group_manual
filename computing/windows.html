@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>HPE DSI &#8212; Wen Group Manual</title>
+    <title>Setting up Your Windows Computer &#8212; Wen Group Manual</title>
   
   
   
@@ -57,11 +57,11 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'computing/hpe_dsi';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'computing/windows';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Conda Environment" href="conda.html" />
-    <link rel="prev" title="Setting up Your Laptop" href="laptop.html" />
+    <link rel="next" title="Software" href="software/index.html" />
+    <link rel="prev" title="Conda Environment" href="conda.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -178,9 +178,9 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Computing</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="laptop.html">Setting up Your Laptop</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">HPE DSI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hpe_dsi.html">HPE DSI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="conda.html">Conda Environment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="windows.html">Setting up Your Windows Computer</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Setting up Your Windows Computer</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="software/index.html">Software</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="software/vasp.html">VASP</a></li>
 <li class="toctree-l2"><a class="reference internal" href="software/gulp.html">GULP</a></li>
@@ -280,7 +280,7 @@
       
       
       
-      <li><a href="https://github.com/wengroup/group_manual/edit/main/docs/computing/hpe_dsi.md" target="_blank"
+      <li><a href="https://github.com/wengroup/group_manual/edit/main/docs/computing/windows.md" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -297,7 +297,7 @@
       
       
       
-      <li><a href="https://github.com/wengroup/group_manual/issues/new?title=Issue%20on%20page%20%2Fcomputing/hpe_dsi.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/wengroup/group_manual/issues/new?title=Issue%20on%20page%20%2Fcomputing/windows.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -327,7 +327,7 @@
       
       
       
-      <li><a href="../_sources/computing/hpe_dsi.md" target="_blank"
+      <li><a href="../_sources/computing/windows.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -411,7 +411,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>HPE DSI</h1>
+    <h1>Setting up Your Windows Computer</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -421,14 +421,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-an-account">Getting an account</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logging-into-the-system">Logging into the system</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transferring-data">Transferring data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submitting-jobs">Submitting jobs</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-gpu">Using GPU</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#checking-balance">Checking balance</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#authentication-via-ssh-optional">Authentication via ssh (optional)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#more-information">More information</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wsl-2">WSL 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-and-python-utilities">Python and Python Utilities</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-lab">Jupyter Lab</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-pycharm-with-wsl">Using Pycharm with WSL</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tips-notes">Tips/Notes</a></li>
 </ul>
             </nav>
         </div>
@@ -440,132 +437,108 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="hpe-dsi">
-<span id="label-hpe-dsi"></span><h1>HPE DSI<a class="headerlink" href="#hpe-dsi" title="Link to this heading">#</a></h1>
-<p>This page describes the basics of using the HPE Data Science Institute clusters at UH.</p>
-<section id="getting-an-account">
-<h2>Getting an account<a class="headerlink" href="#getting-an-account" title="Link to this heading">#</a></h2>
-<p>If you have never used HPE DSI clusters, first request an account at <a class="reference external" href="https://uh.edu/rcdc/getting-started/request-account.php">https://uh.edu/rcdc/getting-started/request-account.php</a>. The below information may be needed:</p>
-<ul class="simple">
-<li><p>Principal Investigator (PI): Mingjian Wen</p></li>
-<li><p>PI Email address: <a class="reference external" href="mailto:mjwen&#37;&#52;&#48;uh&#46;edu">mjwen<span>&#64;</span>uh<span>&#46;</span>edu</a></p></li>
-<li><p>Grant information: N/A</p></li>
-<li><p>Please select the Resource (Cluster): <code class="docutils literal notranslate"><span class="pre">Carya</span></code> or <code class="docutils literal notranslate"><span class="pre">Sabine</span></code> # Check with Mingjian on which cluster to use</p></li>
-<li><p>Please select your login shell: Bash</p></li>
-</ul>
-<p>You will receive an email shortly after submitting your request, which contains the login information such as your <code class="docutils literal notranslate"><span class="pre">username</span></code> (called <code class="docutils literal notranslate"><span class="pre">Login</span> <span class="pre">name</span></code> in the email).</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>For all the below sections, replace <code class="docutils literal notranslate"><span class="pre">&lt;username&gt;</span></code> by your username. And replace <code class="docutils literal notranslate"><span class="pre">&lt;clustername&gt;</span></code> by either <code class="docutils literal notranslate"><span class="pre">carya</span></code> or <code class="docutils literal notranslate"><span class="pre">sabine</span></code> depending on which cluster you are using.</p>
-</div>
-</section>
-<section id="logging-into-the-system">
-<h2>Logging into the system<a class="headerlink" href="#logging-into-the-system" title="Link to this heading">#</a></h2>
-<p>You need to use <code class="docutils literal notranslate"><span class="pre">ssh</span></code> to log into the cluster.
-In any terminal on Linux or Mac (<a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/">Linux subsystem</a> can be installed on Windows), type</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>&lt;username&gt;@&lt;clustername&gt;.rcdc.uh.edu
-</pre></div>
-</div>
-<p>Replace <code class="docutils literal notranslate"><span class="pre">&lt;username&gt;</span></code> by yours and replace <code class="docutils literal notranslate"><span class="pre">&lt;clustername&gt;</span></code> by the corresponding cluster name. press <code class="docutils literal notranslate"><span class="pre">Enter</span></code> and then provide your CougarNet credentials to login.</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>The clusters can be accessed via the <code class="docutils literal notranslate"><span class="pre">UHSecure</span></code> not the <code class="docutils literal notranslate"><span class="pre">UHGuest</span></code> network. If you cannot log in and see error message like <code class="docutils literal notranslate"><span class="pre">ssh:</span> <span class="pre">connect</span> <span class="pre">to</span> <span class="pre">host</span> <span class="pre">carya.rcdc.uh.edu</span> <span class="pre">port</span> <span class="pre">22:</span> <span class="pre">Operation</span> <span class="pre">timed</span> <span class="pre">out</span></code>, check your Wi-Fi connection.</p>
-<p>If you are off campus, use UH <a class="reference external" href="https://uh.edu/infotech/services/computing/networks/vpn/">VPN</a> to get access.</p>
-</div>
-</section>
-<section id="transferring-data">
-<h2>Transferring data<a class="headerlink" href="#transferring-data" title="Link to this heading">#</a></h2>
-<p>Transfer a file from your laptop to the cluster:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>scp<span class="w"> </span>&lt;/local/path/my_file.txt&gt;<span class="w"> </span>&lt;username&gt;@&lt;clustername&gt;.rcdc.uh.edu:&lt;/remote/path/&gt;
-</pre></div>
-</div>
-<p>Replace <code class="docutils literal notranslate"><span class="pre">&lt;/local/path/my_file.txt&gt;</span></code> by the path to your file on your laptop,
-and <code class="docutils literal notranslate"><span class="pre">&lt;/remote/path/&gt;</span></code> by the path to a directory on Carya where you want to place
-your file.</p>
-<p>Transfer a file from Carya to your laptop:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>scp<span class="w"> </span>&lt;username&gt;@&lt;clustername&gt;.rcdc.uh.edu:/remote/path/my_file.txt<span class="w"> </span>/local/path
-</pre></div>
-</div>
-<p>Again, replace <code class="docutils literal notranslate"><span class="pre">&lt;/local/path&gt;</span></code> by the path to a directory on your laptop where you want to place
-your file, and <code class="docutils literal notranslate"><span class="pre">&lt;/remote/path/my_file.txt&gt;</span></code> by the path to your file on Carya.</p>
-<p>Alternatively, if you prefer a graphical user interface or want to transfer a large amount of data, <code class="docutils literal notranslate"><span class="pre">globus</span></code> is a good option. See <a class="reference external" href="https://uh.edu/rcdc/support-services/user-guide/getting-started-clusters">HPE DSI User Guide</a> for instructions. [TODO: add instructions here].</p>
-</section>
-<section id="submitting-jobs">
-<h2>Submitting jobs<a class="headerlink" href="#submitting-jobs" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Do not submit jobs from your home directory <code class="docutils literal notranslate"><span class="pre">/home/&lt;username&gt;</span></code>, which is not configured for I/O and has a limited storage space of 10GB.</p></li>
-<li><p>Do not submit jobs on the login node; it can affect other users.</p></li>
-</ul>
-<p>Instead, submit jobs to the compute node from the project directory and using <a class="reference external" href="https://slurm.schedmd.com">Slurm</a> script.</p>
-<p>First, create a directory with your <code class="docutils literal notranslate"><span class="pre">username</span></code>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cd /project/wen
-$ mkdir &lt;username&gt;      # change &lt;username&gt; to yours
-$ chmod g-w &lt;username&gt;  # remove write access for others
-</pre></div>
-</div>
-<p>All your jobs should be submitted in the <code class="docutils literal notranslate"><span class="pre">project/wen/&lt;username&gt;</span></code> directory and its subdirectories.</p>
-<p>Next, let’s submit a job. Suppose you want to run a python script <code class="docutils literal notranslate"><span class="pre">example.py</span></code> placed in <code class="docutils literal notranslate"><span class="pre">project/wen/&lt;username&gt;</span></code>. A Slurm script for it can be:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash -l</span>
-
-<span class="c1">#SBATCH --job-name=my_1st_job</span>
-<span class="c1">#SBATCH --account=wen           # account of our group</span>
-<span class="c1">#SBATCH --time=00:10:00         # run for a max of 10 mins</span>
-<span class="c1">#SBATCH --nodes=1               # run on 1 node</span>
-
-python<span class="w"> </span>example.py
-</pre></div>
-</div>
-<p>Copy the above content into a file named, e.g., <code class="docutils literal notranslate"><span class="pre">submit.sh</span></code>, and place it in the same directory as <code class="docutils literal notranslate"><span class="pre">example.py</span></code>. Then you can submit the job using <code class="docutils literal notranslate"><span class="pre">sbatch</span></code>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sbatch submit.sh
-</pre></div>
-</div>
-</section>
-<section id="using-gpu">
-<h2>Using GPU<a class="headerlink" href="#using-gpu" title="Link to this heading">#</a></h2>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash -l</span>
-
-<span class="c1">#SBATCH --job-name=my_1st_job</span>
-<span class="c1">#SBATCH --account=wen</span>
-<span class="c1">#SBATCH --time=00:10:00</span>
-<span class="c1">#SBATCH --nodes=1</span>
-<span class="c1">#SBATCH --mem=10GB  # don&#39;t forget this; otherwise, it can throw out-of-memory error</span>
-<span class="c1">#SBATCH --gpus=1    # run on 1 gpu</span>
-
-python<span class="w"> </span>example.py
-</pre></div>
-</div>
-</section>
-<section id="checking-balance">
-<h2>Checking balance<a class="headerlink" href="#checking-balance" title="Link to this heading">#</a></h2>
-<p>To check the group allocations and accounts, use</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sbalance
-</pre></div>
-</div>
-</section>
-<section id="authentication-via-ssh-optional">
-<h2>Authentication via ssh (optional)<a class="headerlink" href="#authentication-via-ssh-optional" title="Link to this heading">#</a></h2>
-<p>You need to enter the CougarNet password every time you log in or use <code class="docutils literal notranslate"><span class="pre">scp</span></code>. You can
-avoid this by using ssh authentication.</p>
-<ol class="arabic">
-<li><p>Generate SSH keys if you have not done so. See <a class="reference internal" href="../devtool/ssh.html#label-ssh"><span class="std std-ref">SSH</span></a> for instructions.</p></li>
-<li><p>Copy you public key (replace <code class="docutils literal notranslate"><span class="pre">&lt;username&gt;</span></code> by yours):</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cat<span class="w"> </span>~/.ssh/id_rsa.pub<span class="w"> </span><span class="p">|</span><span class="w"> </span>ssh<span class="w"> </span>&lt;username&gt;@&lt;clustername&gt;.rcdc.uh.edu<span class="w"> </span><span class="s2">&quot;mkdir -p ~/.ssh &amp;&amp; cat &gt;&gt; ~/.ssh/authorized_keys&quot;</span>
-</pre></div>
-</div>
-<p>This copies your public key in <code class="docutils literal notranslate"><span class="pre">~/.ssh/id_rsa.pub</span></code> to the cluster, and appends it to
-<code class="docutils literal notranslate"><span class="pre">~/.ssh/authorized_keys</span></code> on the cluster. You will be asked for your password.</p>
-</li>
+  <section class="tex2jax_ignore mathjax_ignore" id="setting-up-your-windows-computer">
+<span id="label-windows"></span><h1>Setting up Your Windows Computer<a class="headerlink" href="#setting-up-your-windows-computer" title="Link to this heading">#</a></h1>
+<p>This page describes the basic steps to set up your Windows computer for computational research.
+The major task is to install Windows Subsystem for Linux (WSL) and Python.</p>
+<section id="wsl-2">
+<h2>WSL 2<a class="headerlink" href="#wsl-2" title="Link to this heading">#</a></h2>
+<p>WSL is Windows subsystem for Linux. More particularly we will be focusing on installing WSL 2.
+What we are doing is unlocking the ability to use the Ubuntu operating system (or other Linux OS) on our Windows computer to better interact with the clusters on campus &amp; for ease of installing &amp; for the ability to use other utilities and packages.</p>
+<p>First we must install WSL 2, to do this first you will have to:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-0">
+Command Line</label><div class="sd-tab-content docutils">
+<ol class="arabic simple">
+<li><p>Update Windows prior to installing WSL (older version of Windows 11 did not work with this command)</p></li>
+<li><p>Type CMD into the search bar (with administrator privileges on your computer) to pull up the windows command line.</p></li>
+<li><p>On the windows command line type,</p></li>
 </ol>
-<p>After doing this, you can log in without entering your CougarNet password.
-If you have a passphrase for your private key, you will be asked for it.
-But you can avoid this by adding your private key to the ssh-agent. See
-<a class="reference internal" href="../devtool/ssh.html#label-ssh"><span class="std std-ref">SSH</span></a> for instructions.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wsl<span class="w"> </span>-install
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>This will install WSL 2 (or the most recent iteration of WSL) onto your computer. This may ask you to restart your computer.
+</pre></div>
+</div>
+<p>Windows says that this will install Ubuntu onto your computer, but this is not always the case, this is fine just install [Ubuntu](<a class="reference external" href="https://apps.microsoft.com/detail/9pdxgncfsczv?hl=en-us&amp;amp;gl=US">Ubuntu - Microsoft Apps</a>) from the windows application store. This method may not work for Windows 10</p>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-1">
+Windows Feature</label><div class="sd-tab-content docutils">
+<ol class="arabic simple">
+<li><p>Update Windows prior to installing WSL.</p></li>
+<li><p>Open the Start Menu &amp; search <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Features</span></code> into the search bar. Then click on <code class="docutils literal notranslate"><span class="pre">Turn</span> <span class="pre">Windows</span> <span class="pre">Features</span> <span class="pre">On</span> <span class="pre">or</span> <span class="pre">Off</span></code></p></li>
+<li><p>Scroll down to the check box for <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Subsystem</span> <span class="pre">for</span> <span class="pre">Linux</span></code> check the box, and press the <code class="docutils literal notranslate"><span class="pre">OK</span></code> button.</p></li>
+<li><p>When the operation has completed, you will be asked to restart your computer</p></li>
+<li><p>After the restart install [Ubuntu](<a class="reference external" href="https://apps.microsoft.com/detail/9pdxgncfsczv?hl=en-us&amp;amp;gl=US">Ubuntu - Microsoft Apps</a>)from the windows application store.</p></li>
+</ol>
+</div>
+</div>
+<p>When you finish the installation of Ubuntu and open it, you will be asked to provide a username and password. Remember the password as any time you use the sudo command you will have to enter this password. (any root level commands will prompt you for your password.). After your Ubuntu has been installed it would be a good time to use the command <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">update</span></code> to update your Ubuntu installation to the most recent iteration of Ubuntu.</p>
 </section>
-<section id="more-information">
-<h2>More information<a class="headerlink" href="#more-information" title="Link to this heading">#</a></h2>
-<p>HPE DSI User Guide: <a class="reference external" href="https://uh.edu/rcdc/support-services/user-guide/getting-started-clusters">https://uh.edu/rcdc/support-services/user-guide/getting-started-clusters</a></p>
-<p>Open a ticket at the HPE DSI Support Center: <a class="reference external" href="https://support.hpedsi.uh.edu">https://support.hpedsi.uh.edu</a></p>
-<p>Policies and data management: <a class="reference external" href="https://hpedsi.uh.edu/about/policies">https://hpedsi.uh.edu/about/policies</a></p>
+<section id="python-and-python-utilities">
+<h2>Python and Python Utilities<a class="headerlink" href="#python-and-python-utilities" title="Link to this heading">#</a></h2>
+<p>We use Python a lot for our research and let’s install Python and a series of utilities to manage our environments and packages more easily.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>python3<span class="w"> </span>–y
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>python3-pip<span class="w"> </span>–y
+sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>wget
+wget<span class="w"> </span>https://repo.anaconda.com/archive/Anaconda3-2024.02-1-Linux-x86_64.sh
+bash<span class="w"> </span>Anaconda3-2024.02-1-Linux-x86_64.sh
+</pre></div>
+</div>
+<p>This series of commands will install: <code class="docutils literal notranslate"><span class="pre">python3</span></code>, <code class="docutils literal notranslate"><span class="pre">pip</span></code> a package downloading tool, <code class="docutils literal notranslate"><span class="pre">wget</span></code> a file downloading tool, and <code class="docutils literal notranslate"><span class="pre">conda</span></code> a Python environment managing tool.</p>
+<p>For instructions on how to use <code class="docutils literal notranslate"><span class="pre">conda</span></code> to manage your Python environments, see <a class="reference internal" href="conda.html#label-conda"><span class="std std-ref">Conda Environments</span></a>.</p>
+</section>
+<section id="jupyter-lab">
+<h2>Jupyter Lab<a class="headerlink" href="#jupyter-lab" title="Link to this heading">#</a></h2>
+<p>We also use Jupyter Lab a lot for our research. It is a great tool for interactive computing and data visualization. To install and use Jupyter lab we will:</p>
+<ol class="arabic">
+<li><p>Open the Ubuntu application from the windows start menu.</p></li>
+<li><p>Update Ubuntu</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>update
+</pre></div>
+</div>
+</li>
+<li><p>Install Jupyter lab</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>jupyterlab
+</pre></div>
+</div>
+</li>
+<li><p>Start Jupyter lab</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter<span class="w"> </span>lab
+</pre></div>
+</div>
+</li>
+<li><p>Once Jupyter lab has executed you will have to copy the https address in the jupyter lab output into the address bar in your favorite web browser.</p></li>
+<li><p>From here you can see your directories and files, run commands from the terminal, edit code and other things.</p></li>
+</ol>
+</section>
+<section id="using-pycharm-with-wsl">
+<h2>Using Pycharm with WSL<a class="headerlink" href="#using-pycharm-with-wsl" title="Link to this heading">#</a></h2>
+<p>Install <a class="reference external" href="https://www.jetbrains.com/pycharm/download/?section=windows">Pycharm</a> in the normal way you would download any other program for your windows computer. After this our Pycharm will be installed onto the Windows side of our computer. Because of this the default interpreter dose not work with all the packages you have installed on your Linux version of your computer. Because of this we will have to change/update our interpreter in Pycharm to <code class="docutils literal notranslate"><span class="pre">look</span></code> for the correct interpretation of python &amp; python packages.</p>
+<ol class="arabic simple">
+<li><p>Inside the Pycharm application, in the bottom right corner will be a tab that when you hover over it will say <code class="docutils literal notranslate"><span class="pre">Current</span> <span class="pre">Interpreter:</span> <span class="pre">...</span></code> Click this tab</p></li>
+<li><p>In the interface that opens up click the “Add New Interpreter” button, then press the <code class="docutils literal notranslate"><span class="pre">On</span> <span class="pre">WSL...</span></code> button</p></li>
+<li><p>A window will pop up, after a moment you should see <code class="docutils literal notranslate"><span class="pre">Introspection</span> <span class="pre">completed</span> <span class="pre">successfully!</span></code> select the <code class="docutils literal notranslate"><span class="pre">Next</span></code> button in the bottom right</p></li>
+<li><p>From here you could select any of the options.</p>
+<ul class="simple">
+<li><p>The Virtual Environment option comes with a few issues and is not recommended to use.</p></li>
+<li><p>The System Interpreter option selects your baseline python installation on the Linux side of your computer. While this can work for your programming needs it is not best practice to use this.</p></li>
+<li><p>The Conda Environment option is best practice and relates to a particular Anaconda environment.</p></li>
+</ul>
+</li>
+<li><p>For Conda Environment option select “Use Existing” and select the environment you want to use for this project, or create new environment and fill in a name for the new environment</p></li>
+<li><p>Press the “Create” option.</p></li>
+<li><p>In the bottom corner again select the “Current Interpreter: …” tab and select the interpreter that was just made.</p></li>
+</ol>
+</section>
+<section id="tips-notes">
+<h2>Tips/Notes<a class="headerlink" href="#tips-notes" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>To transfer files between Windows and WSL, see this <a class="reference external" href="https://stackoverflow.com/questions/42586120/copy-files-from-windows-to-windows-subsystem-for-linux-wsl">Stack Overflow post</a>.</p></li>
+<li><p>For a general Linux command cheat sheet refer to <a class="reference external" href="https://www.geeksforgeeks.org/linux-commands-cheat-sheet/">Geeks for Geeks cheat sheet</a> here you can find a simple list of commands for Linux along with more advanced commands.</p></li>
+</ul>
 </section>
 </section>
 
@@ -600,20 +573,20 @@ But you can avoid this by adding your private key to the ssh-agent. See
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="laptop.html"
+       href="conda.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Setting up Your Laptop</p>
+        <p class="prev-next-title">Conda Environment</p>
       </div>
     </a>
     <a class="right-next"
-       href="conda.html"
+       href="software/index.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Conda Environment</p>
+        <p class="prev-next-title">Software</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -633,14 +606,11 @@ But you can avoid this by adding your private key to the ssh-agent. See
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-an-account">Getting an account</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logging-into-the-system">Logging into the system</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transferring-data">Transferring data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submitting-jobs">Submitting jobs</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-gpu">Using GPU</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#checking-balance">Checking balance</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#authentication-via-ssh-optional">Authentication via ssh (optional)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#more-information">More information</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wsl-2">WSL 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-and-python-utilities">Python and Python Utilities</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-lab">Jupyter Lab</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-pycharm-with-wsl">Using Pycharm with WSL</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tips-notes">Tips/Notes</a></li>
 </ul>
   </nav></div>
 
