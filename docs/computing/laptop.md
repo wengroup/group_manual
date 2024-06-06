@@ -1,5 +1,6 @@
 (label:laptop)=
-# Setting up Your Laptop
+
+# Setting up Mac
 
 This page describes the basic steps to set up your Mac for computational research.
 

@@ -11,9 +11,9 @@ parts:
   - caption: Computing
     chapters:
       - file: computing/laptop.md
+      - file: computing/windows.md
       - file: computing/hpe_dsi.md
       - file: computing/conda.md
-      - file: computing/windows.md
       - file: computing/software/index.md
         sections:
           - file: computing/software/vasp.md
