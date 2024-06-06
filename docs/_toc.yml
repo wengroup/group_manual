@@ -13,7 +13,7 @@ parts:
       - file: computing/laptop.md
       - file: computing/hpe_dsi.md
       - file: computing/conda.md
-      - file: computing/WSL_set_up_guide.md
+      - file: computing/windows.md
       - file: computing/software/index.md
         sections:
           - file: computing/software/vasp.md
