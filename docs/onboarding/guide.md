@@ -14,7 +14,7 @@ postdocs joining the group.
   and then ask `Nicolette Solano` (department administrative assistant) to help with purchase.
   Only send Apple and Dell products to Shenoy for quote; other products can be purchased directly
   by Nicolette.
-- Configure your laptop for computational research, following [Setting up Your Laptop](label:laptop).
+- Configure your laptop for computational research, following [Setting up Mac](label:laptop) or [Setting up Windows](label:windows) instructions.
 
 ## Meetings
 
