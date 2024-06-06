@@ -39,6 +39,7 @@ Windows says that this will install Ubuntu onto your computer, but this is not a
 5. After the restart install [Ubuntu]([Ubuntu - Microsoft Apps](https://apps.microsoft.com/detail/9pdxgncfsczv?hl=en-us&gl=US))from the windows application store.
 
 :::
+::::
 
 When you finish the installation of Ubuntu and open it, you will be asked to provide a username and password. Remember the password as any time you use the sudo command you will have to enter this password. (any root level commands will prompt you for your password.). After your Ubuntu has been installed it would be a good time to use the command `sudo apt update` to update your Ubuntu installation to the most recent iteration of Ubuntu.
 
