@@ -1,6 +1,6 @@
 (label:windows)=
 
-# Setting up Your Windows Computer
+# Setting up Windows
 
 This page describes the basic steps to set up your Windows computer for computational research.
 The major task is to install Windows Subsystem for Linux (WSL) and Python.
@@ -24,7 +24,7 @@ First we must install WSL 2, to do this first you will have to:
 wsl -install
 ```
 
-    This will install WSL 2 (or the most recent iteration of WSL) onto your computer. This may ask you to restart your computer.
+This will install WSL 2 (or the most recent iteration of WSL) onto your computer. This may ask you to restart your computer.
 
 Windows says that this will install Ubuntu onto your computer, but this is not always the case, this is fine just install [Ubuntu]([Ubuntu - Microsoft Apps](https://apps.microsoft.com/detail/9pdxgncfsczv?hl=en-us&gl=US)) from the windows application store. This method may not work for Windows 10
 
