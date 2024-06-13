@@ -29,7 +29,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
@@ -46,7 +46,7 @@
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -240,9 +240,9 @@
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -400,9 +400,9 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -425,6 +425,7 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started">Getting started</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tips">Tips</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#useful-packages">Useful packages</a></li>
 </ul>
             </nav>
         </div>
@@ -472,7 +473,14 @@ If you haven’t used Overleaf before, you can start with the <a class="referenc
 <p>This does nothing but add a prefix to the reference. For example, <code class="docutils literal notranslate"><span class="pre">\ref{fig:diamond}</span></code> will only give <code class="docutils literal notranslate"><span class="pre">1</span></code>. With the above macros, you can use <code class="docutils literal notranslate"><span class="pre">\fref{fig:diamond}</span></code> to get <code class="docutils literal notranslate"><span class="pre">Fig.</span> <span class="pre">1</span></code>.</p>
 </li>
 <li><p>Add a slash <code class="docutils literal notranslate"><span class="pre">\</span> </code> after a period to indicate that it is not the end of a sentence. For example, you should write <code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">U.S.\</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">country.</span></code>, instead of <code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">U.S.</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">country.</span></code>. The period after <code class="docutils literal notranslate"><span class="pre">U.S.</span></code> is not the end of the sentence, so we add a slash <code class="docutils literal notranslate"><span class="pre">\</span> </code> after it. This will make the spacing between <code class="docutils literal notranslate"><span class="pre">U.S.</span></code> and <code class="docutils literal notranslate"><span class="pre">is</span></code> correct. Similarly, you should use <code class="docutils literal notranslate"><span class="pre">e.g.\</span> </code> instead of <code class="docutils literal notranslate"><span class="pre">e.g.</span> </code> in the middle of a sentence.</p></li>
-<li><p>Use <code class="docutils literal notranslate"><span class="pre">\mathrm{}</span></code> for text in math mode. For example, the Boltzmann constant should be written as <code class="docutils literal notranslate"><span class="pre">$k_\mathrm{B}$</span></code>, which gives <span class="math notranslate nohighlight">\(k_\mathrm{B}\)</span>, instead of <code class="docutils literal notranslate"><span class="pre">$k_B$</span></code>, which gives <span class="math notranslate nohighlight">\(k_B\)</span>. By default, all text in math mode is italicized. Here <code class="docutils literal notranslate"><span class="pre">B</span></code> stands for the text Boltzmann, and we use <code class="docutils literal notranslate"><span class="pre">\mathrm{}</span></code> to make it upright.</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">\text{}</span></code> for text in math mode. For example, the Boltzmann constant should be written as <code class="docutils literal notranslate"><span class="pre">$k_\text{B}$</span></code>, which gives <span class="math notranslate nohighlight">\(k_\text{B}\)</span>, instead of <code class="docutils literal notranslate"><span class="pre">$k_B$</span></code>, which gives <span class="math notranslate nohighlight">\(k_B\)</span>. By default, all text in math mode is italicized. Here <code class="docutils literal notranslate"><span class="pre">B</span></code> stands for the text Boltzmann, and we use <code class="docutils literal notranslate"><span class="pre">\text{}</span></code> to make it upright.</p></li>
+</ol>
+</section>
+<section id="useful-packages">
+<h2>Useful packages<a class="headerlink" href="#useful-packages" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">siunitx</span></code> for SI units. For example, the speed of light should be written as <code class="docutils literal notranslate"><span class="pre">\SI{3e8}{\meter\per\second}</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mhchem</span></code> for chemical formulas. For example, water should be written as <code class="docutils literal notranslate"><span class="pre">\ce{H2O}</span></code>.</p></li>
 </ol>
 </section>
 </section>
@@ -543,6 +551,7 @@ If you haven’t used Overleaf before, you can start with the <a class="referenc
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started">Getting started</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tips">Tips</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#useful-packages">Useful packages</a></li>
 </ul>
   </nav></div>
 
