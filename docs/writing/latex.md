@@ -44,4 +44,10 @@ LaTex is a powerful typesetting system, and there are a lot of customizations yo
 
 4. Add a slash `\ ` after a period to indicate that it is not the end of a sentence. For example, you should write `The U.S.\ is a country.`, instead of `The U.S. is a country.`. The period after `U.S.` is not the end of the sentence, so we add a slash `\ ` after it. This will make the spacing between `U.S.` and `is` correct. Similarly, you should use `e.g.\ ` instead of `e.g. ` in the middle of a sentence.
 
-5. Use `\mathrm{}` for text in math mode. For example, the Boltzmann constant should be written as `$k_\mathrm{B}$`, which gives $k_\mathrm{B}$, instead of `$k_B$`, which gives $k_B$. By default, all text in math mode is italicized. Here `B` stands for the text Boltzmann, and we use `\mathrm{}` to make it upright.
+5. Use `\text{}` for text in math mode. For example, the Boltzmann constant should be written as `$k_\text{B}$`, which gives $k_\text{B}$, instead of `$k_B$`, which gives $k_B$. By default, all text in math mode is italicized. Here `B` stands for the text Boltzmann, and we use `\text{}` to make it upright.
+
+## Useful packages
+
+1. `siunitx` for SI units. For example, the speed of light should be written as `\SI{3e8}{\meter\per\second}`.
+
+2. `mhchem` for chemical formulas. For example, water should be written as `\ce{H2O}`.
