@@ -88,6 +88,8 @@ Next, let's submit a job. Suppose you want to run a python script `example.py` p
 #SBATCH --nodes=1               # run on 1 node
 
 python example.py
+
+scontrol show job $SLURM_JOBID  # show job details, for later reference
 ```
 
 Copy the above content into a file named, e.g., `submit.sh`, and place it in the same directory as `example.py`. Then you can submit the job using `sbatch`:
@@ -109,6 +111,8 @@ $ sbatch submit.sh
 #SBATCH --gpus=1    # run on 1 gpu
 
 python example.py
+
+scontrol show job $SLURM_JOBID  # show job details, for later reference
 ```
 
 ## Checking balance
