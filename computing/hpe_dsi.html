@@ -513,6 +513,8 @@ $ chmod g-w &lt;username&gt;  # remove write access for others
 <span class="c1">#SBATCH --nodes=1               # run on 1 node</span>
 
 python<span class="w"> </span>example.py
+
+scontrol<span class="w"> </span>show<span class="w"> </span>job<span class="w"> </span><span class="nv">$SLURM_JOBID</span><span class="w">  </span><span class="c1"># show job details, for later reference</span>
 </pre></div>
 </div>
 <p>Copy the above content into a file named, e.g., <code class="docutils literal notranslate"><span class="pre">submit.sh</span></code>, and place it in the same directory as <code class="docutils literal notranslate"><span class="pre">example.py</span></code>. Then you can submit the job using <code class="docutils literal notranslate"><span class="pre">sbatch</span></code>:</p>
@@ -532,6 +534,8 @@ python<span class="w"> </span>example.py
 <span class="c1">#SBATCH --gpus=1    # run on 1 gpu</span>
 
 python<span class="w"> </span>example.py
+
+scontrol<span class="w"> </span>show<span class="w"> </span>job<span class="w"> </span><span class="nv">$SLURM_JOBID</span><span class="w">  </span><span class="c1"># show job details, for later reference</span>
 </pre></div>
 </div>
 </section>
