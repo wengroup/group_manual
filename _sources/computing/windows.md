@@ -21,7 +21,7 @@ First we must install WSL 2, to do this first you will have to:
 3.  On the windows command line type,
 
 ```bash
-wsl -install
+wsl --install
 ```
 
 This will install WSL 2 (or the most recent iteration of WSL) onto your computer. This may ask you to restart your computer.
