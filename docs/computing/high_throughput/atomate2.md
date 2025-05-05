@@ -101,8 +101,9 @@ Replace all info in bracket `<>` by your MongoDB and MinIO access credentials. F
 ```yaml
 JOB_STORE:
   docs_store:
-    type: MongoURIStore
-    uri: <uri>
+    type: MongoStore
+    host: <uri>
+    port: 27017
     database: <database>
     collection_name: jobflow_outputs
   additional_stores:
@@ -112,8 +113,9 @@ JOB_STORE:
       key: blob_uuid
       compress: true
       index:
-        type: MongoURIStore
-        uri: <uri>
+        type: MongoStore
+        host: <uri>
+        port: 27017
         database: <database>
         collection_name: jobflow_minio_index
         key: blob_uuid
