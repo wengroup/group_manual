@@ -28,13 +28,13 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -426,6 +426,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started">Getting started</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#syntax">Syntax</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tips">Tips</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#useful-packages">Useful packages</a></li>
 </ul>
@@ -447,6 +448,27 @@ document.write(`
 <p>The easiest way to get started is to use <a class="reference external" href="https://www.overleaf.com/">Overleaf</a>, an online LaTeX editor. It is free to use and has a rich set of features.
 If you haven’t used Overleaf before, you can start with the <a class="reference external" href="https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes">Learn LaTeX in 30 minutes tutorial</a>.</p>
 <p>Alternatively, you can install a LaTeX distribution on your computer. See <a class="reference external" href="https://www.tug.org/mactex/">MacTeX</a> for macOS.</p>
+</section>
+<section id="syntax">
+<h2>Syntax<a class="headerlink" href="#syntax" title="Link to this heading">#</a></h2>
+<p>Some syntax rules (that are different from other word processors like Microsoft Word) to keep in mind when writing LaTeX documents.</p>
+<ol class="arabic">
+<li><p>Quotes</p>
+<p>The opening and closing quotes are different in LaTeX.
+You should use backticks <code class="docutils literal notranslate"><span class="pre">`</span></code> for opening single quotes, and straight quotes <code class="docutils literal notranslate"><span class="pre">'</span></code> for closing single quotes. Use two backticks <code class="docutils literal notranslate"><span class="pre">``</span></code> for opening double quotes, and two straight quotes <code class="docutils literal notranslate"><span class="pre">''</span></code> for closing double quotes.
+For example, you should write: <code class="docutils literal notranslate"> <span class="pre">`single</span> <span class="pre">quotes'</span></code>, which will be typeset as <code class="docutils literal notranslate"><span class="pre">'single</span> <span class="pre">quotes'</span></code> , and <code class="docutils literal notranslate"><span class="pre">``double</span> <span class="pre">quotes''</span></code>, which will be typeset as <code class="docutils literal notranslate"><span class="pre">&quot;double</span> <span class="pre">quotes&quot;</span></code>.</p>
+</li>
+<li><p>Dashes &amp; Hyphens</p>
+<ul class="simple">
+<li><p>Hyphen (<code class="docutils literal notranslate"><span class="pre">-</span></code>): Used for compound words, e.g., <code class="docutils literal notranslate"><span class="pre">state-of-the-art</span></code>, <code class="docutils literal notranslate"><span class="pre">pre-industrial</span></code>.</p></li>
+<li><p>En-dash (<code class="docutils literal notranslate"><span class="pre">--</span></code>): Used for ranges, e.g., <code class="docutils literal notranslate"><span class="pre">1990--2023</span></code>, <code class="docutils literal notranslate"><span class="pre">pp.</span> <span class="pre">45--52</span></code>, and to connect related terms, e.g., <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">York--London</span> <span class="pre">flight</span></code>.</p></li>
+<li><p>Em-dash (<code class="docutils literal notranslate"><span class="pre">---</span></code>): Used to indicate interruptions within sentences or to replace parentheses for emphasis. For example, <code class="docutils literal notranslate"><span class="pre">Indicates</span> <span class="pre">interruptions---like</span> <span class="pre">this---within</span> <span class="pre">sentences</span></code> or <code class="docutils literal notranslate"><span class="pre">Replaces</span> <span class="pre">parentheses---though</span> <span class="pre">less</span> <span class="pre">formally---for</span> <span class="pre">emphasis</span></code>.</p></li>
+</ul>
+</li>
+<li><p>Space</p>
+<p>Add a slash <code class="docutils literal notranslate"><span class="pre">\</span> </code> after a period to indicate that it is not the end of a sentence. For example, you should write <code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">U.S.\</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">country.</span></code>, instead of <code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">U.S.</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">country.</span></code>. The period after <code class="docutils literal notranslate"><span class="pre">U.S.</span></code> is not the end of the sentence, so we add a slash <code class="docutils literal notranslate"><span class="pre">\</span> </code> after it. This will make the spacing between <code class="docutils literal notranslate"><span class="pre">U.S.</span></code> and <code class="docutils literal notranslate"><span class="pre">is</span></code> correct. Similarly, you should use <code class="docutils literal notranslate"><span class="pre">e.g.\</span> </code> instead of <code class="docutils literal notranslate"><span class="pre">e.g.</span> </code> in the middle of a sentence.</p>
+</li>
+</ol>
 </section>
 <section id="tips">
 <h2>Tips<a class="headerlink" href="#tips" title="Link to this heading">#</a></h2>
@@ -474,7 +496,6 @@ If you haven’t used Overleaf before, you can start with the <a class="referenc
 </div>
 <p>This does nothing but add a prefix to the reference. For example, <code class="docutils literal notranslate"><span class="pre">\ref{fig:diamond}</span></code> will only give <code class="docutils literal notranslate"><span class="pre">1</span></code>. With the above macros, you can use <code class="docutils literal notranslate"><span class="pre">\fref{fig:diamond}</span></code> to get <code class="docutils literal notranslate"><span class="pre">Fig.</span> <span class="pre">1</span></code>.</p>
 </li>
-<li><p>Add a slash <code class="docutils literal notranslate"><span class="pre">\</span> </code> after a period to indicate that it is not the end of a sentence. For example, you should write <code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">U.S.\</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">country.</span></code>, instead of <code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">U.S.</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">country.</span></code>. The period after <code class="docutils literal notranslate"><span class="pre">U.S.</span></code> is not the end of the sentence, so we add a slash <code class="docutils literal notranslate"><span class="pre">\</span> </code> after it. This will make the spacing between <code class="docutils literal notranslate"><span class="pre">U.S.</span></code> and <code class="docutils literal notranslate"><span class="pre">is</span></code> correct. Similarly, you should use <code class="docutils literal notranslate"><span class="pre">e.g.\</span> </code> instead of <code class="docutils literal notranslate"><span class="pre">e.g.</span> </code> in the middle of a sentence.</p></li>
 <li><p>Use <code class="docutils literal notranslate"><span class="pre">\text{}</span></code> for text in math mode. For example, the Boltzmann constant should be written as <code class="docutils literal notranslate"><span class="pre">$k_\text{B}$</span></code>, which gives <span class="math notranslate nohighlight">\(k_\text{B}\)</span>, instead of <code class="docutils literal notranslate"><span class="pre">$k_B$</span></code>, which gives <span class="math notranslate nohighlight">\(k_B\)</span>. By default, all text in math mode is italicized. Here <code class="docutils literal notranslate"><span class="pre">B</span></code> stands for the text Boltzmann, and we use <code class="docutils literal notranslate"><span class="pre">\text{}</span></code> to make it upright.</p></li>
 </ol>
 </section>
@@ -552,6 +573,7 @@ If you haven’t used Overleaf before, you can start with the <a class="referenc
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started">Getting started</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#syntax">Syntax</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tips">Tips</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#useful-packages">Useful packages</a></li>
 </ul>
